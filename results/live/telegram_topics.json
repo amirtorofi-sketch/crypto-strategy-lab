@@ -12,5 +12,7 @@
   "-1003942226034::smc_order_block_retest": 13,
   "-1003942226034::pa_support_resistance_bounce": 17,
   "-1003942226034::range_fade_extremes": 20,
-  "-1003942226034::rtm_supply_demand_zone": 22
+  "-1003942226034::rtm_supply_demand_zone": 22,
+  "-1003942226034::pa_engulfing_candle": 26,
+  "-1003942226034::pa_inside_bar_breakout": 28
 }
