@@ -5,5 +5,7 @@
   "-1003942226034::smc_choch_reversal": "unsupported",
   "-1003942226034::classic_donchian_channel_breakout": "unsupported",
   "-1003942226034::classic_ichimoku_kumo_breakout": "unsupported",
-  "-1003942226034::classic_rsi_reversal_30_70": "unsupported"
+  "-1003942226034::classic_rsi_reversal_30_70": "unsupported",
+  "-1003942226034::pa_three_white_soldiers_crows": 6,
+  "-1003942226034::smc_bos_continuation": 8
 }

@@ -169,5 +169,43 @@
     "pnl_usdt": null,
     "pnl_pct": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "pa_three_white_soldiers_crows__BTC-USDT__20260902T120411",
+    "strategy": "pa_three_white_soldiers_crows",
+    "category": "price_action",
+    "symbol": "BTC/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-02T12:04:11.375168+00:00",
+    "entry_price": 76778.54,
+    "stop_loss": 77765.99,
+    "take_profit": 74710.27827061701,
+    "size_usdt": 777.5435718264124,
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "reason": "سه کلاغ سیاه"
+  },
+  {
+    "id": "smc_bos_continuation__ETH-USDT__20260902T120413",
+    "strategy": "smc_bos_continuation",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-02T12:04:13.488677+00:00",
+    "entry_price": 2379.84,
+    "stop_loss": 2415.060559511381,
+    "take_profit": 2309.3988809772386,
+    "size_usdt": 675.6962504332137,
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "reason": "تایید BOS نزولی"
   }
 ]
