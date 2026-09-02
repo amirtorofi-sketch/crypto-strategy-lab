@@ -1,0 +1,9 @@
+config.yaml
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+results/trades/*.csv
+results/backtest_summary.csv
+!results/live/.gitkeep

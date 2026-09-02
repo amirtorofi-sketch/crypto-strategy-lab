@@ -1,0 +1,58 @@
+name: Live Signals Runner
+
+on:
+  schedule:
+    # هر ۵ دقیقه اجرا می‌شود (UTC) - چون کوچک‌ترین تایم‌فریم استفاده‌شده
+    # بین استراتژی‌ها 5m است (بعضی ICT). خود runner.py برای هر استراتژی
+    # فقط روی تایم‌فریم خودش کار می‌کند و به‌خاطر چک «پوزیشن باز نداشتن
+    # قبل از ورود» سیگنال تکراری هم نمی‌فرستد، پس اجرای مکرر بی‌خطر است.
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}   # امکان اجرای دستی از تب Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-signals-runner
+  cancel-in-progress: false   # نگذار دو اجرا هم‌زمان با هم تداخل کنند؛ صف بشوند
+
+jobs:
+  run-signals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build config.yaml from secrets
+        run: |
+          cp config.example.yaml config.yaml
+          python - <<'PY'
+          import yaml, os
+          with open("config.yaml") as f:
+              cfg = yaml.safe_load(f)
+          cfg["telegram"]["bot_token"] = os.environ["TELEGRAM_BOT_TOKEN"]
+          cfg["telegram"]["chat_id"] = os.environ["TELEGRAM_CHAT_ID"]
+          with open("config.yaml", "w") as f:
+              yaml.safe_dump(cfg, f, allow_unicode=True)
+          PY
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Run live runner
+        run: python -m live.runner
+
+      - name: Commit updated ledger
+        run: |
+          git config user.name "trading-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add results/live/positions.json results/live/telegram_topics.json || true
+          git diff --quiet --cached || git commit -m "chore: update paper trading ledger [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          git push

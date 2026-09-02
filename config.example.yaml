@@ -1,0 +1,31 @@
+# این فایل را کپی کن به config.yaml و مقادیر را پر کن
+# config.yaml را هرگز کامیت نکن (در .gitignore هست)
+
+exchange:
+  id: binance
+  symbols:
+    - "BTC/USDT"
+    - "ETH/USDT"
+  # توجه: دیگر یک timeframe مشترک نداریم - هر استراتژی روی تایم‌فریم
+  # مخصوص به خودش (strategy.timeframe در کد) اجرا می‌شود، چون مثلاً
+  # ICT Silver Bullet روی 5m معنا دارد ولی Golden Cross روی 1d.
+  extra_bars_buffer: 50      # چند کندل اضافه روی حداقل لازم هر استراتژی واکشی شود
+  max_fetch_bars: 1000       # سقف تعداد کندل در هر درخواست (محدودیت بایننس)
+
+telegram:
+  bot_token: "PUT_YOUR_TELEGRAM_BOT_TOKEN_HERE"
+  chat_id: "PUT_YOUR_CHAT_ID_HERE"
+  use_topics: true            # اگر گروه‌ات Forum/Topics باشد، هر استراتژی تاپیک جدا می‌گیرد
+                               # (اگر گروه عادی/چت خصوصی باشد خودکار به حالت معمولی برمی‌گردد)
+
+paper_trading:
+  initial_balance_usdt: 1000
+  risk_per_trade_pct: 1.0      # درصد از بالانس هر پوزیشن
+  default_rr: 2.0               # ریسک به ریوارد پیش‌فرض اگر استراتژی مشخص نکرده باشد
+  max_open_per_strategy: 1      # حداکثر پوزیشن باز هم‌زمان به ازای هر استراتژی روی هر نماد
+
+backtest:
+  start_date: "2023-01-01"
+  end_date: "2024-12-31"
+  fee_pct: 0.04                 # کارمزد هر طرف معامله (٪) - نمونه بایننس فیوچرز تیکر
+  slippage_pct: 0.02
