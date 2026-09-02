@@ -13,6 +13,13 @@ def get_exchange(exchange_id: str = "binance") -> ccxt.Exchange:
     ex = klass({
         "enableRateLimit": True,
     })
+    if exchange_id == "binance":
+        # بایننس بعضی رنج‌های IP سرورهای ابری/CI (مثل GitHub Actions) را با خطای
+        # 451 "restricted location" بلاک می‌کند. data-api.binance.vision یک
+        # mirror رسمی و فقط-خواندنی برای دیتای عمومی مارکت است که این محدودیت
+        # را ندارد. فقط اندپوینت‌های عمومی (public) را عوض می‌کنیم؛ چیزی که
+        # این پروژه استفاده می‌کند (fetch_ohlcv, load_markets) کاملاً کافی است.
+        ex.urls["api"]["public"] = "https://data-api.binance.vision/api/v3"
     return ex
 
 
