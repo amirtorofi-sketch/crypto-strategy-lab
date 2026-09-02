@@ -302,5 +302,43 @@
     "pnl_usdt": null,
     "pnl_pct": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20260902T180315",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-02T18:03:15.877022+00:00",
+    "entry_price": 77379.68,
+    "stop_loss": 77701.62460066286,
+    "take_profit": 76923.0,
+    "size_usdt": 2403.50917023234,
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "rtm_supply_demand_zone__ETH-USDT__20260902T180317",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-02T18:03:17.805136+00:00",
+    "entry_price": 2394.56,
+    "stop_loss": 2373.448731236871,
+    "take_profit": 2450.979031446936,
+    "size_usdt": 1134.2567928376372,
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]

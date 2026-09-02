@@ -10,5 +10,7 @@
   "-1003942226034::smc_bos_continuation": 8,
   "-1003942226034::classic_macd_signal_cross": 11,
   "-1003942226034::smc_order_block_retest": 13,
-  "-1003942226034::pa_support_resistance_bounce": 17
+  "-1003942226034::pa_support_resistance_bounce": 17,
+  "-1003942226034::range_fade_extremes": 20,
+  "-1003942226034::rtm_supply_demand_zone": 22
 }
