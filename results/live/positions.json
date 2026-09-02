@@ -340,5 +340,24 @@
     "pnl_usdt": null,
     "pnl_pct": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "pa_three_white_soldiers_crows__ETH-USDT__20260902T205716",
+    "strategy": "pa_three_white_soldiers_crows",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-09-02T20:57:16.446744+00:00",
+    "entry_price": 2393.83,
+    "stop_loss": 2377.21,
+    "take_profit": 2480.899623542262,
+    "size_usdt": 1440.3309265944738,
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "reason": "سه سرباز سفید"
   }
 ]
