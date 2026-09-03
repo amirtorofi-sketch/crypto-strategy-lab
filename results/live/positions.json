@@ -1146,12 +1146,33 @@
     "take_profit": 2535.970948816504,
     "size_usdt": 3397.340395913418,
     "session": "New York",
+    "status": "loss",
+    "exit_time": "2026-09-03T22:27:38.027916+00:00",
+    "exit_price": 2499.760286142019,
+    "pnl_usdt": -12.7179,
+    "pnl_pct": -0.3743,
+    "duration_minutes": 146.3,
+    "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "classic_rsi_reversal_30_70__BTC-USDT__20260903T222736",
+    "strategy": "classic_rsi_reversal_30_70",
+    "category": "classic",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-03T22:27:36.594978+00:00",
+    "entry_price": 81142.16,
+    "stop_loss": 82010.58689112027,
+    "take_profit": 79405.30621775947,
+    "size_usdt": 934.3579848768496,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG صعودی"
+    "reason": "خروج RSI از اشباع خرید"
   }
 ]
