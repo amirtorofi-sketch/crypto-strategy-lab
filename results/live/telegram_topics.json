@@ -19,5 +19,7 @@
   "-1003942226034::classic_stochastic_cross": 41,
   "-1003942226034::smc_premium_discount_zone": 44,
   "-1003942226034::smc_fvg_fill_entry": 47,
-  "-1003942226034::rtm_imbalance_rebalance": 49
+  "-1003942226034::rtm_imbalance_rebalance": 49,
+  "-1003942226034::pa_pin_bar_rejection": 55,
+  "-1003942226034::smc_liquidity_sweep_reversal": 60
 }
