@@ -2,7 +2,8 @@
 دفتر پوزیشن‌های فرضی (paper trading ledger).
 روی دیسک به صورت JSON ذخیره می‌شود تا در GitHub Actions بین اجراها
 (با git commit) باقی بماند. هر ردیف یک پوزیشن فرضی است، مستقل برای
-هر استراتژی + نماد، تا در پایان ماه بتوان عملکرد هرکدام را جدا دید.
+هر استراتژی + نماد + تایم‌فریم + سشن معاملاتی، تا بعداً بتوان عملکرد
+هرکدام را جدا و دقیق تحلیل کرد.
 """
 from __future__ import annotations
 import json
@@ -13,6 +14,28 @@ from typing import List, Optional
 
 
 LEDGER_PATH = "results/live/positions.json"
+
+
+def get_trading_session(dt_utc: datetime) -> str:
+    """
+    سشن معاملاتی را بر اساس ساعت UTC زمان ورود تعیین می‌کند.
+    بازه‌ها بر اساس ساعات رایج فعالیت هر بازار (تقریبی) هستند:
+      - Asia            00:00–07:00 UTC  (توکیو/سیدنی)
+      - London           07:00–12:00 UTC
+      - London-NY Overlap 12:00–16:00 UTC  (پرنوسان‌ترین بازه)
+      - New York          16:00–21:00 UTC
+      - Off-hours          21:00–24:00 UTC
+    """
+    hour = dt_utc.astimezone(timezone.utc).hour
+    if 0 <= hour < 7:
+        return "Asia"
+    if 7 <= hour < 12:
+        return "London"
+    if 12 <= hour < 16:
+        return "London-NY Overlap"
+    if 16 <= hour < 21:
+        return "New York"
+    return "Off-hours"
 
 
 @dataclass
@@ -28,11 +51,13 @@ class PaperPosition:
     stop_loss: float
     take_profit: float
     size_usdt: float
+    session: str = "Unknown"      # Asia | London | London-NY Overlap | New York | Off-hours
     status: str = "open"          # open | win | loss
     exit_time: Optional[str] = None
     exit_price: Optional[float] = None
     pnl_usdt: Optional[float] = None
     pnl_pct: Optional[float] = None
+    duration_minutes: Optional[float] = None
     reason: str = ""
 
 
@@ -47,9 +72,11 @@ class PaperLedger:
             return []
         with open(self.path, "r", encoding="utf-8") as f:
             raw = json.load(f)
-        # سازگاری با دفترهای قدیمی که فیلد timeframe نداشتند
+        # سازگاری با دفترهای قدیمی که فیلد timeframe یا session نداشتند
         for p in raw:
             p.setdefault("timeframe", "1h")
+            p.setdefault("session", "Unknown")
+            p.setdefault("duration_minutes", None)
         return [PaperPosition(**p) for p in raw]
 
     def save(self):
@@ -60,7 +87,8 @@ class PaperLedger:
         return any(p.strategy == strategy and p.symbol == symbol and p.status == "open" for p in self.positions)
 
     def open_position(self, strategy: str, category: str, symbol: str, timeframe: str, signal, size_usdt: float) -> PaperPosition:
-        pos_id = f"{strategy}__{symbol.replace('/', '-')}__{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')}"
+        entry_dt = datetime.now(timezone.utc)
+        pos_id = f"{strategy}__{symbol.replace('/', '-')}__{entry_dt.strftime('%Y%m%dT%H%M%S')}"
         pos = PaperPosition(
             id=pos_id,
             strategy=strategy,
@@ -68,11 +96,12 @@ class PaperLedger:
             symbol=symbol,
             timeframe=timeframe,
             side=signal.side,
-            entry_time=datetime.now(timezone.utc).isoformat(),
+            entry_time=entry_dt.isoformat(),
             entry_price=signal.entry,
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             size_usdt=size_usdt,
+            session=get_trading_session(entry_dt),
             reason=signal.reason,
         )
         self.positions.append(pos)
@@ -102,11 +131,13 @@ class PaperLedger:
                 direction = 1 if p.side == "long" else -1
                 raw_pct = direction * (exit_price - p.entry_price) / p.entry_price * 100
                 net_pct = raw_pct - fee_pct * 2
+                exit_dt = datetime.now(timezone.utc)
                 p.status = status
-                p.exit_time = datetime.now(timezone.utc).isoformat()
+                p.exit_time = exit_dt.isoformat()
                 p.exit_price = exit_price
                 p.pnl_pct = round(net_pct, 4)
                 p.pnl_usdt = round(p.size_usdt * net_pct / 100, 4)
+                p.duration_minutes = round((exit_dt - datetime.fromisoformat(p.entry_time)).total_seconds() / 60, 1)
                 closed_now.append(p)
         return closed_now
 
