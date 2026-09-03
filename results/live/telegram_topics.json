@@ -14,5 +14,6 @@
   "-1003942226034::range_fade_extremes": 20,
   "-1003942226034::rtm_supply_demand_zone": 22,
   "-1003942226034::pa_engulfing_candle": 26,
-  "-1003942226034::pa_inside_bar_breakout": 28
+  "-1003942226034::pa_inside_bar_breakout": 28,
+  "-1003942226034::classic_ma_crossover_20_50": 34
 }
