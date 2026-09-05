@@ -22,5 +22,6 @@
   "-1003942226034::rtm_imbalance_rebalance": 49,
   "-1003942226034::pa_pin_bar_rejection": 55,
   "-1003942226034::smc_liquidity_sweep_reversal": 60,
-  "-1003942226034::smc_breaker_block": "unsupported"
+  "-1003942226034::smc_breaker_block": "unsupported",
+  "-1003942226034::smc_equal_highs_lows_grab": 151
 }
