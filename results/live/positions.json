@@ -1692,12 +1692,12 @@
     "take_profit": 2452.37,
     "size_usdt": 2795.5848136597706,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-05T15:07:57.422241+00:00",
+    "exit_price": 2458.3924957326662,
+    "pnl_usdt": -12.2365,
+    "pnl_pct": -0.4377,
+    "duration_minutes": 608.6,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -1741,5 +1741,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه عرضه تازه"
+  },
+  {
+    "id": "range_fade_extremes__ETH-USDT__20260905T150757",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-05T15:07:57.817853+00:00",
+    "entry_price": 2458.99,
+    "stop_loss": 2463.5521295406575,
+    "take_profit": 2456.0,
+    "size_usdt": 5390.004773177727,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
