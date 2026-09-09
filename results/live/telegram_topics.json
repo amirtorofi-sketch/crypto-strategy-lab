@@ -30,5 +30,6 @@
   "-1003942226034::classic_golden_cross_50_200": 273,
   "-1003942226034::classic_volume_spike_breakout": 291,
   "-1003942226034::ict_breakaway_imbalance": 293,
-  "-1003942226034::ict_optimal_trade_entry_ote": 321
+  "-1003942226034::ict_optimal_trade_entry_ote": 321,
+  "-1003942226034::ict_mitigation_block": 352
 }
