@@ -4618,5 +4618,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین ابر کومو"
+  },
+  {
+    "id": "smc_order_block_retest__BTC-USDT__20260911T011310",
+    "strategy": "smc_order_block_retest",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-11T01:13:10.091769+00:00",
+    "entry_price": 76977.4,
+    "stop_loss": 76352.77915053234,
+    "take_profit": 78089.60849467655,
+    "size_usdt": 1232.3860157022548,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به بولیش Order Block"
   }
 ]
