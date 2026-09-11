@@ -4611,12 +4611,12 @@
     "take_profit": 2344.7203509735314,
     "size_usdt": 1018.389415564143,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-11T05:58:29.277613+00:00",
+    "exit_price": 2467.8774999999996,
+    "pnl_usdt": -10.8147,
+    "pnl_pct": -1.0619,
+    "duration_minutes": 395.9,
     "reason": "شکست پایین ابر کومو"
   },
   {
