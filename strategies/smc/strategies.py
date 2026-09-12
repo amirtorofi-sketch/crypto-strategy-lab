@@ -122,31 +122,6 @@ class PremiumDiscountZone(Strategy):
         return None
 
 
-class BreakerBlock(Strategy):
-    name = "smc_breaker_block"
-    category = "smc"
-    description = "Breaker Block: بازگشت به Order Block شکسته‌شده که حالا نقش عکس دارد"
-    min_bars = 60
-    timeframe = "1h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        obs = ind.find_order_blocks(df, lookback=50)
-        structure = ind.detect_bos_choch(df)
-        if not obs or structure is None:
-            return None
-        ob = obs[-1]
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        # اگر یک بولیش OB بود ولی ساختار بعداً نزولی شد -> بریکر نزولی (مقاومت جدید)
-        if ob["type"] == "bullish" and structure in ("bearish_bos", "bearish_choch") \
-                and ob["bottom"] <= close <= ob["top"] * 1.01:
-            return Signal("short", close, ob["top"] + 0.3 * atrv, close - 3 * atrv, "بریکر بلاک نزولی")
-        if ob["type"] == "bearish" and structure in ("bullish_bos", "bullish_choch") \
-                and ob["top"] * 0.99 <= close <= ob["top"]:
-            return Signal("long", close, ob["bottom"] - 0.3 * atrv, close + 3 * atrv, "بریکر بلاک صعودی")
-        return None
-
-
 class EqualHighsLowsLiquidity(Strategy):
     name = "smc_equal_highs_lows_grab"
     category = "smc"
@@ -174,5 +149,5 @@ class EqualHighsLowsLiquidity(Strategy):
 
 STRATEGIES = [
     BOSContinuation, CHoCHReversal, OrderBlockRetest, FairValueGapFill,
-    LiquiditySweepReversal, PremiumDiscountZone, BreakerBlock, EqualHighsLowsLiquidity,
+    LiquiditySweepReversal, PremiumDiscountZone, EqualHighsLowsLiquidity,
 ]
