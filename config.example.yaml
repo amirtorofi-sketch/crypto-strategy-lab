@@ -6,6 +6,9 @@ exchange:
   symbols:
     - "BTC/USDT"
     - "ETH/USDT"
+    - "SOL/USDT"
+    - "BNB/USDT"
+    - "PAXG/USDT"
   # توجه: دیگر یک timeframe مشترک نداریم - هر استراتژی روی تایم‌فریم
   # مخصوص به خودش (strategy.timeframe در کد) اجرا می‌شود، چون مثلاً
   # ICT Silver Bullet روی 5m معنا دارد ولی Golden Cross روی 1d.
@@ -20,7 +23,7 @@ telegram:
 
 paper_trading:
   initial_balance_usdt: 1000
-  risk_per_trade_pct: 1.0      # درصد از بالانس هر پوزیشن
+  trade_value_usdt: 10.0        # ارزش (notional) ثابت هر پوزیشن فرضی، نه ریسک هر معامله
   default_rr: 2.0               # ریسک به ریوارد پیش‌فرض اگر استراتژی مشخص نکرده باشد
   max_open_per_strategy: 1      # حداکثر پوزیشن باز هم‌زمان به ازای هر استراتژی روی هر نماد
 
