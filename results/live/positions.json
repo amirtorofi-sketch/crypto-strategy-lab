@@ -7131,12 +7131,12 @@
     "take_profit": 77295.104,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-12T22:15:44.096622+00:00",
+    "exit_price": 77295.104,
+    "pnl_usdt": 0.0121,
+    "pnl_pct": 0.1211,
+    "duration_minutes": 194.1,
     "reason": "برگشت از باند پایین بولینگر"
   },
   {
@@ -7614,12 +7614,12 @@
     "take_profit": 101.0262255327331,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-12T22:15:46.389385+00:00",
+    "exit_price": 101.54845293607202,
+    "pnl_usdt": -0.0197,
+    "pnl_pct": -0.1968,
+    "duration_minutes": 14.8,
     "reason": "ورود در FVG نزولی"
   }
 ]
