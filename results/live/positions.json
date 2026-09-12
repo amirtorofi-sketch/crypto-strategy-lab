@@ -5857,5 +5857,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای رنج افتتاحیه لندن"
+  },
+  {
+    "id": "pa_pin_bar_rejection__SOL-USDT__20260912T081543",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-12T08:15:43.662745+00:00",
+    "entry_price": 101.65,
+    "stop_loss": 102.02663538010472,
+    "take_profit": 98.11729239790532,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
