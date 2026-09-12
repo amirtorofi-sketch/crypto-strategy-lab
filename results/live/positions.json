@@ -6942,12 +6942,12 @@
     "take_profit": 77380.43,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-12T17:15:44.491236+00:00",
+    "exit_price": 77380.43,
+    "pnl_usdt": -0.0106,
+    "pnl_pct": -0.1064,
+    "duration_minutes": 14.7,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -6970,5 +6970,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20260912T171545",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-12T17:15:45.221341+00:00",
+    "entry_price": 77357.28,
+    "stop_loss": 77528.5002138243,
+    "take_profit": 77380.43,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
