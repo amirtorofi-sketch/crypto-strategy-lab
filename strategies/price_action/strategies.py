@@ -4,27 +4,6 @@ from strategies.base import Strategy, Signal
 from strategies import indicators as ind
 
 
-class BullishBearishEngulfing(Strategy):
-    name = "pa_engulfing_candle"
-    category = "price_action"
-    description = "کندل انگالفینگ صعودی/نزولی در جهت روند کوتاه‌مدت"
-    min_bars = 25
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        c1, c2 = df.iloc[-2], df.iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        bullish = c1["close"] < c1["open"] and c2["close"] > c2["open"] and \
-                  c2["close"] > c1["open"] and c2["open"] < c1["close"]
-        bearish = c1["close"] > c1["open"] and c2["close"] < c2["open"] and \
-                  c2["close"] < c1["open"] and c2["open"] > c1["close"]
-        if bullish:
-            return Signal("long", c2["close"], c2["low"] - 0.2 * atrv, c2["close"] + 2 * atrv, "انگالفینگ صعودی")
-        if bearish:
-            return Signal("short", c2["close"], c2["high"] + 0.2 * atrv, c2["close"] - 2 * atrv, "انگالفینگ نزولی")
-        return None
-
-
 class PinBarRejection(Strategy):
     name = "pa_pin_bar_rejection"
     category = "price_action"
@@ -89,27 +68,6 @@ class DoubleTopBottom(Strategy):
             l1, l2 = lows.iloc[0], lows.iloc[1]
             if abs(l1 - l2) / l1 < 0.01 and close > max(l1, l2) * 1.01:
                 return Signal("long", close, min(l1, l2) - 0.5 * atrv, close + 2.5 * atrv, "دابل باتم")
-        return None
-
-
-class HeadAndShoulders(Strategy):
-    name = "pa_head_and_shoulders"
-    category = "price_action"
-    description = "الگوی سر و شانه (ساده‌شده بر اساس ۳ سوئینگ های اخیر)"
-    min_bars = 80
-    timeframe = "1d"
-
-    def generate_signal(self, df: pd.DataFrame):
-        sh, _ = ind.swing_points(df, 3, 3)
-        highs = df["high"][sh].tail(3)
-        if len(highs) < 3:
-            return None
-        l_sh, head, r_sh = highs.iloc[0], highs.iloc[1], highs.iloc[2]
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        neckline = min(df["low"].iloc[-40:])
-        if head > l_sh and head > r_sh and abs(l_sh - r_sh) / l_sh < 0.02 and close < neckline:
-            return Signal("short", close, head, close - 2.5 * atrv, "سر و شانه سقف")
         return None
 
 
@@ -185,6 +143,6 @@ class ThreeWhiteSoldiers(Strategy):
 
 
 STRATEGIES = [
-    BullishBearishEngulfing, PinBarRejection, InsideBarBreakout, DoubleTopBottom,
-    HeadAndShoulders, SupportResistanceBounce, TrendlineBreak, ThreeWhiteSoldiers,
+    PinBarRejection, InsideBarBreakout, DoubleTopBottom,
+    SupportResistanceBounce, TrendlineBreak, ThreeWhiteSoldiers,
 ]
