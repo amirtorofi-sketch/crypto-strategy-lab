@@ -6039,12 +6039,12 @@
     "take_profit": 2541.697685826961,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-12T13:30:52.030984+00:00",
+    "exit_price": 2541.697685826961,
+    "pnl_usdt": 0.0318,
+    "pnl_pct": 0.3181,
+    "duration_minutes": 209.9,
     "reason": "ورود در FVG صعودی"
   },
   {
