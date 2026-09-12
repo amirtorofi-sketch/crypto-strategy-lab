@@ -109,9 +109,11 @@ def main():
                 if signal is None:
                     continue
 
-                risk_amount = pt_cfg["initial_balance_usdt"] * (pt_cfg["risk_per_trade_pct"] / 100)
-                stop_dist_pct = abs(signal.entry - signal.stop_loss) / signal.entry * 100
-                size_usdt = risk_amount / (stop_dist_pct / 100) if stop_dist_pct > 0 else 0
+                # ارزش (notional) هر پوزیشن فرضی ثابت است، نه بر اساس فاصله‌ی حد ضرر.
+                # یعنی هر معامله دقیقاً trade_value_usdt دلار "ارزش" دارد، صرف نظر
+                # از اینکه استاپ چقدر نزدیک/دور باشد (که قبلاً باعث می‌شد استاپ‌های
+                # خیلی نزدیک اندازه‌ی پوزیشن را به‌صورت غیرمنطقی بزرگ کنند).
+                size_usdt = pt_cfg["trade_value_usdt"]
 
                 ledger.open_position(strat.name, strat.category, symbol, timeframe, signal, size_usdt)
                 text = format_signal_message(strat.name, strat.category, timeframe, symbol, signal)
