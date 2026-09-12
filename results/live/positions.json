@@ -6753,12 +6753,12 @@
     "take_profit": 725.6652414977477,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-12T19:30:52.550787+00:00",
+    "exit_price": 725.6652414977477,
+    "pnl_usdt": 0.1355,
+    "pnl_pct": 1.355,
+    "duration_minutes": 269.8,
     "reason": "کراس نزولی MACD"
   },
   {
@@ -7159,5 +7159,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BNB-USDT__20260912T193053",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-12T19:30:53.205421+00:00",
+    "entry_price": 725.82,
+    "stop_loss": 728.0170074146313,
+    "take_profit": 722.9282715447385,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
