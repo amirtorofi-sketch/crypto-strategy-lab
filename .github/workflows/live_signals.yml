@@ -1,13 +1,12 @@
 name: Live Signals Runner
 
 on:
-  schedule:
-    # هر ۱۵ دقیقه اجرا می‌شود (UTC). قبلاً هر ۵ دقیقه بود، ولی گیت‌هاب
-    # برای زمان‌بندی‌های خیلی مکرر (به‌خصوص روی ریپوهای رایگان/عمومی)
-    # اجراها را در دوره‌های پرترافیک به تأخیر می‌اندازد یا رد می‌کند؛
-    # ۱۵ دقیقه فاصله‌ی قابل‌اعتمادتری برای Scheduled workflows گیت‌هاب است.
-    - cron: "*/15 * * * *"
-  workflow_dispatch: {}   # امکان اجرای دستی از تب Actions
+  # ⚠️ کرون داخلی گیت‌هاب حذف شد چون غیرقابل‌اعتماده و باعث اجرای نامنظم می‌شه.
+  # به‌جاش از سرویس خارجی cron-job.org استفاده کن که هر ۱۵ دقیقه این آدرس رو صدا بزنه:
+  # POST https://api.github.com/repos/<owner>/<repo>/actions/workflows/live_signals.yml/dispatches
+  # هدرها: Authorization: token <YOUR_GITHUB_PAT>  و  Accept: application/vnd.github+json
+  # بادی: {"ref": "main"}
+  workflow_dispatch: {}   # امکان اجرای دستی از تب Actions یا از طریق cron-job.org
 
 permissions:
   contents: write
