@@ -52,28 +52,6 @@ class RangeBoundFadeStrategy(Strategy):
         return None
 
 
-class RangeBreakoutRetest(Strategy):
-    name = "range_breakout_retest"
-    category = "range_rtm"
-    description = "شکست رنج و سپس بازگشت (retest) موفق به مرز رنج شکسته‌شده"
-    min_bars = 50
-    timeframe = "15m"
-
-    def generate_signal(self, df: pd.DataFrame):
-        window = df.iloc[-30:-2]
-        high, low = window["high"].max(), window["low"].min()
-        close = df["close"].iloc[-1]
-        prev2 = df["close"].iloc[-3]
-        atrv = ind.atr(df).iloc[-1]
-        broke_up = prev2 > high
-        broke_down = prev2 < low
-        if broke_up and abs(close - high) < atrv * 0.5 and close > high:
-            return Signal("long", close, high - 0.5 * atrv, close + 3 * atrv, "ریتست موفق بعد از شکست سقف رنج")
-        if broke_down and abs(close - low) < atrv * 0.5 and close < low:
-            return Signal("short", close, low + 0.5 * atrv, close - 3 * atrv, "ریتست موفق بعد از شکست کف رنج")
-        return None
-
-
 class ImbalanceRebalanceRTM(Strategy):
     name = "rtm_imbalance_rebalance"
     category = "range_rtm"
@@ -97,5 +75,5 @@ class ImbalanceRebalanceRTM(Strategy):
 
 
 STRATEGIES = [
-    SupplyDemandZoneReaction, RangeBoundFadeStrategy, RangeBreakoutRetest, ImbalanceRebalanceRTM,
+    SupplyDemandZoneReaction, RangeBoundFadeStrategy, ImbalanceRebalanceRTM,
 ]
