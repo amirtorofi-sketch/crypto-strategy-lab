@@ -6466,5 +6466,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای inside bar"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__SOL-USDT__20260912T124547",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-12T12:45:47.302501+00:00",
+    "entry_price": 102.25,
+    "stop_loss": 102.30645125961321,
+    "take_profit": 101.70323110580173,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
