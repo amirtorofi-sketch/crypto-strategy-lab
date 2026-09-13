@@ -11065,5 +11065,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20260913T181549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-13T18:15:49.921581+00:00",
+    "entry_price": 2506.52,
+    "stop_loss": 2504.3319500151833,
+    "take_profit": 2520.170416540137,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
