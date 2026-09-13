@@ -8664,12 +8664,12 @@
     "take_profit": 77199.89499999999,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-13T07:15:42.728435+00:00",
+    "exit_price": 77199.89499999999,
+    "pnl_usdt": -0.0162,
+    "pnl_pct": -0.162,
+    "duration_minutes": 14.7,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -8902,5 +8902,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین رنج افتتاحیه لندن"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20260913T071543",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-13T07:15:43.170570+00:00",
+    "entry_price": 77170.73,
+    "stop_loss": 77367.76186824412,
+    "take_profit": 77199.89499999999,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
