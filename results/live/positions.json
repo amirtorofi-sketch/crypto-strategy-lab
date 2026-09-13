@@ -11142,12 +11142,12 @@
     "take_profit": 76684.99062582082,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-13T23:15:41.852324+00:00",
+    "exit_price": 76684.99062582082,
+    "pnl_usdt": 0.0695,
+    "pnl_pct": 0.6951,
+    "duration_minutes": 239.9,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
   },
   {
