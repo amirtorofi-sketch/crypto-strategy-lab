@@ -8566,5 +8566,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20260913T061543",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-13T06:15:43.841500+00:00",
+    "entry_price": 4357.52,
+    "stop_loss": 4358.1579847929215,
+    "take_profit": 4355.036793392315,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
