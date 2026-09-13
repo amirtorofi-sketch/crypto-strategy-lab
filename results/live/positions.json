@@ -11646,12 +11646,12 @@
     "take_profit": 101.95437010889214,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-13T23:30:49.417033+00:00",
+    "exit_price": 99.41370865940719,
+    "pnl_usdt": -0.0726,
+    "pnl_pct": -0.7259,
+    "duration_minutes": 45.0,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
