@@ -7978,5 +7978,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی MACD"
+  },
+  {
+    "id": "pa_pin_bar_rejection__SOL-USDT__20260913T023054",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-13T02:30:54.515049+00:00",
+    "entry_price": 101.84,
+    "stop_loss": 102.49288678737787,
+    "take_profit": 98.7822642524428,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
