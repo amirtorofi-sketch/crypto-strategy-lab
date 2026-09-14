@@ -13452,12 +13452,12 @@
     "take_profit": 2563.0875639239675,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-14T08:15:49.290331+00:00",
+    "exit_price": 2517.294162405069,
+    "pnl_usdt": -0.0269,
+    "pnl_pct": -0.2686,
+    "duration_minutes": 14.7,
     "reason": "میتیگیشن بلاک صعودی"
   },
   {
@@ -13501,5 +13501,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "ict_mitigation_block__ETH-USDT__20260914T081549",
+    "strategy": "ict_mitigation_block",
+    "category": "ict",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-14T08:15:49.664092+00:00",
+    "entry_price": 2520.71,
+    "stop_loss": 2517.1478345199753,
+    "take_profit": 2563.942482200377,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "میتیگیشن بلاک صعودی"
   }
 ]
