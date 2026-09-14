@@ -68,6 +68,7 @@ def main():
     ex = get_exchange(ex_cfg["id"])
     groups = group_strategies_by_timeframe()
     ledger = PaperLedger()
+    min_reward_pct = pt_cfg.get("min_reward_pct", 0.0)
 
     print(f"تایم‌فریم‌های فعال: {list(groups.keys())}")
 
@@ -115,7 +116,15 @@ def main():
                 # خیلی نزدیک اندازه‌ی پوزیشن را به‌صورت غیرمنطقی بزرگ کنند).
                 size_usdt = pt_cfg["trade_value_usdt"]
 
-                ledger.open_position(strat.name, strat.category, symbol, timeframe, signal, size_usdt)
+                new_pos = ledger.open_position(
+                    strat.name, strat.category, symbol, timeframe, signal, size_usdt,
+                    min_reward_pct=min_reward_pct,
+                )
+                if new_pos is None:
+                    # سیگنال نامعتبر بود (جهت اشتباه TP/SL یا فاصله‌ی سود خیلی کوچک)؛
+                    # دلیل دقیق در paper_trader.py چاپ شده - هیچ پیامی فرستاده نمی‌شود.
+                    continue
+
                 text = format_signal_message(strat.name, strat.category, timeframe, symbol, signal)
                 notify(tg, strat.name, text)
                 print(f"  [{strat.name}] سیگنال جدید: {signal.side} @ {signal.entry}")
