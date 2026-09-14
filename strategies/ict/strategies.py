@@ -18,20 +18,23 @@ class OptimalTradeEntry(Strategy):
         window = df.iloc[-30:]
         close = df["close"].iloc[-1]
         atrv = ind.atr(df).iloc[-1]
+        if pd.isna(atrv) or atrv <= 0:
+            return None
+        leg_low, leg_high = window["low"].min(), window["high"].max()
+        rng = leg_high - leg_low
+        if rng <= 0:
+            return None
         if structure == "bullish_bos":
-            leg_low, leg_high = window["low"].min(), window["high"].max()
-            rng = leg_high - leg_low
             fib_62 = leg_high - 0.62 * rng
             fib_79 = leg_high - 0.79 * rng
             if fib_79 <= close <= fib_62:
-                return Signal("long", close, leg_low, leg_high, "ورود در ناحیه OTE صعودی")
+                # استاپ با بافر ۰.۲ ATR زیر کف پا، نه دقیقاً روی آن (رد شدنِ ساده‌ی کف)
+                return Signal("long", close, leg_low - 0.2 * atrv, leg_high, "ورود در ناحیه OTE صعودی")
         else:
-            leg_low, leg_high = window["low"].min(), window["high"].max()
-            rng = leg_high - leg_low
             fib_62 = leg_low + 0.62 * rng
             fib_79 = leg_low + 0.79 * rng
             if fib_62 <= close <= fib_79:
-                return Signal("short", close, leg_high, leg_low, "ورود در ناحیه OTE نزولی")
+                return Signal("short", close, leg_high + 0.2 * atrv, leg_low, "ورود در ناحیه OTE نزولی")
         return None
 
 
