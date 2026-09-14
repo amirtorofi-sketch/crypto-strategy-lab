@@ -16014,12 +16014,33 @@
     "take_profit": 4320.286108939288,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-09-14T22:15:49.343579+00:00",
+    "exit_price": 4304.248866927285,
+    "pnl_usdt": -0.0123,
+    "pnl_pct": -0.1232,
+    "duration_minutes": 30.0,
+    "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20260914T221549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-14T22:15:49.739129+00:00",
+    "entry_price": 4304.08,
+    "stop_loss": 4306.175089224936,
+    "take_profit": 4291.204256458868,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG صعودی"
+    "reason": "ورود در FVG نزولی"
   }
 ]
