@@ -15951,12 +15951,12 @@
     "take_profit": 2522.2850000000003,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-14T23:30:55.364234+00:00",
+    "exit_price": 2522.2850000000003,
+    "pnl_usdt": 0.1334,
+    "pnl_pct": 1.3343,
+    "duration_minutes": 119.9,
     "reason": "برگشت از باند بالای بولینگر"
   },
   {
