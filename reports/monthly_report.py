@@ -37,8 +37,13 @@ def build_report(year: int, month: int) -> pd.DataFrame:
 
     rows = []
     for strat_name, positions in by_strategy.items():
-        wins = [p for p in positions if p.status == "win"]
-        losses = [p for p in positions if p.status == "loss"]
+        # توجه: wins/losses بر اساس علامت واقعی pnl_usdt تعیین می‌شود، نه
+        # position.status (که فقط یعنی «برخورد به TP یا SL»). این دو همیشه
+        # یکی نیستند - وقتی برخورد به TP بود ولی کارمزد کل سود را می‌خورد،
+        # status='win' است ولی pnl واقعاً منفی است. برای وین‌ریت و پروفیت‌فکتور
+        # درست، باید سود/زیان واقعی ملاک باشد.
+        wins = [p for p in positions if (p.pnl_usdt or 0) >= 0]
+        losses = [p for p in positions if (p.pnl_usdt or 0) < 0]
         total = len(positions)
         pnl_sum = sum(p.pnl_usdt or 0 for p in positions)
         pnl_pct_sum = sum(p.pnl_pct or 0 for p in positions)

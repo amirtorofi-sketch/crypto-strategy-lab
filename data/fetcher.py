@@ -13,6 +13,15 @@ def get_exchange(exchange_id: str = "binance") -> ccxt.Exchange:
     ex = klass({
         "enableRateLimit": True,
     })
+    if exchange_id == "binance":
+        # این پروژه فقط بازار اسپات (BTC/USDT, ETH/USDT) استفاده می‌کند. بدون
+        # این خط، ccxt هنگام load_markets علاوه بر اسپات، به fapi.binance.com
+        # (فیوچرز) و dapi.binance.com (inverse) هم سر می‌زند که همان بلاک
+        # 451 روی سرورهای GitHub Actions را دارند.
+        ex.options["fetchMarkets"] = {"types": ["spot"], "loadAllOptions": False}
+        # اندپوینت عمومی اسپات را به mirror رسمی و بدون محدودیت جغرافیایی
+        # بایننس هدایت کن (مخصوص همین سناریوی سرورهای ابری/CI ساخته شده).
+        ex.urls["api"]["public"] = "https://data-api.binance.vision/api/v3"
     return ex
 
 

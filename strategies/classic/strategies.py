@@ -98,26 +98,6 @@ class BollingerBandBounce(Strategy):
         return None
 
 
-class BollingerBreakout(Strategy):
-    name = "classic_bollinger_breakout"
-    category = "classic"
-    description = "شکست باند بولینگر همراه با انبساط باند (اسکوییز)"
-    min_bars = 40
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        upper, mid, lower = ind.bollinger_bands(df["close"])
-        bandwidth = (upper - lower) / mid
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        if bandwidth.iloc[-2] < bandwidth.rolling(50).mean().iloc[-2] * 0.7:
-            if close > upper.iloc[-1]:
-                return Signal("long", close, mid.iloc[-1], close + 2 * atrv, "شکست بولینگر بعد از اسکوییز")
-            if close < lower.iloc[-1]:
-                return Signal("short", close, mid.iloc[-1], close - 2 * atrv, "شکست بولینگر بعد از اسکوییز")
-        return None
-
-
 class StochasticCross(Strategy):
     name = "classic_stochastic_cross"
     category = "classic"
@@ -136,87 +116,7 @@ class StochasticCross(Strategy):
         return None
 
 
-class DonchianBreakout(Strategy):
-    name = "classic_donchian_channel_breakout"
-    category = "classic"
-    description = "شکست کانال دانچیان ۲۰ کندلی (سبک ترتل تریدرز)"
-    min_bars = 30
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        upper, lower = ind.donchian(df, 20)
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        if close > upper.iloc[-2]:
-            return Signal("long", close, close - 2 * atrv, close + 4 * atrv, "شکست سقف کانال دانچیان")
-        if close < lower.iloc[-2]:
-            return Signal("short", close, close + 2 * atrv, close - 4 * atrv, "شکست کف کانال دانچیان")
-        return None
-
-
-class ADXTrendFollowing(Strategy):
-    name = "classic_adx_trend_following"
-    category = "classic"
-    description = "ورود در جهت روند وقتی ADX>25 و جهت +DI/-DI تایید کند"
-    min_bars = 40
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        adx_val = ind.adx(df)
-        e20 = ind.ema(df["close"], 20)
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        if adx_val.iloc[-1] > 25:
-            if close > e20.iloc[-1] and df["close"].iloc[-2] <= e20.iloc[-2]:
-                return Signal("long", close, close - 1.5 * atrv, close + 3 * atrv, "روند قوی ADX + بازگشت به EMA20")
-            if close < e20.iloc[-1] and df["close"].iloc[-2] >= e20.iloc[-2]:
-                return Signal("short", close, close + 1.5 * atrv, close - 3 * atrv, "روند قوی ADX + بازگشت به EMA20")
-        return None
-
-
-class IchimokuKumoBreakout(Strategy):
-    name = "classic_ichimoku_kumo_breakout"
-    category = "classic"
-    description = "شکست ابر کومو ایچیموکو همراه با تنکان/کیجون"
-    min_bars = 60
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        tenkan, kijun, span_a, span_b = ind.ichimoku(df)
-        close = df["close"].iloc[-1]
-        prev_close = df["close"].iloc[-2]
-        top_cloud = max(span_a.iloc[-1], span_b.iloc[-1])
-        bottom_cloud = min(span_a.iloc[-1], span_b.iloc[-1])
-        atrv = ind.atr(df).iloc[-1]
-        if prev_close <= top_cloud and close > top_cloud and tenkan.iloc[-1] > kijun.iloc[-1]:
-            return Signal("long", close, bottom_cloud, close + 3 * atrv, "شکست بالای ابر کومو")
-        if prev_close >= bottom_cloud and close < bottom_cloud and tenkan.iloc[-1] < kijun.iloc[-1]:
-            return Signal("short", close, top_cloud, close - 3 * atrv, "شکست پایین ابر کومو")
-        return None
-
-
-class VolumeSpikeBreakout(Strategy):
-    name = "classic_volume_spike_breakout"
-    category = "classic"
-    description = "شکست همراه با اسپایک حجم (بیش از ۲ برابر میانگین)"
-    min_bars = 30
-    timeframe = "15m"
-
-    def generate_signal(self, df: pd.DataFrame):
-        vol_avg = df["volume"].rolling(20).mean()
-        high20 = df["high"].rolling(20).max()
-        low20 = df["low"].rolling(20).min()
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        if df["volume"].iloc[-1] > 2 * vol_avg.iloc[-2] and close > high20.iloc[-2]:
-            return Signal("long", close, close - 2 * atrv, close + 4 * atrv, "شکست سقف با اسپایک حجم")
-        if df["volume"].iloc[-1] > 2 * vol_avg.iloc[-2] and close < low20.iloc[-2]:
-            return Signal("short", close, close + 2 * atrv, close - 4 * atrv, "شکست کف با اسپایک حجم")
-        return None
-
-
 STRATEGIES = [
     MACrossover, GoldenCross50_200, RSIOversoldOverbought, MACDCrossover,
-    BollingerBandBounce, BollingerBreakout, StochasticCross, DonchianBreakout,
-    ADXTrendFollowing, IchimokuKumoBreakout, VolumeSpikeBreakout,
+    BollingerBandBounce, StochasticCross,
 ]

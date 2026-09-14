@@ -43,3 +43,49 @@ class Strategy:
 
     def __repr__(self):
         return f"<Strategy {self.name} ({self.category}, {self.timeframe})>"
+
+
+def validate_signal(signal: Optional[Signal], min_reward_pct: float = 0.0) -> tuple[bool, str]:
+    """
+    اعتبارسنجی مرکزی یک سیگنال - هم در بک‌تست و هم در اجرای زنده استفاده
+    می‌شود تا هر دو دقیقاً یک منطق را رعایت کنند.
+
+    دو نوع بررسی انجام می‌دهد:
+    ۱) صحت جهت (همیشه چک می‌شود، صرف نظر از min_reward_pct): برای یک
+       پوزیشن long، حد سود باید بالاتر و حد ضرر باید پایین‌تر از ورود
+       باشد (برعکسش برای short). این یک باگ واقعی را می‌گیرد - نه یک
+       تنظیم قابل‌بحث - چون اگر رعایت نشود، حتی رسیدن قیمت به "حد سود"
+       ممکن است در واقعیت به‌معنی ضرر باشد.
+    ۲) حداقل فاصله‌ی سودآوری (فقط اگر min_reward_pct > 0 داده شود): اگر
+       فاصله‌ی حد سود تا ورود آن‌قدر کوچک باشد که کارمزد رفت‌وبرگشت کل
+       سود را بخورد، سیگنال رد می‌شود.
+
+    خروجی: (معتبر است؟, دلیل رد در صورت نامعتبر بودن)
+    """
+    if signal is None:
+        return False, "سیگنال خالی است"
+    if signal.entry <= 0:
+        return False, "قیمت ورود باید مثبت باشد"
+
+    if signal.side == "long":
+        if signal.take_profit <= signal.entry:
+            return False, "برای پوزیشن long، حد سود باید بالاتر از قیمت ورود باشد"
+        if signal.stop_loss >= signal.entry:
+            return False, "برای پوزیشن long، حد ضرر باید پایین‌تر از قیمت ورود باشد"
+    elif signal.side == "short":
+        if signal.take_profit >= signal.entry:
+            return False, "برای پوزیشن short، حد سود باید پایین‌تر از قیمت ورود باشد"
+        if signal.stop_loss <= signal.entry:
+            return False, "برای پوزیشن short، حد ضرر باید بالاتر از قیمت ورود باشد"
+    else:
+        return False, f"side نامعتبر: {signal.side!r}"
+
+    if min_reward_pct > 0:
+        reward_pct = abs(signal.take_profit - signal.entry) / signal.entry * 100
+        if reward_pct < min_reward_pct:
+            return False, (
+                f"فاصله‌ی حد سود تا ورود ({reward_pct:.4f}%) کمتر از حداقل "
+                f"لازم برای پوشش کارمزد ({min_reward_pct}%) است"
+            )
+
+    return True, ""

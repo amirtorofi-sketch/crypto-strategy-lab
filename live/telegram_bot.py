@@ -123,11 +123,26 @@ def format_signal_message(strategy_name: str, category: str, timeframe: str, sym
 
 
 def format_close_message(position) -> str:
-    emoji = "✅" if position.status == "win" else "❌"
+    """
+    برچسب «سود/ضرر» بر اساس علامت واقعی pnl_usdt تعیین می‌شود، نه بر اساس
+    position.status (که فقط یعنی «به کدام سطح قیمتی برخورد کرد: TP یا SL»).
+    قبلاً چون این دو همیشه یکی فرض می‌شدند، وقتی برخورد به TP بود ولی بعد از
+    کسر کارمزد خالص منفی می‌شد، پیام می‌گفت «سود» ولی عدد داخل پرانتز منفی
+    بود - دقیقاً همان ناسازگاری که در تلگرام دیده می‌شد.
+    """
+    is_actually_profit = (position.pnl_usdt or 0) >= 0
+    emoji = "✅" if is_actually_profit else "❌"
+    label = "سود" if is_actually_profit else "ضرر"
+    hit_note = ""
+    if is_actually_profit != (position.status == "win"):
+        # موردی که به TP خورده ولی خالص ضرر شده (یا برعکس) - شفاف اعلام می‌شود
+        hit_side = "TP" if position.status == "win" else "SL"
+        hit_note = f"\n<i>(برخورد به {hit_side}، ولی بعد از کارمزد خالص {label} شد)</i>"
     return (
-        f"{emoji} <b>پوزیشن بسته شد ({'سود' if position.status == 'win' else 'ضرر'})</b>\n"
+        f"{emoji} <b>پوزیشن بسته شد ({label})</b>\n"
         f"نماد: <b>{position.symbol}</b> | تایم‌فریم: <b>{position.timeframe}</b>\n"
         f"استراتژی: <code>{position.strategy}</code> [{position.category}]\n"
         f"ورود: <code>{position.entry_price:.6g}</code> | خروج: <code>{position.exit_price:.6g}</code>\n"
         f"PnL: <b>{position.pnl_pct}%</b> ({position.pnl_usdt} USDT)"
+        f"{hit_note}"
     )

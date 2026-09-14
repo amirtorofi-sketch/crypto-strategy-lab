@@ -87,7 +87,16 @@ def ichimoku(df: pd.DataFrame):
 # ---------- ابزارهای ساختار بازار (Market Structure) برای ICT / Smart Money ----------
 
 def swing_points(df: pd.DataFrame, left: int = 2, right: int = 2):
-    """نقاط swing high / swing low ساده (فرکتال) - نسخه‌ی وکتورایز با numpy برای سرعت."""
+    """
+    نقاط swing high / swing low ساده (فرکتال) - نسخه‌ی وکتورایز با numpy.
+
+    نکته: علاوه بر برابری با حداکثر/حداقل غلتان، نقطه باید در پنجره‌اش
+    "یکتا" هم باشد (تساوی با نقاط دیگر همان پنجره را نمی‌پذیرد). بدون این
+    شرط، در بازارهای مسطح/کم‌نوسان (highها یا lowهای برابر) هر نقطه‌ی تخت
+    به‌اشتباه به‌عنوان سوئینگ شناسایی می‌شد. این چک یکتایی فقط روی
+    کاندیدهای اولیه (که معمولاً تعداد کمی‌اند) اجرا می‌شود، نه همه‌ی کندل‌ها،
+    پس سرعت وکتورایزشده حفظ می‌شود.
+    """
     n = len(df)
     highs = df["high"].to_numpy()
     lows = df["low"].to_numpy()
@@ -95,7 +104,7 @@ def swing_points(df: pd.DataFrame, left: int = 2, right: int = 2):
     is_sl = np.zeros(n, dtype=bool)
     win = left + right + 1
     if n >= win:
-        # حداکثر/حداقل غلتان متمرکز (centered rolling) با numpy stride tricks
+        # حداکثر/حداقل غلتان متمرکز (centered rolling)
         rmax = pd.Series(highs).rolling(win, center=True).max().to_numpy()
         rmin = pd.Series(lows).rolling(win, center=True).min().to_numpy()
         candidate_sh = highs == rmax
@@ -104,6 +113,16 @@ def swing_points(df: pd.DataFrame, left: int = 2, right: int = 2):
         candidate_sh[n - right:] = False
         candidate_sl[:left] = False
         candidate_sl[n - right:] = False
+
+        for i in np.where(candidate_sh)[0]:
+            window_vals = highs[i - left: i + right + 1]
+            if np.sum(window_vals == highs[i]) > 1:
+                candidate_sh[i] = False
+        for i in np.where(candidate_sl)[0]:
+            window_vals = lows[i - left: i + right + 1]
+            if np.sum(window_vals == lows[i]) > 1:
+                candidate_sl[i] = False
+
         is_sh = candidate_sh
         is_sl = candidate_sl
     return pd.Series(is_sh, index=df.index), pd.Series(is_sl, index=df.index)
@@ -188,13 +207,18 @@ def liquidity_sweep(df: pd.DataFrame, left=3, right=3):
     sh, sl = swing_points(df, left, right)
     swing_highs = df["high"][sh]
     swing_lows = df["low"][sl]
-    if swing_highs.empty or swing_lows.empty:
-        return None
     last = df.iloc[-1]
-    prev_high = swing_highs.iloc[-1]
-    prev_low = swing_lows.iloc[-1]
-    if last["high"] > prev_high and last["close"] < prev_high:
-        return "buy_side_sweep"
-    if last["low"] < prev_low and last["close"] > prev_low:
-        return "sell_side_sweep"
+
+    # هرکدام از دو حالت مستقل بررسی می‌شود؛ نبودِ سوئینگِ یک سمت (مثلاً در
+    # یک روند قوی یک‌طرفه که سوئینگ لوی معتبری ندارد) نباید مانع بررسی سمت
+    # دیگر شود - قبلاً هر دو با هم لازم بودند که باعث از دست رفتن سوئیپ‌های
+    # واقعی می‌شد.
+    if not swing_highs.empty:
+        prev_high = swing_highs.iloc[-1]
+        if last["high"] > prev_high and last["close"] < prev_high:
+            return "buy_side_sweep"
+    if not swing_lows.empty:
+        prev_low = swing_lows.iloc[-1]
+        if last["low"] < prev_low and last["close"] > prev_low:
+            return "sell_side_sweep"
     return None
