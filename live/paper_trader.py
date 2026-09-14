@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from dataclasses import dataclass, asdict, field
 from typing import List, Optional
 
+from strategies.base import validate_signal
 
 LEDGER_PATH = "results/live/positions.json"
 
@@ -86,7 +87,20 @@ class PaperLedger:
     def has_open_position(self, strategy: str, symbol: str) -> bool:
         return any(p.strategy == strategy and p.symbol == symbol and p.status == "open" for p in self.positions)
 
-    def open_position(self, strategy: str, category: str, symbol: str, timeframe: str, signal, size_usdt: float) -> PaperPosition:
+    def open_position(self, strategy: str, category: str, symbol: str, timeframe: str, signal, size_usdt: float,
+                       min_reward_pct: float = 0.0) -> Optional[PaperPosition]:
+        """
+        قبل از باز کردن پوزیشن، سیگنال را اعتبارسنجی می‌کند (جهت درست TP/SL،
+        و در صورت تنظیم min_reward_pct > 0، حداقل فاصله‌ی سودآوری کافی برای
+        پوشش کارمزد). اگر نامعتبر بود، None برمی‌گرداند و هیچ پوزیشنی باز
+        نمی‌شود - این همان قفلی است که ریشه‌ی گزارش‌های خودمتناقض («سود» ولی
+        عدد منفی) را می‌گیرد.
+        """
+        is_valid, reason = validate_signal(signal, min_reward_pct=min_reward_pct)
+        if not is_valid:
+            print(f"[paper_trader] سیگنال {strategy}/{symbol} رد شد: {reason}")
+            return None
+
         entry_dt = datetime.now(timezone.utc)
         pos_id = f"{strategy}__{symbol.replace('/', '-')}__{entry_dt.strftime('%Y%m%dT%H%M%S')}"
         pos = PaperPosition(
