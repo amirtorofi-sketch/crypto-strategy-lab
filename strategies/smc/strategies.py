@@ -56,7 +56,9 @@ class OrderBlockRetest(Strategy):
         atrv = ind.atr(df).iloc[-1]
         if ob["type"] == "bullish" and ob["bottom"] <= close <= ob["top"] * 1.01:
             return Signal("long", close, ob["bottom"] - 0.3 * atrv, close + 3 * atrv, "واکنش به بولیش Order Block")
-        if ob["type"] == "bearish" and ob["top"] * 0.99 <= close <= ob["top"]:
+        # اصلاح: ورود شورت باید کل ناحیه‌ی OB بریش را پوشش دهد، نه فقط نوک بالایی آن
+        # (قبلاً نامتقارن با شرط بولیش بالا بود و عملاً سیگنال شورت خیلی کم صادر می‌شد)
+        if ob["type"] == "bearish" and ob["bottom"] <= close <= ob["top"] * 1.01:
             return Signal("short", close, ob["top"] + 0.3 * atrv, close - 3 * atrv, "واکنش به بریش Order Block")
         return None
 
