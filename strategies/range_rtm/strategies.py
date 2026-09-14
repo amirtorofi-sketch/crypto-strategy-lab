@@ -25,7 +25,8 @@ class SupplyDemandZoneReaction(Strategy):
             zone_top, zone_bottom = base["high"], base["low"]
             if base_is_small and move_up and zone_bottom <= close <= zone_top * 1.01:
                 return Signal("long", close, zone_bottom - 0.2 * atrv, close + 3 * atrv, "واکنش به ناحیه تقاضای تازه")
-            if base_is_small and move_down and zone_top * 0.99 <= close <= zone_top:
+            # اصلاح: ورود شورت باید کل ناحیه‌ی عرضه را پوشش دهد (قبلاً نامتقارن با شرط لانگ بود)
+            if base_is_small and move_down and zone_bottom <= close <= zone_top * 1.01:
                 return Signal("short", close, zone_top + 0.2 * atrv, close - 3 * atrv, "واکنش به ناحیه عرضه تازه")
         return None
 
@@ -45,10 +46,19 @@ class RangeBoundFadeStrategy(Strategy):
         high, low = window["high"].max(), window["low"].min()
         close = df["close"].iloc[-1]
         atrv = ind.atr(df).iloc[-1]
+        mid = (high + low) / 2
+        # نکته‌ی مهم: در رنج‌های خیلی باریک (کم‌نوسان)، میانگین رنج (mid) می‌تواند
+        # به‌جای پایین‌تر از ورود (برای short) یا بالاتر (برای long) قرار بگیرد -
+        # یعنی «حد سود» عملاً سمت اشتباه ورود می‌افتد. قبلاً این حالت چک نمی‌شد و
+        # باعث می‌شد بعضی معاملات با برخورد به‌اصطلاح «حد سود» در واقع ضرر باشند.
         if close >= high * 0.995:
-            return Signal("short", close, high + 0.5 * atrv, (high + low) / 2, "فروش از سقف رنج")
+            if mid >= close:
+                return None
+            return Signal("short", close, high + 0.5 * atrv, mid, "فروش از سقف رنج")
         if close <= low * 1.005:
-            return Signal("long", close, low - 0.5 * atrv, (high + low) / 2, "خرید از کف رنج")
+            if mid <= close:
+                return None
+            return Signal("long", close, low - 0.5 * atrv, mid, "خرید از کف رنج")
         return None
 
 
