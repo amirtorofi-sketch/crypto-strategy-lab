@@ -93,56 +93,7 @@ class SupportResistanceBounce(Strategy):
         return None
 
 
-class TrendlineBreak(Strategy):
-    name = "pa_trendline_break"
-    category = "price_action"
-    description = "شکست خط روند رسم‌شده از دو سوئینگ اخیر هم‌جهت"
-    min_bars = 60
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        sh, sl = ind.swing_points(df, 3, 3)
-        lows = df["low"][sl].tail(2)
-        highs = df["high"][sh].tail(2)
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        if len(lows) == 2 and lows.iloc[1] > lows.iloc[0]:
-            idx0, idx1 = df.index.get_loc(lows.index[0]), df.index.get_loc(lows.index[1])
-            slope = (lows.iloc[1] - lows.iloc[0]) / max(idx1 - idx0, 1)
-            proj = lows.iloc[1] + slope * (len(df) - 1 - idx1)
-            if close < proj and df["close"].iloc[-2] >= proj:
-                return Signal("short", close, close + 2 * atrv, close - 3 * atrv, "شکست خط روند صعودی (حمایت دینامیک)")
-        if len(highs) == 2 and highs.iloc[1] < highs.iloc[0]:
-            idx0, idx1 = df.index.get_loc(highs.index[0]), df.index.get_loc(highs.index[1])
-            slope = (highs.iloc[1] - highs.iloc[0]) / max(idx1 - idx0, 1)
-            proj = highs.iloc[1] + slope * (len(df) - 1 - idx1)
-            if close > proj and df["close"].iloc[-2] <= proj:
-                return Signal("long", close, close - 2 * atrv, close + 3 * atrv, "شکست خط روند نزولی (مقاومت دینامیک)")
-        return None
-
-
-class ThreeWhiteSoldiers(Strategy):
-    name = "pa_three_white_soldiers_crows"
-    category = "price_action"
-    description = "سه سرباز سفید (صعودی) / سه کلاغ سیاه (نزولی)"
-    min_bars = 20
-    timeframe = "4h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        c1, c2, c3 = df.iloc[-3], df.iloc[-2], df.iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        bullish = all(c["close"] > c["open"] for c in [c1, c2, c3]) and \
-                  c1["close"] < c2["close"] < c3["close"]
-        bearish = all(c["close"] < c["open"] for c in [c1, c2, c3]) and \
-                  c1["close"] > c2["close"] > c3["close"]
-        if bullish:
-            return Signal("long", c3["close"], c1["low"], c3["close"] + 2.5 * atrv, "سه سرباز سفید")
-        if bearish:
-            return Signal("short", c3["close"], c1["high"], c3["close"] - 2.5 * atrv, "سه کلاغ سیاه")
-        return None
-
-
 STRATEGIES = [
     PinBarRejection, InsideBarBreakout, DoubleTopBottom,
-    SupportResistanceBounce, TrendlineBreak, ThreeWhiteSoldiers,
+    SupportResistanceBounce,
 ]
