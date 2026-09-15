@@ -17218,5 +17218,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "pa_trendline_break__BNB-USDT__20260915T071548",
+    "strategy": "pa_trendline_break",
+    "category": "price_action",
+    "symbol": "BNB/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-15T07:15:48.516909+00:00",
+    "entry_price": 717.85,
+    "stop_loss": 733.9612860995738,
+    "take_profit": 693.6830708506393,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست خط روند صعودی (حمایت دینامیک)"
   }
 ]
