@@ -16756,5 +16756,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "سه کلاغ سیاه"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BNB-USDT__20260915T044548",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-15T04:45:48.674610+00:00",
+    "entry_price": 720.73,
+    "stop_loss": 721.3528538653958,
+    "take_profit": 716.872884455035,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
