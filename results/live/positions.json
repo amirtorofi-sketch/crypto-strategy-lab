@@ -17932,5 +17932,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به مقاومت افقی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20260915T120059",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-15T12:00:59.887968+00:00",
+    "entry_price": 76959.18,
+    "stop_loss": 77015.0254372066,
+    "take_profit": 76600.63468994507,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
