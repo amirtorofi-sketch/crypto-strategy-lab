@@ -61,28 +61,6 @@ class JudasSwing(Strategy):
         return None
 
 
-class MitigationBlock(Strategy):
-    name = "ict_mitigation_block"
-    category = "ict"
-    description = "بازگشت قیمت به آخرین ناحیه Mitigation (اولین OB خلاف روند قبل از BOS)"
-    min_bars = 60
-    timeframe = "1h"
-
-    def generate_signal(self, df: pd.DataFrame):
-        structure = ind.detect_bos_choch(df)
-        obs = ind.find_order_blocks(df, lookback=50)
-        if structure is None or not obs:
-            return None
-        close = df["close"].iloc[-1]
-        atrv = ind.atr(df).iloc[-1]
-        ob = obs[0]  # اولین (قدیمی‌ترین) در بازه به عنوان نقطه mitigation
-        if structure.startswith("bullish") and ob["type"] == "bearish" and ob["bottom"] <= close <= ob["top"]:
-            return Signal("long", close, ob["bottom"] - 0.2 * atrv, close + 3 * atrv, "میتیگیشن بلاک صعودی")
-        if structure.startswith("bearish") and ob["type"] == "bullish" and ob["bottom"] <= close <= ob["top"]:
-            return Signal("short", close, ob["top"] + 0.2 * atrv, close - 3 * atrv, "میتیگیشن بلاک نزولی")
-        return None
-
-
 class LondonKillzoneBreakout(Strategy):
     name = "ict_london_killzone_breakout"
     category = "ict"
@@ -120,5 +98,5 @@ class LondonKillzoneBreakout(Strategy):
 
 
 STRATEGIES = [
-    OptimalTradeEntry, JudasSwing, MitigationBlock, LondonKillzoneBreakout,
+    OptimalTradeEntry, JudasSwing, LondonKillzoneBreakout,
 ]
