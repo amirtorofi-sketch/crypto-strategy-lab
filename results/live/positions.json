@@ -16728,12 +16728,33 @@
     "take_profit": 78186.4727752089,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-09-15T04:30:53.534339+00:00",
+    "exit_price": 77630.18648165274,
+    "pnl_usdt": -0.0197,
+    "pnl_pct": -0.1966,
+    "duration_minutes": 29.9,
+    "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "pa_three_white_soldiers_crows__ETH-USDT__20260915T043054",
+    "strategy": "pa_three_white_soldiers_crows",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-15T04:30:54.281828+00:00",
+    "entry_price": 2494.39,
+    "stop_loss": 2615.0,
+    "take_profit": 2404.9520472438044,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکار لوهای برابر"
+    "reason": "سه کلاغ سیاه"
   }
 ]
