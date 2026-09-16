@@ -20389,5 +20389,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20260916T013054",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-16T01:30:54.001102+00:00",
+    "entry_price": 4295.42,
+    "stop_loss": 4289.9260834666065,
+    "take_profit": 4306.619304444948,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
