@@ -23490,12 +23490,12 @@
     "take_profit": 94.63577776352025,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-16T20:15:42.428934+00:00",
+    "exit_price": 98.38321111182398,
+    "pnl_usdt": -0.0369,
+    "pnl_pct": -0.3687,
+    "duration_minutes": 14.7,
     "reason": "پین‌بار نزولی"
   },
   {
@@ -23560,5 +23560,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "classic_stochastic_cross__PAXG-USDT__20260916T201544",
+    "strategy": "classic_stochastic_cross",
+    "category": "classic",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-16T20:15:44.795073+00:00",
+    "entry_price": 4272.78,
+    "stop_loss": 4237.248673366581,
+    "take_profit": 4343.842653266837,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس صعودی استوکاستیک از اشباع فروش"
   }
 ]
