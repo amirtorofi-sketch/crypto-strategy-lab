@@ -23763,12 +23763,12 @@
     "take_profit": 4224.505635944694,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-16T22:45:47.918036+00:00",
+    "exit_price": 4277.87,
+    "pnl_usdt": -0.0317,
+    "pnl_pct": -0.3174,
+    "duration_minutes": 44.2,
     "reason": "شکست پایین inside bar"
   },
   {
@@ -23847,12 +23847,33 @@
     "take_profit": 709.9344259921261,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-09-16T22:45:46.706376+00:00",
+    "exit_price": 721.08,
+    "pnl_usdt": -0.0365,
+    "pnl_pct": -0.3651,
+    "duration_minutes": 14.8,
+    "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "pa_inside_bar_breakout__PAXG-USDT__20260916T224548",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-16T22:45:48.250860+00:00",
+    "entry_price": 4278.21,
+    "stop_loss": 4273.52,
+    "take_profit": 4322.657570836993,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکست پایین inside bar"
+    "reason": "شکست بالای inside bar"
   }
 ]
