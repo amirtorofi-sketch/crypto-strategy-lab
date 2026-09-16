@@ -21544,5 +21544,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20260916T113057",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-16T11:30:57.266950+00:00",
+    "entry_price": 97.36,
+    "stop_loss": 97.86212907656011,
+    "take_profit": 97.07,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
