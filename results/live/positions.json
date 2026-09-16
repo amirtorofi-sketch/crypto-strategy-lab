@@ -22188,12 +22188,12 @@
     "take_profit": 99.7960714293687,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-16T16:30:53.669667+00:00",
+    "exit_price": 96.96892857137541,
+    "pnl_usdt": -0.0502,
+    "pnl_pct": -0.5021,
+    "duration_minutes": 15.0,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
@@ -22237,5 +22237,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20260916T163054",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-16T16:30:54.183462+00:00",
+    "entry_price": 97.29,
+    "stop_loss": 96.96707089314668,
+    "take_profit": 99.73393660279967,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
