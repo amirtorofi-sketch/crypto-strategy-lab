@@ -20977,5 +20977,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "pa_inside_bar_breakout__ETH-USDT__20260916T051559",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-16T05:15:59.560343+00:00",
+    "entry_price": 2401.08,
+    "stop_loss": 2410.45,
+    "take_profit": 2358.712756667379,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین inside bar"
   }
 ]
