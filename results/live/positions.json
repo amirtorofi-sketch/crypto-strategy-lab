@@ -20865,12 +20865,12 @@
     "take_profit": 4281.409112534655,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-16T05:45:49.740656+00:00",
+    "exit_price": 4334.985044373268,
+    "pnl_usdt": -0.0174,
+    "pnl_pct": -0.1741,
+    "duration_minutes": 89.9,
     "reason": "پین‌بار نزولی"
   },
   {
