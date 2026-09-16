@@ -23686,5 +23686,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "pa_pin_bar_rejection__PAXG-USDT__20260916T211546",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-09-16T21:15:46.353518+00:00",
+    "entry_price": 4277.34,
+    "stop_loss": 4262.952169864666,
+    "take_profit": 4344.696602706677,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار صعودی"
   }
 ]
