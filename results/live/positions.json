@@ -21453,12 +21453,12 @@
     "take_profit": 97.07,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-16T11:15:44.949698+00:00",
+    "exit_price": 97.07,
+    "pnl_usdt": 0.0187,
+    "pnl_pct": 0.1871,
+    "duration_minutes": 74.7,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -21523,5 +21523,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به حمایت افقی"
+  },
+  {
+    "id": "classic_stochastic_cross__PAXG-USDT__20260916T111546",
+    "strategy": "classic_stochastic_cross",
+    "category": "classic",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-16T11:15:46.620285+00:00",
+    "entry_price": 4352.67,
+    "stop_loss": 4371.485957552141,
+    "take_profit": 4315.038084895718,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی استوکاستیک از اشباع خرید"
   }
 ]
