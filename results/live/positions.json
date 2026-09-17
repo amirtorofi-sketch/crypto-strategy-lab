@@ -23301,12 +23301,12 @@
     "take_profit": 4161.165936235305,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-17T01:15:46.422467+00:00",
+    "exit_price": 4309.792031882347,
+    "pnl_usdt": -0.1243,
+    "pnl_pct": -1.2429,
+    "duration_minutes": 359.8,
     "reason": "تایید BOS نزولی"
   },
   {
