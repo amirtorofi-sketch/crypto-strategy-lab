@@ -24540,12 +24540,12 @@
     "take_profit": 4262.653890532506,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-17T06:01:01.993906+00:00",
+    "exit_price": 4306.1627331361,
+    "pnl_usdt": -0.0416,
+    "pnl_pct": -0.4156,
+    "duration_minutes": 225.3,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -24988,5 +24988,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "classic_macd_signal_cross__PAXG-USDT__20260917T060101",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-17T06:01:01.385801+00:00",
+    "entry_price": 4306.3,
+    "stop_loss": 4276.160083391623,
+    "take_profit": 4366.579833216756,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس صعودی MACD"
   }
 ]
