@@ -23679,12 +23679,12 @@
     "take_profit": 4184.297731379731,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-17T01:45:51.541849+00:00",
+    "exit_price": 4318.671134310135,
+    "pnl_usdt": -0.1128,
+    "pnl_pct": -1.128,
+    "duration_minutes": 284.8,
     "reason": "CHoCH نزولی - برگشت روند"
   },
   {
