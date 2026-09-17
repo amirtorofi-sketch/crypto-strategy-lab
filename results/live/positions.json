@@ -27004,5 +27004,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20260917T230057",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-17T23:00:57.763502+00:00",
+    "entry_price": 2445.32,
+    "stop_loss": 2443.256027157903,
+    "take_profit": 2465.9295926314508,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
