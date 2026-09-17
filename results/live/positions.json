@@ -24120,12 +24120,12 @@
     "take_profit": 4295.029188057196,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-17T01:01:03.588533+00:00",
+    "exit_price": 4295.029188057196,
+    "pnl_usdt": 0.042,
+    "pnl_pct": 0.4198,
+    "duration_minutes": 60.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
@@ -24337,5 +24337,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "pa_pin_bar_rejection__SOL-USDT__20260917T010101",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-17T01:01:01.435062+00:00",
+    "entry_price": 98.55,
+    "stop_loss": 99.375273614643,
+    "take_profit": 95.04452770714005,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
