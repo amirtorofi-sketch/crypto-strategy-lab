@@ -24568,5 +24568,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20260917T024542",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-17T02:45:42.650747+00:00",
+    "entry_price": 76408.0,
+    "stop_loss": 76150.55918280575,
+    "take_profit": 76986.67347661879,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
