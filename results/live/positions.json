@@ -25149,12 +25149,12 @@
     "take_profit": 98.96587143283078,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-17T08:45:46.271422+00:00",
+    "exit_price": 100.21494190447795,
+    "pnl_usdt": -0.0205,
+    "pnl_pct": -0.2048,
+    "duration_minutes": 74.7,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
