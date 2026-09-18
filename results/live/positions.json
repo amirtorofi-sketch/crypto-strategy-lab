@@ -28432,5 +28432,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "ict_london_killzone_breakout__SOL-USDT__20260918T074548",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-18T07:45:48.666086+00:00",
+    "entry_price": 105.98,
+    "stop_loss": 105.32,
+    "take_profit": 107.02000000000002,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
