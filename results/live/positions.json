@@ -27123,12 +27123,12 @@
     "take_profit": 2431.827058686822,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T01:00:55.016471+00:00",
+    "exit_price": 2449.430441196977,
+    "pnl_usdt": -0.0184,
+    "pnl_pct": -0.1838,
+    "duration_minutes": 59.8,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   },
   {
