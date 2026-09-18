@@ -29370,12 +29370,12 @@
     "take_profit": 81097.49816263544,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-18T15:30:54.389671+00:00",
+    "exit_price": 81097.49816263544,
+    "pnl_usdt": 0.213,
+    "pnl_pct": 2.13,
+    "duration_minutes": 104.9,
     "reason": "CHoCH صعودی - برگشت روند"
   },
   {
@@ -29608,5 +29608,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خروج RSI از اشباع خرید"
+  },
+  {
+    "id": "smc_choch_reversal__BTC-USDT__20260918T153054",
+    "strategy": "smc_choch_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-18T15:30:54.865500+00:00",
+    "entry_price": 80904.35,
+    "stop_loss": 79800.28704680488,
+    "take_profit": 83112.47590639027,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "CHoCH صعودی - برگشت روند"
   }
 ]
