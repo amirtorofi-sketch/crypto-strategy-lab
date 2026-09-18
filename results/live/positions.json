@@ -27144,12 +27144,12 @@
     "take_profit": 729.202,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T01:30:54.097633+00:00",
+    "exit_price": 742.241311252576,
+    "pnl_usdt": -0.0651,
+    "pnl_pct": -0.6506,
+    "duration_minutes": 89.7,
     "reason": "برگشت از باند بالای بولینگر"
   },
   {
@@ -27298,5 +27298,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_order_block_retest__BNB-USDT__20260918T013054",
+    "strategy": "smc_order_block_retest",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-18T01:30:54.480157+00:00",
+    "entry_price": 742.21,
+    "stop_loss": 734.0206496850644,
+    "take_profit": 754.2035031493556,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به بولیش Order Block"
   }
 ]
