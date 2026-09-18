@@ -30490,5 +30490,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار صعودی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__PAXG-USDT__20260918T211545",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-18T21:15:45.501155+00:00",
+    "entry_price": 4372.25,
+    "stop_loss": 4379.433199955762,
+    "take_profit": 4307.986000884779,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
