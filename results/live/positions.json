@@ -27480,12 +27480,12 @@
     "take_profit": 4338.256609552083,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T03:45:49.422799+00:00",
+    "exit_price": 4356.753508567187,
+    "pnl_usdt": -0.0131,
+    "pnl_pct": -0.1313,
+    "duration_minutes": 74.9,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   },
   {
@@ -27697,5 +27697,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS صعودی"
+  },
+  {
+    "id": "classic_stochastic_cross__SOL-USDT__20260918T034547",
+    "strategy": "classic_stochastic_cross",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-18T03:45:47.504266+00:00",
+    "entry_price": 104.12,
+    "stop_loss": 105.5020458986387,
+    "take_profit": 101.3559082027226,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی استوکاستیک از اشباع خرید"
   }
 ]
