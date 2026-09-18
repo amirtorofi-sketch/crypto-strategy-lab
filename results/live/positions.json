@@ -29335,5 +29335,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار صعودی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__ETH-USDT__20260918T133053",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-09-18T13:30:53.102661+00:00",
+    "entry_price": 2506.91,
+    "stop_loss": 2490.7150564502363,
+    "take_profit": 2580.008870995275,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار صعودی"
   }
 ]
