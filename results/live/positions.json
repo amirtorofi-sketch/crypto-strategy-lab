@@ -26451,12 +26451,12 @@
     "take_profit": 2409.612059686785,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T08:30:59.149315+00:00",
+    "exit_price": 2499.773970156607,
+    "pnl_usdt": -0.1297,
+    "pnl_pct": -1.2969,
+    "duration_minutes": 989.9,
     "reason": "خروج RSI از اشباع خرید"
   },
   {
@@ -28551,12 +28551,12 @@
     "take_profit": 2415.0820104286654,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T08:30:58.380156+00:00",
+    "exit_price": 2502.1813994785666,
+    "pnl_usdt": -0.0654,
+    "pnl_pct": -0.6536,
+    "duration_minutes": 15.2,
     "reason": "پین‌بار نزولی"
   }
 ]
