@@ -27942,12 +27942,12 @@
     "take_profit": 4351.3,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-18T05:45:46.818335+00:00",
+    "exit_price": 4371.285107735285,
+    "pnl_usdt": -0.0173,
+    "pnl_pct": -0.1733,
+    "duration_minutes": 44.7,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -28159,5 +28159,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20260918T054547",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-18T05:45:47.372709+00:00",
+    "entry_price": 4374.49,
+    "stop_loss": 4379.13818923047,
+    "take_profit": 4355.125,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
