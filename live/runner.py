@@ -27,7 +27,7 @@ import os
 import yaml
 from collections import defaultdict
 
-from data.fetcher import get_exchange, fetch_ohlcv_df
+from data.fetcher import get_exchange, fetch_ohlcv_df, drop_unclosed_candle
 from strategies.registry import get_all_strategies
 from live.telegram_bot import (
     send_telegram_message, format_signal_message, format_close_message, get_or_create_topic,
@@ -82,6 +82,12 @@ def main():
             except Exception as e:
                 print(f"  خطا در واکشی دیتا: {e}")
                 continue
+
+            # کندل آخر ممکن است هنوز درحال تشکیل باشد (بایننس آن را هم
+            # برمی‌گرداند)؛ چون هم سیگنال‌سازی و هم چک TP/SL باید روی کندل
+            # واقعاً بسته‌شده انجام شود، همین‌جا حذفش می‌کنیم - قبل از هر
+            # استفاده‌ای از df.
+            df = drop_unclosed_candle(df, timeframe)
 
             if df.empty or len(df) < 60:
                 print("  دیتای کافی نیست، رد شد.")
