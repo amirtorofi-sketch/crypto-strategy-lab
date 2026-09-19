@@ -30847,5 +30847,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "classic_rsi_reversal_30_70__ETH-USDT__20260919T013044",
+    "strategy": "classic_rsi_reversal_30_70",
+    "category": "classic",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-19T01:30:44.905196+00:00",
+    "entry_price": 2612.37,
+    "stop_loss": 2645.195237340377,
+    "take_profit": 2546.719525319246,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خروج RSI از اشباع خرید"
   }
 ]
