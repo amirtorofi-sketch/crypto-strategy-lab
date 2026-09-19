@@ -37,17 +37,29 @@ def compute_metrics(trades_df: pd.DataFrame, initial_balance: float = 1000.0, ri
     drawdown = (equity - running_max) / running_max * 100
     max_dd = drawdown.min()
 
-    wins = closed[closed["result"] == "win"]
-    losses = closed[closed["result"] == "loss"]
+    # توجه: wins/losses بر اساس علامت واقعی pnl_pct (بعد از کارمزد) تعیین می‌شود،
+    # نه ستون "result" (که فقط یعنی «برخورد به TP یا SL»، exit_reason است نه
+    # outcome). این دو همیشه یکی نیستند - وقتی TP خورده ولی کارمزد کل سود را
+    # می‌خورد، result="win" است ولی pnl واقعاً منفی است. برای win_rate و
+    # profit_factor درست، باید سود/زیان واقعی ملاک باشد؛ همان اصلاحی که قبلاً
+    # در live/telegram_bot.py و reports/monthly_report.py انجام شد، اینجا هم اعمال شد.
+    wins = closed[closed["pnl_pct"] >= 0]
+    losses = closed[closed["pnl_pct"] < 0]
     gross_profit = wins["pnl_pct"].clip(lower=0).sum()
     gross_loss = losses["pnl_pct"].clip(upper=0).abs().sum()
     profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float("inf")
+
+    # نرخ TP-hit جدا هم نگه داشته می‌شود - مفید برای دیباگ (مثلاً فهمیدن اینکه
+    # آیا استراتژی به هدفش می‌رسد ولی فاصله‌اش خیلی کوچک است) اما دیگر به عنوان
+    # win_rate اصلی گزارش نمی‌شود.
+    tp_hit_rate = round((closed["result"] == "win").sum() / len(closed) * 100, 2)
 
     return {
         "total_trades": len(closed),
         "wins": len(wins),
         "losses": len(losses),
         "win_rate": round(len(wins) / len(closed) * 100, 2),
+        "tp_hit_rate": tp_hit_rate,
         "profit_factor": profit_factor,
         "max_drawdown_pct": round(max_dd, 2),
         "net_return_pct": round((balance - initial_balance) / initial_balance * 100, 2),
