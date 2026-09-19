@@ -33171,12 +33171,12 @@
     "take_profit": 111.41,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-19T22:15:37.414960+00:00",
+    "exit_price": 110.13988031109722,
+    "pnl_usdt": -0.0694,
+    "pnl_pct": -0.6937,
+    "duration_minutes": 44.6,
     "reason": "خرید از کف رنج"
   },
   {
