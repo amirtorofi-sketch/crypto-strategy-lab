@@ -7,6 +7,38 @@ import time
 import pandas as pd
 import ccxt
 
+# طول هر تایم‌فریم بر حسب ثانیه - برای تشخیص اینکه آخرین کندل واقعاً بسته
+# شده یا هنوز درحال تشکیل است.
+TIMEFRAME_SECONDS = {
+    "1m": 60, "3m": 180, "5m": 300, "15m": 900, "30m": 1800,
+    "1h": 3600, "2h": 7200, "4h": 14400, "6h": 21600, "8h": 28800,
+    "12h": 43200, "1d": 86400, "3d": 259200, "1w": 604800,
+}
+
+
+def drop_unclosed_candle(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
+    """
+    اگر آخرین ردیف df هنوز کاملاً بسته نشده باشد (یعنی زمان فعلی هنوز به
+    timestamp_شروع + طول_تایم‌فریم نرسیده)، آن ردیف را حذف می‌کند.
+
+    این رفع همان باگی است که در آن exchange.fetch_ohlcv همیشه آخرین کندلِ
+    درحال‌شکل‌گیری بازار را هم برمی‌گرداند، ولی کد قبلی فرض می‌کرد
+    df.iloc[-1] همیشه یک کندل بسته‌شده است - هم برای تولید سیگنال و هم
+    برای چک کردن TP/SL پوزیشن‌های باز. تایم‌فریم ناشناخته را دست‌نخورده
+    برمی‌گرداند (fail-safe، به‌جای فرض غلط).
+    """
+    if df.empty:
+        return df
+    tf_seconds = TIMEFRAME_SECONDS.get(timeframe)
+    if tf_seconds is None:
+        return df
+    last_open_time = df.index[-1]
+    close_time = last_open_time + pd.Timedelta(seconds=tf_seconds)
+    now_utc = pd.Timestamp.now(tz="UTC")
+    if now_utc < close_time:
+        return df.iloc[:-1]
+    return df
+
 
 def get_exchange(exchange_id: str = "binance") -> ccxt.Exchange:
     klass = getattr(ccxt, exchange_id)
