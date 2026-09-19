@@ -32100,12 +32100,12 @@
     "take_profit": 4379.9193965390095,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-19T15:01:02.627376+00:00",
+    "exit_price": 4364.65,
+    "pnl_usdt": -0.0115,
+    "pnl_pct": -0.115,
+    "duration_minutes": 240.0,
     "reason": "شکست بالای inside bar"
   },
   {
