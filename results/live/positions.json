@@ -31092,12 +31092,12 @@
     "take_profit": 80202.3593464218,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-19T10:00:55.437546+00:00",
+    "exit_price": 81445.71,
+    "pnl_usdt": -0.0454,
+    "pnl_pct": -0.454,
+    "duration_minutes": 390.1,
     "reason": "شکست پایین inside bar"
   },
   {
