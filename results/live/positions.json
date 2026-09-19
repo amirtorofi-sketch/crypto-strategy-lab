@@ -32359,5 +32359,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "ict_judas_swing__ETH-USDT__20260919T133053",
+    "strategy": "ict_judas_swing",
+    "category": "ict",
+    "symbol": "ETH/USDT",
+    "timeframe": "5m",
+    "side": "long",
+    "entry_time": "2026-09-19T13:30:53.280878+00:00",
+    "entry_price": 2634.55,
+    "stop_loss": 2632.6474697995177,
+    "take_profit": 2643.08162750603,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "Judas Swing صعودی در باز شدن سشن"
   }
 ]
