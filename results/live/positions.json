@@ -32436,12 +32436,12 @@
     "take_profit": 112.67848186412344,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-19T16:15:47.218965+00:00",
+    "exit_price": 111.30943454239177,
+    "pnl_usdt": -0.0358,
+    "pnl_pct": -0.3582,
+    "duration_minutes": 134.8,
     "reason": "شکار لوهای برابر"
   },
   {
