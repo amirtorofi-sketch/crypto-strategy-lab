@@ -32541,12 +32541,12 @@
     "take_profit": 2617.82219097329,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-19T15:45:45.163580+00:00",
+    "exit_price": 2645.5498539351142,
+    "pnl_usdt": -0.0324,
+    "pnl_pct": -0.3236,
+    "duration_minutes": 60.0,
     "reason": "شکار های‌های برابر"
   }
 ]
