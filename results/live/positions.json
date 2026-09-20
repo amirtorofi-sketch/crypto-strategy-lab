@@ -34578,12 +34578,12 @@
     "take_profit": 2556.0615201321884,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T08:15:44.434999+00:00",
+    "exit_price": 2581.4702175841376,
+    "pnl_usdt": -0.0254,
+    "pnl_pct": -0.2542,
+    "duration_minutes": 44.8,
     "reason": "ورود در FVG نزولی"
   },
   {
