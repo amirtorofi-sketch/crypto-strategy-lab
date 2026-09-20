@@ -34536,12 +34536,12 @@
     "take_profit": 2601.8659765150046,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T11:15:51.676416+00:00",
+    "exit_price": 2568.168268232333,
+    "pnl_usdt": -0.0322,
+    "pnl_pct": -0.3217,
+    "duration_minutes": 270.1,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
@@ -35005,5 +35005,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20260920T111552",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-20T11:15:52.295129+00:00",
+    "entry_price": 2571.79,
+    "stop_loss": 2566.138578916741,
+    "take_profit": 2592.5113162488824,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
