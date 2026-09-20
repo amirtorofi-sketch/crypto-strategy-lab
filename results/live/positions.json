@@ -35397,12 +35397,12 @@
     "take_profit": 109.04089373536799,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T14:30:57.715149+00:00",
+    "exit_price": 108.1163659396948,
+    "pnl_usdt": -0.0185,
+    "pnl_pct": -0.185,
+    "duration_minutes": 30.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
@@ -35530,5 +35530,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__ETH-USDT__20260920T143056",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-20T14:30:56.545506+00:00",
+    "entry_price": 2577.27,
+    "stop_loss": 2574.077382458681,
+    "take_profit": 2592.620783608792,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
