@@ -34585,5 +34585,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "ict_london_killzone_breakout__BNB-USDT__20260920T074557",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-20T07:45:57.747080+00:00",
+    "entry_price": 748.88,
+    "stop_loss": 753.47,
+    "take_profit": 741.9399999999999,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین رنج افتتاحیه لندن"
   }
 ]
