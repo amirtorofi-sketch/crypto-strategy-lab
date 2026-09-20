@@ -33486,12 +33486,12 @@
     "take_profit": 758.065296515285,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T00:45:49.351519+00:00",
+    "exit_price": 762.8029644181659,
+    "pnl_usdt": -0.0174,
+    "pnl_pct": -0.1736,
+    "duration_minutes": 14.9,
     "reason": "ورود در FVG نزولی"
   }
 ]
