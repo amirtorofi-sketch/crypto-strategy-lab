@@ -34809,12 +34809,12 @@
     "take_profit": 79631.71826054041,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T09:31:27.173930+00:00",
+    "exit_price": 80420.01,
+    "pnl_usdt": -0.0273,
+    "pnl_pct": -0.2733,
+    "duration_minutes": 15.7,
     "reason": "شکست پایین inside bar"
   },
   {
@@ -34851,12 +34851,33 @@
     "take_profit": 744.4474419903468,
     "size_usdt": 10.0,
     "session": "London",
+    "status": "loss",
+    "exit_time": "2026-09-20T09:31:30.734096+00:00",
+    "exit_price": 750.596883701448,
+    "pnl_usdt": -0.0181,
+    "pnl_pct": -0.1809,
+    "duration_minutes": 15.7,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__BTC-USDT__20260920T093127",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-20T09:31:27.599469+00:00",
+    "entry_price": 80264.85,
+    "stop_loss": 80420.01,
+    "take_profit": 79631.71826054041,
+    "size_usdt": 10.0,
+    "session": "London",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+    "reason": "شکست پایین inside bar"
   }
 ]
