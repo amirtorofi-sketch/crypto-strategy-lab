@@ -34830,12 +34830,12 @@
     "take_profit": 109.39076951366285,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T10:15:48.631418+00:00",
+    "exit_price": 107.97728203242248,
+    "pnl_usdt": -0.024,
+    "pnl_pct": -0.2397,
+    "duration_minutes": 60.0,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
@@ -34963,5 +34963,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__BTC-USDT__20260920T101546",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-20T10:15:46.472007+00:00",
+    "entry_price": 80411.1,
+    "stop_loss": 80357.39842933035,
+    "take_profit": 80750.870471131,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
