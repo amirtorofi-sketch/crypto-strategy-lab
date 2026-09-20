@@ -34998,12 +34998,12 @@
     "take_profit": 744.4427190099356,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-20T11:30:57.070131+00:00",
+    "exit_price": 750.5975921485096,
+    "pnl_usdt": -0.0225,
+    "pnl_pct": -0.2251,
+    "duration_minutes": 45.2,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   },
   {
