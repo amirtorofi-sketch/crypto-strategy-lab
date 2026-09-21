@@ -41571,12 +41571,12 @@
     "take_profit": 2725.7482705514976,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-21T20:30:54.499826+00:00",
+    "exit_price": 2778.924115296567,
+    "pnl_usdt": -0.0585,
+    "pnl_pct": -0.585,
+    "duration_minutes": 45.0,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
