@@ -37623,12 +37623,12 @@
     "take_profit": 2777.4040466377105,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-21T01:15:43.647954+00:00",
+    "exit_price": 2645.082976681145,
+    "pnl_usdt": -0.172,
+    "pnl_pct": -1.7202,
+    "duration_minutes": 14.6,
     "reason": "CHoCH صعودی - برگشت روند"
   },
   {
@@ -37672,5 +37672,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای inside bar"
+  },
+  {
+    "id": "smc_choch_reversal__ETH-USDT__20260921T011544",
+    "strategy": "smc_choch_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-21T01:15:44.275419+00:00",
+    "entry_price": 2689.19,
+    "stop_loss": 2645.082976681145,
+    "take_profit": 2777.4040466377105,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "CHoCH صعودی - برگشت روند"
   }
 ]
