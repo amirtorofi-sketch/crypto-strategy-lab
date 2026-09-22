@@ -46086,12 +46086,12 @@
     "take_profit": 794.350908621037,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-22T18:45:43.137990+00:00",
+    "exit_price": 785.9034909654756,
+    "pnl_usdt": -0.0268,
+    "pnl_pct": -0.2675,
+    "duration_minutes": 59.9,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -46177,5 +46177,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20260922T184541",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-22T18:45:41.962880+00:00",
+    "entry_price": 118.12,
+    "stop_loss": 118.74730463996698,
+    "take_profit": 117.175,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
