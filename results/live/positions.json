@@ -46072,5 +46072,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BNB-USDT__20260922T174547",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-22T17:45:47.169107+00:00",
+    "entry_price": 787.38,
+    "stop_loss": 785.9034909654756,
+    "take_profit": 794.350908621037,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
