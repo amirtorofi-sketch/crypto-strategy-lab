@@ -46338,12 +46338,12 @@
     "take_profit": 792.0424408088877,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-22T21:01:05.592762+00:00",
+    "exit_price": 784.5331706127408,
+    "pnl_usdt": -0.0145,
+    "pnl_pct": -0.1446,
+    "duration_minutes": 45.3,
     "reason": "شکار لوهای برابر"
   },
   {
