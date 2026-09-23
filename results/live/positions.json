@@ -49957,5 +49957,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__SOL-USDT__20260923T194556",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-23T19:45:56.634154+00:00",
+    "entry_price": 114.4,
+    "stop_loss": 114.65366876429555,
+    "take_profit": 112.94220823802969,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
