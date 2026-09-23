@@ -47640,12 +47640,12 @@
     "take_profit": 118.81,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-23T06:30:57.072597+00:00",
+    "exit_price": 118.81,
+    "pnl_usdt": 0.0249,
+    "pnl_pct": 0.2493,
+    "duration_minutes": 29.8,
     "reason": "خرید از کف رنج"
   },
   {
