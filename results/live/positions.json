@@ -48193,5 +48193,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین رنج افتتاحیه لندن"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20260923T091548",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-23T09:15:48.488617+00:00",
+    "entry_price": 2739.68,
+    "stop_loss": 2733.175899269701,
+    "take_profit": 2766.8915109544832,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
