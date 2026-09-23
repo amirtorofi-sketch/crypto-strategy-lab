@@ -47682,12 +47682,33 @@
     "take_profit": 117.51242333102184,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-09-23T06:45:48.959635+00:00",
+    "exit_price": 118.99610920027737,
+    "pnl_usdt": -0.0304,
+    "pnl_pct": -0.3041,
+    "duration_minutes": 30.1,
+    "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20260923T064549",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-23T06:45:49.517314+00:00",
+    "entry_price": 119.19,
+    "stop_loss": 120.00797383320102,
+    "take_profit": 118.81,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG نزولی"
+    "reason": "فروش از سقف رنج"
   }
 ]
