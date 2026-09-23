@@ -49929,12 +49929,12 @@
     "take_profit": 2631.6943853891457,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-23T19:30:57.701081+00:00",
+    "exit_price": 2675.0003743073903,
+    "pnl_usdt": -0.0303,
+    "pnl_pct": -0.3029,
+    "duration_minutes": 29.9,
     "reason": "شکار های‌های برابر"
   },
   {
