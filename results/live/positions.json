@@ -50335,5 +50335,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__BNB-USDT__20260924T000110",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "BNB/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-09-24T00:01:10.037988+00:00",
+    "entry_price": 767.38,
+    "stop_loss": 763.4910927326258,
+    "take_profit": 790.5581453474828,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار صعودی"
   }
 ]
