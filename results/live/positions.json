@@ -55137,12 +55137,12 @@
     "take_profit": 120.04134100543682,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-24T23:01:04.746990+00:00",
+    "exit_price": 116.48,
+    "pnl_usdt": -0.0847,
+    "pnl_pct": -0.8467,
+    "duration_minutes": 195.2,
     "reason": "شکست بالای inside bar"
   },
   {
@@ -55585,5 +55585,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20260924T230103",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-24T23:01:03.072270+00:00",
+    "entry_price": 84277.32,
+    "stop_loss": 84099.45916407542,
+    "take_profit": 84942.88253886877,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
