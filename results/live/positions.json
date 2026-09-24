@@ -55557,12 +55557,12 @@
     "take_profit": 84404.68,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-24T23:30:58.992121+00:00",
+    "exit_price": 84404.68,
+    "pnl_usdt": 0.0223,
+    "pnl_pct": 0.2226,
+    "duration_minutes": 45.2,
     "reason": "خرید از کف رنج"
   },
   {
@@ -55620,12 +55620,12 @@
     "take_profit": 115.49394477689165,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-24T23:31:00.678656+00:00",
+    "exit_price": 116.966326626773,
+    "pnl_usdt": -0.0368,
+    "pnl_pct": -0.3684,
+    "duration_minutes": 15.2,
     "reason": "ورود در FVG نزولی"
   }
 ]
