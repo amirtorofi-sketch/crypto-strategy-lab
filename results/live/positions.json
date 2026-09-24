@@ -50356,5 +50356,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار صعودی"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20260924T003058",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-24T00:30:58.329420+00:00",
+    "entry_price": 4290.0,
+    "stop_loss": 4297.527555743595,
+    "take_profit": 4282.475,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
