@@ -55410,12 +55410,12 @@
     "take_profit": 115.98138675093595,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-25T00:15:48.345571+00:00",
+    "exit_price": 117.27429198735962,
+    "pnl_usdt": -0.0212,
+    "pnl_pct": -0.2117,
+    "duration_minutes": 150.0,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   },
   {
@@ -55753,5 +55753,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20260925T001546",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-25T00:15:46.208597+00:00",
+    "entry_price": 84657.87,
+    "stop_loss": 84816.68630015262,
+    "take_profit": 84303.01000000001,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
