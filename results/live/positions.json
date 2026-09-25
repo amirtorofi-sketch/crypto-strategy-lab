@@ -57433,5 +57433,26 @@
     "pnl_pct": 0.2267,
     "duration_minutes": 14.5,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20260925T103103",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-25T10:31:03.477780+00:00",
+    "entry_price": 776.99,
+    "stop_loss": 781.1566147088739,
+    "take_profit": 775.45,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
