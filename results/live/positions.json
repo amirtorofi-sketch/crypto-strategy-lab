@@ -57517,5 +57517,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BNB-USDT__20260925T113054",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-25T11:30:54.681662+00:00",
+    "entry_price": 779.76,
+    "stop_loss": 785.4332417592854,
+    "take_profit": 770.5613736107211,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
