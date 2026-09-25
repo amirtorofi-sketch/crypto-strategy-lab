@@ -54759,12 +54759,12 @@
     "take_profit": 772.0735,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-25T04:01:07.938302+00:00",
+    "exit_price": 772.0735,
+    "pnl_usdt": 0.0758,
+    "pnl_pct": 0.7582,
+    "duration_minutes": 600.0,
     "reason": "برگشت از باند بالای بولینگر"
   },
   {
@@ -56425,5 +56425,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در ناحیه OTE صعودی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__PAXG-USDT__20260925T040108",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-09-25T04:01:08.879161+00:00",
+    "entry_price": 4265.66,
+    "stop_loss": 4291.609290422675,
+    "take_profit": 4211.074191546499,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
