@@ -56817,12 +56817,12 @@
     "take_profit": 2701.3420738381733,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-25T07:45:58.520336+00:00",
+    "exit_price": 2669.1738617441215,
+    "pnl_usdt": -0.0471,
+    "pnl_pct": -0.471,
+    "duration_minutes": 15.1,
     "reason": "شکار لوهای برابر"
   },
   {
