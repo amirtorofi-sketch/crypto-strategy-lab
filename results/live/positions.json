@@ -62179,5 +62179,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "smc_order_block_retest__SOL-USDT__20260926T150102",
+    "strategy": "smc_order_block_retest",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-26T15:01:02.239518+00:00",
+    "entry_price": 120.95,
+    "stop_loss": 120.51515261146285,
+    "take_profit": 123.99847388537138,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به بولیش Order Block"
   }
 ]
