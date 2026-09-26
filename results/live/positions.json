@@ -61584,12 +61584,12 @@
     "take_profit": 2688.685,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-26T10:30:53.291945+00:00",
+    "exit_price": 2688.685,
+    "pnl_usdt": 0.015,
+    "pnl_pct": 0.1498,
+    "duration_minutes": 75.1,
     "reason": "خرید از کف رنج"
   },
   {
