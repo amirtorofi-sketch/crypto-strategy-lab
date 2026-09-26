@@ -62067,12 +62067,12 @@
     "take_profit": 83735.78533555861,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-26T14:45:46.137821+00:00",
+    "exit_price": 83983.22775973297,
+    "pnl_usdt": -0.0133,
+    "pnl_pct": -0.1326,
+    "duration_minutes": 44.7,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -62151,12 +62151,33 @@
     "take_profit": 770.4055370089044,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
+    "status": "loss",
+    "exit_time": "2026-09-26T14:45:48.968475+00:00",
+    "exit_price": 773.4805355589314,
+    "pnl_usdt": -0.0154,
+    "pnl_pct": -0.1538,
+    "duration_minutes": 14.8,
+    "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20260926T144547",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-26T14:45:47.906860+00:00",
+    "entry_price": 120.92,
+    "stop_loss": 120.76642283561237,
+    "take_profit": 121.86647636989683,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG نزولی"
+    "reason": "ورود در FVG صعودی"
   }
 ]
