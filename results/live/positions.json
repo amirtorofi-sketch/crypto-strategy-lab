@@ -62382,12 +62382,12 @@
     "take_profit": 2682.2935811424763,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-26T19:45:48.165682+00:00",
+    "exit_price": 2682.2935811424763,
+    "pnl_usdt": 0.0195,
+    "pnl_pct": 0.1954,
+    "duration_minutes": 120.0,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -62536,5 +62536,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BTC-USDT__20260926T194546",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-26T19:45:46.570934+00:00",
+    "entry_price": 84016.78,
+    "stop_loss": 83965.54366312415,
+    "take_profit": 84184.72505313785,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
