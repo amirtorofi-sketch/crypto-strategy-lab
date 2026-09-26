@@ -61185,12 +61185,12 @@
     "take_profit": 83229.82338428902,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-26T08:00:52.318229+00:00",
+    "exit_price": 84012.93,
+    "pnl_usdt": -0.0225,
+    "pnl_pct": -0.2251,
+    "duration_minutes": 59.8,
     "reason": "شکست پایین inside bar"
   },
   {
@@ -61360,5 +61360,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__SOL-USDT__20260926T080054",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-09-26T08:00:54.078671+00:00",
+    "entry_price": 120.76,
+    "stop_loss": 119.90909676341315,
+    "take_profit": 125.37806473173706,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار صعودی"
   }
 ]
