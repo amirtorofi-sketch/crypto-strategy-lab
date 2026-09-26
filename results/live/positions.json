@@ -61605,12 +61605,12 @@
     "take_profit": 121.36087175377921,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-26T09:30:56.692536+00:00",
+    "exit_price": 119.91994188308139,
+    "pnl_usdt": -0.028,
+    "pnl_pct": -0.2798,
+    "duration_minutes": 15.0,
     "reason": "شکار لوهای برابر"
   }
 ]
