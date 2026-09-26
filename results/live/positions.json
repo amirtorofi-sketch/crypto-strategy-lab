@@ -61080,12 +61080,33 @@
     "take_profit": 779.0297442181721,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-09-26T04:00:58.569979+00:00",
+    "exit_price": 774.2013503854553,
+    "pnl_usdt": -0.0222,
+    "pnl_pct": -0.2217,
+    "duration_minutes": 30.1,
+    "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "pa_inside_bar_breakout__ETH-USDT__20260926T040056",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-26T04:00:56.294807+00:00",
+    "entry_price": 2687.98,
+    "stop_loss": 2695.81,
+    "take_profit": 2656.619105213634,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکار لوهای برابر"
+    "reason": "شکست پایین inside bar"
   }
 ]
