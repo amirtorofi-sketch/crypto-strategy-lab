@@ -61612,5 +61612,26 @@
     "pnl_pct": -0.2798,
     "duration_minutes": 15.0,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BNB-USDT__20260926T094541",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-26T09:45:41.027820+00:00",
+    "entry_price": 771.08,
+    "stop_loss": 771.4487077082266,
+    "take_profit": 768.5907690981118,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
