@@ -62347,5 +62347,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20260926T163050",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-26T16:30:50.429416+00:00",
+    "entry_price": 2690.92,
+    "stop_loss": 2689.139260829763,
+    "take_profit": 2698.5094930853124,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
