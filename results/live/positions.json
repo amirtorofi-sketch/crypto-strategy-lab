@@ -65616,12 +65616,12 @@
     "take_profit": 2672.7747211505684,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-27T18:15:48.596477+00:00",
+    "exit_price": 2692.560233461932,
+    "pnl_usdt": -0.0236,
+    "pnl_pct": -0.2362,
+    "duration_minutes": 60.1,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -65686,5 +65686,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه عرضه تازه"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20260927T181547",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-27T18:15:47.357147+00:00",
+    "entry_price": 84604.44,
+    "stop_loss": 84273.54384101013,
+    "take_profit": 84750.515,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
