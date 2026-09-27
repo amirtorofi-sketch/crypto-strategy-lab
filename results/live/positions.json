@@ -65427,12 +65427,12 @@
     "take_profit": 118.54728713330817,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-27T20:01:01.301228+00:00",
+    "exit_price": 123.35135643334591,
+    "pnl_usdt": -0.1395,
+    "pnl_pct": -1.3953,
+    "duration_minutes": 239.9,
     "reason": "کراس نزولی MACD"
   },
   {
