@@ -65700,12 +65700,12 @@
     "take_profit": 84750.515,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-27T18:45:49.823792+00:00",
+    "exit_price": 84750.515,
+    "pnl_usdt": 0.0093,
+    "pnl_pct": 0.0927,
+    "duration_minutes": 30.0,
     "reason": "خرید از کف رنج"
   }
 ]
