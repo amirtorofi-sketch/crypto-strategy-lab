@@ -61017,12 +61017,12 @@
     "take_profit": 4275.525852654777,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-27T17:45:50.154830+00:00",
+    "exit_price": 4275.525852654777,
+    "pnl_usdt": 0.0102,
+    "pnl_pct": 0.1017,
+    "duration_minutes": 2324.7,
     "reason": "شکار های‌های برابر"
   },
   {
