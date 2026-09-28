@@ -68682,12 +68682,12 @@
     "take_profit": 4180.065426481368,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-28T11:45:48.805205+00:00",
+    "exit_price": 4158.852148822235,
+    "pnl_usdt": -0.018,
+    "pnl_pct": -0.1796,
+    "duration_minutes": 89.9,
     "reason": "ورود در FVG صعودی"
   },
   {
