@@ -68269,5 +68269,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__ETH-USDT__20260928T084548",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-28T08:45:48.532447+00:00",
+    "entry_price": 2644.08,
+    "stop_loss": 2638.421996295537,
+    "take_profit": 2669.250055566941,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
