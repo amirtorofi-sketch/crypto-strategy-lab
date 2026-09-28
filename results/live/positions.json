@@ -70264,5 +70264,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20260928T194546",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-28T19:45:46.683101+00:00",
+    "entry_price": 4139.77,
+    "stop_loss": 4118.087765991524,
+    "take_profit": 4151.035,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
