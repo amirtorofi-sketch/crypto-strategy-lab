@@ -70663,5 +70663,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20260928T223057",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-09-28T22:30:57.330315+00:00",
+    "entry_price": 759.57,
+    "stop_loss": 756.0237404257623,
+    "take_profit": 765.3050000000001,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
