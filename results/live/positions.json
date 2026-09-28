@@ -70404,12 +70404,12 @@
     "take_profit": 81821.08926264524,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-28T20:31:03.997037+00:00",
+    "exit_price": 83924.56338249032,
+    "pnl_usdt": -0.0722,
+    "pnl_pct": -0.7216,
+    "duration_minutes": 15.3,
     "reason": "واکنش به ناحیه عرضه تازه"
   },
   {
@@ -70495,5 +70495,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__BTC-USDT__20260928T203104",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-28T20:31:04.505583+00:00",
+    "entry_price": 83389.54,
+    "stop_loss": 83924.56338249032,
+    "take_profit": 81821.08926264524,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
