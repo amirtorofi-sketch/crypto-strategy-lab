@@ -68913,12 +68913,12 @@
     "take_profit": 2676.1538712624033,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-28T13:45:49.683007+00:00",
+    "exit_price": 2694.740490299008,
+    "pnl_usdt": -0.0222,
+    "pnl_pct": -0.2223,
+    "duration_minutes": 44.7,
     "reason": "Judas Swing نزولی در باز شدن سشن"
   },
   {
@@ -69067,5 +69067,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "ict_judas_swing__SOL-USDT__20260928T134550",
+    "strategy": "ict_judas_swing",
+    "category": "ict",
+    "symbol": "SOL/USDT",
+    "timeframe": "5m",
+    "side": "short",
+    "entry_time": "2026-09-28T13:45:50.934336+00:00",
+    "entry_price": 120.1,
+    "stop_loss": 120.44566053714414,
+    "take_profit": 119.15424328569834,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "Judas Swing نزولی در باز شدن سشن"
   }
 ]
