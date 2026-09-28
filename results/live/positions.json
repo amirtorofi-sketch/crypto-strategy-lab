@@ -69606,12 +69606,12 @@
     "take_profit": 122.4533436787152,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-28T16:15:56.400087+00:00",
+    "exit_price": 118.13044375475232,
+    "pnl_usdt": -0.0568,
+    "pnl_pct": -0.5682,
+    "duration_minutes": 14.7,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
@@ -69634,5 +69634,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20260928T161556",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-28T16:15:56.963889+00:00",
+    "entry_price": 118.71,
+    "stop_loss": 118.13044375475232,
+    "take_profit": 122.4533436787152,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
