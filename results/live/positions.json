@@ -74730,12 +74730,12 @@
     "take_profit": 114.0368783258995,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-29T23:01:06.008153+00:00",
+    "exit_price": 119.54656083705024,
+    "pnl_usdt": -0.164,
+    "pnl_pct": -1.6402,
+    "duration_minutes": 299.9,
     "reason": "کراس نزولی MACD"
   },
   {
