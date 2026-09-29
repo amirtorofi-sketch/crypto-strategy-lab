@@ -71517,12 +71517,12 @@
     "take_profit": 764.6292163955243,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-29T05:01:06.331401+00:00",
+    "exit_price": 757.2092940325371,
+    "pnl_usdt": -0.0288,
+    "pnl_pct": -0.2883,
+    "duration_minutes": 60.1,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -71559,12 +71559,33 @@
     "take_profit": 763.2305887751635,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-09-29T05:01:06.331428+00:00",
+    "exit_price": 757.2529116837254,
+    "pnl_usdt": -0.0215,
+    "pnl_pct": -0.2154,
+    "duration_minutes": 15.3,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_choch_reversal__BNB-USDT__20260929T050105",
+    "strategy": "smc_choch_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-09-29T05:01:05.750984+00:00",
+    "entry_price": 757.1,
+    "stop_loss": 767.3864805156904,
+    "take_profit": 736.5270389686192,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+    "reason": "CHoCH نزولی - برگشت روند"
   }
 ]
