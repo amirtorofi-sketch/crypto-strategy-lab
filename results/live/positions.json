@@ -73078,5 +73078,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20260929T114548",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-09-29T11:45:48.434241+00:00",
+    "entry_price": 765.62,
+    "stop_loss": 770.224810322621,
+    "take_profit": 762.165,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
