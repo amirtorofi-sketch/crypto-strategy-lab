@@ -73029,12 +73029,12 @@
     "take_profit": 84620.38160257514,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-29T11:15:52.552172+00:00",
+    "exit_price": 83943.55420769098,
+    "pnl_usdt": -0.0325,
+    "pnl_pct": -0.3253,
+    "duration_minutes": 44.9,
     "reason": "ورود در FVG صعودی"
   },
   {
