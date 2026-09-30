@@ -80337,12 +80337,12 @@
     "take_profit": 770.717858201015,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-30T23:15:49.455527+00:00",
+    "exit_price": 770.717858201015,
+    "pnl_usdt": 0.0455,
+    "pnl_pct": 0.4545,
+    "duration_minutes": 60.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
