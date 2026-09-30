@@ -77250,12 +77250,12 @@
     "take_profit": 4188.42324798439,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-09-30T11:15:47.127901+00:00",
+    "exit_price": 4188.42324798439,
+    "pnl_usdt": 0.0345,
+    "pnl_pct": 0.3455,
+    "duration_minutes": 164.8,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
