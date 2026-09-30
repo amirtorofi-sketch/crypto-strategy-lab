@@ -79098,12 +79098,12 @@
     "take_profit": 4194.76,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-30T15:30:59.202647+00:00",
+    "exit_price": 4161.321545024839,
+    "pnl_usdt": -0.0307,
+    "pnl_pct": -0.307,
+    "duration_minutes": 15.2,
     "reason": "خرید از کف رنج"
   }
 ]
