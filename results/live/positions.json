@@ -80281,5 +80281,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "classic_stochastic_cross__BTC-USDT__20260930T220101",
+    "strategy": "classic_stochastic_cross",
+    "category": "classic",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-09-30T22:01:01.066808+00:00",
+    "entry_price": 83757.72,
+    "stop_loss": 82992.77856767649,
+    "take_profit": 85287.60286464701,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس صعودی استوکاستیک از اشباع فروش"
   }
 ]
