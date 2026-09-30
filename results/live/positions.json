@@ -79875,12 +79875,12 @@
     "take_profit": 2708.1171894267786,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-09-30T19:31:04.006139+00:00",
+    "exit_price": 2671.868854038215,
+    "pnl_usdt": -0.0352,
+    "pnl_pct": -0.3518,
+    "duration_minutes": 29.9,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
