@@ -81849,12 +81849,12 @@
     "take_profit": 4181.157529966708,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-01T10:45:45.707994+00:00",
+    "exit_price": 4181.157529966708,
+    "pnl_usdt": 0.039,
+    "pnl_pct": 0.3902,
+    "duration_minutes": 120.0,
     "reason": "شکار لوهای برابر"
   },
   {
