@@ -84579,12 +84579,33 @@
     "take_profit": 4172.356230947119,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-10-01T23:01:09.049240+00:00",
+    "exit_price": 4187.401565357932,
+    "pnl_usdt": -0.0147,
+    "pnl_pct": -0.1467,
+    "duration_minutes": 15.4,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__PAXG-USDT__20261001T230108",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-01T23:01:08.357338+00:00",
+    "entry_price": 4187.76,
+    "stop_loss": 4185.13,
+    "take_profit": 4214.121873109373,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+    "reason": "شکست بالای inside bar"
   }
 ]
