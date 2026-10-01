@@ -1,0 +1,14 @@
+strategy,category,timeframe,symbol,trades,wins,losses,win_rate_pct,profit_factor,total_pnl_usdt,total_pnl_pct_sum
+ict_london_killzone_breakout,ict,15m,BTC/USDT,4,4,0,100.0,inf,0.24,2.37
+smc_equal_highs_lows_grab,smc,15m,BTC/USDT,8,4,4,50.0,1.31,0.04,0.43
+classic_bollinger_mean_reversion,classic,1h,PAXG/USDT,1,1,0,100.0,inf,0.04,0.42
+ict_judas_swing,ict,5m,ETH/USDT,5,3,2,60.0,1.55,0.02,0.23
+smc_choch_reversal,smc,1h,PAXG/USDT,1,0,1,0.0,0.0,-0.07,-0.66
+smc_bos_continuation,smc,1h,PAXG/USDT,1,0,1,0.0,0.0,-0.08,-0.82
+range_fade_extremes,range_rtm,15m,BTC/USDT,23,13,10,56.5,0.76,-0.09,-0.9
+classic_macd_signal_cross,classic,1h,ETH/USDT,1,0,1,0.0,0.0,-0.12,-1.22
+rtm_imbalance_rebalance,range_rtm,15m,ETH/USDT,14,2,12,14.3,0.24,-0.17,-1.68
+smc_liquidity_sweep_reversal,smc,15m,PAXG/USDT,14,3,11,21.4,0.42,-0.26,-2.59
+smc_fvg_fill_entry,smc,15m,ETH/USDT,27,5,22,18.5,0.32,-0.36,-3.59
+rtm_supply_demand_zone,range_rtm,1h,SOL/USDT,14,0,14,0.0,0.0,-0.57,-5.68
+pa_inside_bar_breakout,price_action,1h,PAXG/USDT,11,0,11,0.0,0.0,-0.6,-6.0
