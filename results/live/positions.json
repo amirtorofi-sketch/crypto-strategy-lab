@@ -86182,5 +86182,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261002T071547",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-02T07:15:47.261796+00:00",
+    "entry_price": 121.52,
+    "stop_loss": 121.2348928468491,
+    "take_profit": 123.39660729726334,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
