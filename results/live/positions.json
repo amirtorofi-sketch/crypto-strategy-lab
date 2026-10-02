@@ -86161,5 +86161,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "برگشت از باند بالای بولینگر"
+  },
+  {
+    "id": "smc_bos_continuation__ETH-USDT__20261002T070103",
+    "strategy": "smc_bos_continuation",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-02T07:01:03.596598+00:00",
+    "entry_price": 2729.42,
+    "stop_loss": 2693.139340441959,
+    "take_profit": 2801.981319116082,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "تایید BOS صعودی"
   }
 ]
