@@ -86728,5 +86728,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "classic_bollinger_mean_reversion__ETH-USDT__20261002T100116",
+    "strategy": "classic_bollinger_mean_reversion",
+    "category": "classic",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-02T10:01:16.207211+00:00",
+    "entry_price": 2747.19,
+    "stop_loss": 2768.6344843025354,
+    "take_profit": 2712.666,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "برگشت از باند بالای بولینگر"
   }
 ]
