@@ -86763,12 +86763,12 @@
     "take_profit": 778.0,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-02T11:45:47.184083+00:00",
+    "exit_price": 778.0,
+    "pnl_usdt": 0.0174,
+    "pnl_pct": 0.1739,
+    "duration_minutes": 90.0,
     "reason": "خرید از کف رنج"
   },
   {
