@@ -84705,12 +84705,33 @@
     "take_profit": 4174.53515546363,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-10-02T00:01:07.395437+00:00",
+    "exit_price": 4191.737656302425,
+    "pnl_usdt": -0.0187,
+    "pnl_pct": -0.1872,
+    "duration_minutes": 15.3,
+    "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "pa_double_top_bottom__PAXG-USDT__20261002T000106",
+    "strategy": "pa_double_top_bottom",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-10-02T00:01:06.559772+00:00",
+    "entry_price": 4191.91,
+    "stop_loss": 4109.088100596982,
+    "take_profit": 4256.869497015089,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکار های‌های برابر"
+    "reason": "دابل باتم"
   }
 ]
