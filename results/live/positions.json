@@ -91495,5 +91495,26 @@
     "pnl_pct": -0.1331,
     "duration_minutes": 30.0,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20261003T144547",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-03T14:45:47.922377+00:00",
+    "entry_price": 84752.0,
+    "stop_loss": 84674.8242177855,
+    "take_profit": 84928.46485178747,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
