@@ -89661,12 +89661,12 @@
     "take_profit": 116.89457966859165,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-03T00:31:02.910644+00:00",
+    "exit_price": 118.979050439769,
+    "pnl_usdt": -0.0722,
+    "pnl_pct": -0.7221,
+    "duration_minutes": 149.9,
     "reason": "ورود در FVG نزولی"
   },
   {
