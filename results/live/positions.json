@@ -91845,12 +91845,12 @@
     "take_profit": 2683.6499999999996,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-03T19:15:47.890021+00:00",
+    "exit_price": 2683.6499999999996,
+    "pnl_usdt": 0.0119,
+    "pnl_pct": 0.1193,
+    "duration_minutes": 74.5,
     "reason": "فروش از سقف رنج"
   },
   {
