@@ -90963,12 +90963,12 @@
     "take_profit": 120.08991476874152,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-03T08:30:50.345960+00:00",
+    "exit_price": 119.23961022775102,
+    "pnl_usdt": -0.0231,
+    "pnl_pct": -0.2311,
+    "duration_minutes": 15.0,
     "reason": "ورود در FVG صعودی"
   }
 ]
