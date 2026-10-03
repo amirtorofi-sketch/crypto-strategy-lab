@@ -90669,12 +90669,12 @@
     "take_profit": 118.65180428338842,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-03T06:45:43.595211+00:00",
+    "exit_price": 119.76654638110743,
+    "pnl_usdt": -0.0303,
+    "pnl_pct": -0.3031,
+    "duration_minutes": 60.0,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
