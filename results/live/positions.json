@@ -91488,12 +91488,12 @@
     "take_profit": 118.97759469419297,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-03T14:31:00.616693+00:00",
+    "exit_price": 119.49336079587106,
+    "pnl_usdt": -0.0133,
+    "pnl_pct": -0.1331,
+    "duration_minutes": 30.0,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
