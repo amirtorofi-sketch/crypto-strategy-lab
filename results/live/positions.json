@@ -95002,5 +95002,26 @@
     "pnl_pct": -0.1461,
     "duration_minutes": 15.4,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BNB-USDT__20261004T191544",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-04T19:15:44.725576+00:00",
+    "entry_price": 788.92,
+    "stop_loss": 789.8445856856207,
+    "take_profit": 785.8512147156887,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
