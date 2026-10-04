@@ -93147,12 +93147,12 @@
     "take_profit": 84676.50341614161,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-04T05:45:48.987917+00:00",
+    "exit_price": 84895.92777225723,
+    "pnl_usdt": -0.0145,
+    "pnl_pct": -0.1449,
+    "duration_minutes": 104.7,
     "reason": "شکار های‌های برابر"
   },
   {
