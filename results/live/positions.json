@@ -93553,5 +93553,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای رنج افتتاحیه لندن"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261004T073106",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-04T07:31:06.547364+00:00",
+    "entry_price": 121.11,
+    "stop_loss": 121.37298665375563,
+    "take_profit": 120.31520019366533,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
