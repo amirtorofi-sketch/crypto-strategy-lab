@@ -93483,12 +93483,12 @@
     "take_profit": 785.86,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-04T09:15:54.964251+00:00",
+    "exit_price": 790.2264789662516,
+    "pnl_usdt": -0.0361,
+    "pnl_pct": -0.3613,
+    "duration_minutes": 164.9,
     "reason": "فروش از سقف رنج"
   },
   {
