@@ -93336,12 +93336,33 @@
     "take_profit": 774.2591924886217,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-04T05:01:10.436740+00:00",
+    "exit_price": 785.1467205007585,
+    "pnl_usdt": -0.0155,
+    "pnl_pct": -0.1548,
+    "duration_minutes": 14.8,
+    "reason": "واکنش به ناحیه عرضه تازه"
+  },
+  {
+    "id": "classic_bollinger_mean_reversion__SOL-USDT__20261004T050109",
+    "strategy": "classic_bollinger_mean_reversion",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-04T05:01:09.293913+00:00",
+    "entry_price": 120.64,
+    "stop_loss": 121.26570713294387,
+    "take_profit": 119.846,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "واکنش به ناحیه عرضه تازه"
+    "reason": "برگشت از باند بالای بولینگر"
   }
 ]
