@@ -100441,5 +100441,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261005T224546",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-05T22:45:46.252934+00:00",
+    "entry_price": 121.18,
+    "stop_loss": 120.74619279371623,
+    "take_profit": 121.96172671903139,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
