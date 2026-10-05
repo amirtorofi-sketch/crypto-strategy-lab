@@ -98376,12 +98376,12 @@
     "take_profit": 86939.66143174333,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-05T12:15:44.605471+00:00",
+    "exit_price": 85960.0,
+    "pnl_usdt": -0.0377,
+    "pnl_pct": -0.3769,
+    "duration_minutes": 14.7,
     "reason": "شکست بالای inside bar"
   },
   {
@@ -98404,5 +98404,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__BTC-USDT__20261005T121545",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-05T12:15:45.106425+00:00",
+    "entry_price": 86216.0,
+    "stop_loss": 85960.0,
+    "take_profit": 86939.66143174333,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
