@@ -97312,5 +97312,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20261005T054552",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-05T05:45:52.624783+00:00",
+    "entry_price": 85784.0,
+    "stop_loss": 86010.60351013504,
+    "take_profit": 85229.38741554129,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
