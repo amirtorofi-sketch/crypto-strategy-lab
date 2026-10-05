@@ -98341,5 +98341,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261005T113101",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-05T11:31:01.001735+00:00",
+    "entry_price": 86210.01,
+    "stop_loss": 86599.10641870713,
+    "take_profit": 85955.25,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
