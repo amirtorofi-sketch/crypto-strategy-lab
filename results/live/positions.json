@@ -100252,5 +100252,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای inside bar"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261005T191617",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-05T19:16:17.965730+00:00",
+    "entry_price": 120.21,
+    "stop_loss": 120.3210926803896,
+    "take_profit": 119.14360979415602,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
