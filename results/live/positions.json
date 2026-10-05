@@ -98040,12 +98040,12 @@
     "take_profit": 123.21137088100346,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-05T09:15:53.616634+00:00",
+    "exit_price": 120.9079086079331,
+    "pnl_usdt": -0.0222,
+    "pnl_pct": -0.2221,
+    "duration_minutes": 14.7,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
@@ -98089,5 +98089,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20261005T091554",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-05T09:15:54.218894+00:00",
+    "entry_price": 121.08,
+    "stop_loss": 120.9079086079331,
+    "take_profit": 123.21137088100346,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
