@@ -97291,5 +97291,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه عرضه تازه"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261005T053054",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-05T05:30:54.830090+00:00",
+    "entry_price": 120.2,
+    "stop_loss": 119.91713186150953,
+    "take_profit": 121.44302207735697,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
