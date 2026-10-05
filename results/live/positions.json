@@ -97410,12 +97410,12 @@
     "take_profit": 4159.457857124234,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-05T06:15:50.284042+00:00",
+    "exit_price": 4159.457857124234,
+    "pnl_usdt": 0.0273,
+    "pnl_pct": 0.2732,
+    "duration_minutes": 14.7,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -97431,12 +97431,12 @@
     "take_profit": 4157.440285699387,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-05T06:15:50.284066+00:00",
+    "exit_price": 4157.440285699387,
+    "pnl_usdt": 0.0224,
+    "pnl_pct": 0.2245,
+    "duration_minutes": 14.7,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
