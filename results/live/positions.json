@@ -104221,5 +104221,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__PAXG-USDT__20261006T173104",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-06T17:31:04.470464+00:00",
+    "entry_price": 4165.67,
+    "stop_loss": 4163.234261046419,
+    "take_profit": 4179.704926357203,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
