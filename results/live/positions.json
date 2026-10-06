@@ -100644,12 +100644,12 @@
     "take_profit": 118.76850418798497,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-06T00:31:00.751168+00:00",
+    "exit_price": 121.18114958120151,
+    "pnl_usdt": -0.0412,
+    "pnl_pct": -0.4121,
+    "duration_minutes": 15.1,
     "reason": "واکنش به بریش Order Block"
   },
   {
@@ -100665,12 +100665,33 @@
     "take_profit": 4137.6747358787425,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-06T00:31:03.409246+00:00",
+    "exit_price": 4146.855031694551,
+    "pnl_usdt": -0.013,
+    "pnl_pct": -0.1296,
+    "duration_minutes": 15.1,
+    "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_order_block_retest__SOL-USDT__20261006T003101",
+    "strategy": "smc_order_block_retest",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-06T00:31:01.365846+00:00",
+    "entry_price": 120.78,
+    "stop_loss": 121.18114958120151,
+    "take_profit": 118.76850418798497,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG نزولی"
+    "reason": "واکنش به بریش Order Block"
   }
 ]
