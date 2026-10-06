@@ -102891,12 +102891,12 @@
     "take_profit": 122.45901480444188,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-06T11:15:47.992745+00:00",
+    "exit_price": 119.85273234637054,
+    "pnl_usdt": -0.041,
+    "pnl_pct": -0.4104,
+    "duration_minutes": 14.6,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
@@ -102919,5 +102919,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20261006T111548",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-06T11:15:48.429624+00:00",
+    "entry_price": 120.25,
+    "stop_loss": 119.85273234637054,
+    "take_profit": 122.45901480444188,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
