@@ -109471,5 +109471,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "range_fade_extremes__ETH-USDT__20261007T213106",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-07T21:31:06.509336+00:00",
+    "entry_price": 2570.12,
+    "stop_loss": 2583.1833556179977,
+    "take_profit": 2558.825,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
