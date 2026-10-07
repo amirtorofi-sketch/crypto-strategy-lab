@@ -108379,5 +108379,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "pa_inside_bar_breakout__PAXG-USDT__20261007T150113",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-07T15:01:13.594200+00:00",
+    "entry_price": 4115.01,
+    "stop_loss": 4096.63,
+    "take_profit": 4141.130938515261,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
