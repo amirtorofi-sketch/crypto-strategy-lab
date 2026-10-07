@@ -109527,12 +109527,12 @@
     "take_profit": 114.64844586560048,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-07T22:45:46.426083+00:00",
+    "exit_price": 116.04298649612795,
+    "pnl_usdt": -0.0472,
+    "pnl_pct": -0.4719,
+    "duration_minutes": 44.6,
     "reason": "ورود در FVG نزولی"
   },
   {
