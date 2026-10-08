@@ -111501,12 +111501,12 @@
     "take_profit": 775.3497609616323,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-08T08:15:55.402685+00:00",
+    "exit_price": 768.6784286846041,
+    "pnl_usdt": -0.0209,
+    "pnl_pct": -0.2088,
+    "duration_minutes": 30.1,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -111613,5 +111613,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار صعودی"
+  },
+  {
+    "id": "ict_london_killzone_breakout__PAXG-USDT__20261008T081556",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-08T08:15:56.593903+00:00",
+    "entry_price": 4136.75,
+    "stop_loss": 4124.32,
+    "take_profit": 4158.210000000001,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
