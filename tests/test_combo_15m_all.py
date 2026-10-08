@@ -1,139 +1,131 @@
-name: Backtest 15m - all strategies (manual)
+"""تست‌های حالت «همه‌ی استراتژی‌ها روی ۱۵ دقیقه، نمادهای پرنقدینگی، اجرای تکه‌تکه و ادغام»."""
+import gzip
+import pickle
 
-# فقط دستی اجرا می‌شود: Actions → "Backtest 15m - all strategies" → Run workflow.
-#
-# چه می‌کند:
-#   - ۳۶ نماد پرنقدینگی (backtest/combos.py: LIQUID_SYMBOLS)
-#   - ۲۰ استراتژی (همه‌ی استراتژی‌های ثبت‌شده منهای EXCLUDED_STRATEGIES) همگی روی تایم‌فریم ۱۵ دقیقه
-#   - هر پنج سشن، هر سشن مستقل (برای مقایسه‌ی منصفانه‌ی سشن‌ها)
-#   - بازه‌ی پیش‌فرض ۳۶۵ روز
-#
-# چرا matrix؟ یک job گیت‌هاب حداکثر ۶ ساعت اجرا می‌شود؛ کل کار حدود ۱۷ ساعت CPU است. نمادها در ۶ تکه
-# (هر تکه ۶ نماد) روی ۶ job موازی اجرا می‌شوند و job آخر نتیجه‌ها را ادغام و گزارش را می‌سازد.
-# اگر یکی از تکه‌ها شکست بخورد، گزارش ساخته نمی‌شود (تا نتیجه‌ی ناقص با کامل اشتباه گرفته نشود).
-on:
-  workflow_dispatch:
-    inputs:
-      days:
-        description: "تعداد روز تاریخچه"
-        default: "365"
-      fee_pct:
-        description: "کارمزد هر طرف (٪) — تبدیل سطح ۱: 0.35 ؛ ستون «Exp قبل از کارمزد» در گزارش برای هر کارمزدی قابل استفاده است"
-        default: "0.04"
-      slippage_pct:
-        description: "اسلیپیج هر طرف (٪)"
-        default: "0"
+import numpy as np
+import pandas as pd
+import pytest
 
-permissions:
-  contents: write
+from backtest import combo_backtest as cb
+from backtest.combos import (BOT_SYMBOLS, EXCLUDED_STRATEGIES, LIQUID_SYMBOLS, SESSIONS, parse_shard,
+                             pick_symbols)
+from strategies.registry import get_all_strategies, get_by_name
 
-concurrency:
-  group: backtest-15m-all
-  cancel-in-progress: false
 
-env:
-  SHARDS: "6"
+# ------------------------------------------------------------------ نمادها و تکه‌ها
+def test_liquid_symbols_are_valid():
+    assert 30 <= len(LIQUID_SYMBOLS) <= 40
+    assert len(set(LIQUID_SYMBOLS)) == len(LIQUID_SYMBOLS)
+    assert set(LIQUID_SYMBOLS) <= set(BOT_SYMBOLS)
 
-defaults:
-  run:
-    shell: bash          # شامل pipefail: خطای python پشت tee گم نمی‌شود
 
-jobs:
-  simulate:
-    name: simulate (shard ${{ matrix.shard }}/6)
-    runs-on: ubuntu-latest
-    timeout-minutes: 340
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3, 4, 5, 6]
-    steps:
-      - uses: actions/checkout@v4
+def test_shards_partition_the_symbols_exactly():
+    n = 6
+    parts = [pick_symbols("liquid", f"{i}/{n}") for i in range(1, n + 1)]
+    flat = [s for p in parts for s in p]
+    assert sorted(flat) == sorted(LIQUID_SYMBOLS) and len(flat) == len(set(flat))
+    assert max(map(len, parts)) - min(map(len, parts)) <= 1
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
 
-      - name: Install dependencies
-        run: pip install pandas numpy PyYAML ccxt requests
+def test_symbol_set_all_and_explicit():
+    assert len(pick_symbols("all")) == len(BOT_SYMBOLS)
+    assert pick_symbols("liquid", None, ["BTC/USDT", "ETHUSDT"]) == ["BTCUSDT", "ETHUSDT"]
+    with pytest.raises(ValueError):
+        pick_symbols("nope")
 
-      - name: Download klines (this shard's symbols)
-        env:
-          DAYS: ${{ inputs.days }}
-        run: |
-          mkdir -p shards
-          python -m backtest.download_klines --days "$DAYS" --shard "${{ matrix.shard }}/$SHARDS" 2>&1 | tee "shards/download_report_${{ matrix.shard }}.txt"
 
-      - name: Simulate (15m, all strategies, all sessions)
-        env:
-          FEE_PCT: ${{ inputs.fee_pct }}
-          SLIPPAGE_PCT: ${{ inputs.slippage_pct }}
-        run: |
-          python -m backtest.combo_backtest \
-            --all-strategies --timeframe 15m --shard "${{ matrix.shard }}/$SHARDS" \
-            --workers "$(nproc)" --fee-pct "$FEE_PCT" --slippage-pct "$SLIPPAGE_PCT" \
-            --trades-out "shards/shard_${{ matrix.shard }}.pkl.gz" 2>&1 | tee "shards/log_${{ matrix.shard }}.txt"
+@pytest.mark.parametrize("bad", ["0/6", "7/6", "a/b", "3", "1/0"])
+def test_parse_shard_rejects_bad_values(bad):
+    with pytest.raises(ValueError):
+        parse_shard(bad)
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: shard-${{ matrix.shard }}
-          path: shards/
-          if-no-files-found: error
-          retention-days: 7
 
-  report:
-    name: merge + report
-    needs: simulate
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-    steps:
-      - uses: actions/checkout@v4
+def test_excluded_strategies_exist_and_twenty_remain():
+    names = {s.name for s in get_all_strategies()}
+    assert EXCLUDED_STRATEGIES <= names
+    assert len(EXCLUDED_STRATEGIES) == 3
+    assert len(names - EXCLUDED_STRATEGIES) == 20
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
 
-      - name: Install dependencies
-        run: pip install pandas numpy PyYAML ccxt requests
+# ------------------------------------------------------------------ تایم‌فریم
+def test_resample_rejects_timeframes_not_buildable_from_15m():
+    df = pd.DataFrame({"open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1.0},
+                      index=pd.date_range("2026-01-01", periods=10, freq="15min", tz="UTC"))
+    for tf in ("5m", "1d"):
+        with pytest.raises(ValueError):
+            cb.resample_tf(df, tf)
+    assert cb.resample_tf(df, "15m") is df
 
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: shard-*
-          path: shards
-          merge-multiple: true
 
-      - name: Merge shards and build report
-        run: |
-          OUT=results/backtest/combos_15m_all
-          python -m backtest.combo_backtest --merge shards/shard_*.pkl.gz --out "$OUT" 2>&1 | tee merge_log.txt
-          cat shards/download_report_*.txt > "$OUT/download_report.txt"
-          # فایل معاملات حجیم است؛ داخل ریپو commit نمی‌شود و فقط در Artifact می‌ماند
-          mkdir -p heavy
-          mv "$OUT/trades.csv.gz" heavy/trades.csv.gz
+def _write_csv(path, n=2500, seed=1):
+    r = np.random.default_rng(seed)
+    t = pd.date_range("2026-03-01", periods=n, freq="15min")
+    c = 100 * np.exp(np.cumsum(r.normal(0, 0.004, n)))
+    o = np.r_[c[0], c[:-1]]
+    pd.DataFrame({"open_time": t, "open": o, "high": np.maximum(o, c) * 1.001, "low": np.minimum(o, c) * 0.999,
+                  "close": c, "volume": r.uniform(10, 100, n)}).to_csv(path, index=False)
 
-      - name: Show summary on the run page
-        if: always()
-        run: |
-          if [ -f results/backtest/combos_15m_all/summary.md ]; then cat results/backtest/combos_15m_all/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: backtest-15m-all-results
-          path: |
-            results/backtest/combos_15m_all/
-            heavy/trades.csv.gz
-            merge_log.txt
-          if-no-files-found: warn
+def test_run_symbol_timeframe_override_does_not_touch_registry(tmp_path):
+    p = tmp_path / "TESTUSDT_15m.csv"
+    _write_csv(p)
+    name = "classic_bollinger_mean_reversion"        # استراتژی ۱ساعته‌ی سبک
+    native = get_by_name(name).timeframe
+    assert native != "15m"
+    job = {"symbol": "TESTUSDT", "path": str(p), "allowed": {name: list(SESSIONS)}, "selected": {}, "windows": {},
+           "tf_override": "15m", "buffer_bars": 50, "max_fetch": 1000, "min_reward_pct": 0.0,
+           "trade_value": 10.0, "fee_pct": 0.04, "slippage_pct": 0.0, "independent": True}
+    sym, rows, meta = cb.run_symbol(job)
+    assert sym == "TESTUSDT" and meta["trades"] == len(rows)
+    assert rows, "روی داده‌ی تصادفی باید دست‌کم چند معامله ثبت شود"
+    assert {r["timeframe"] for r in rows} == {"15m"}
+    assert not any(r["selected"] for r in rows)
+    assert get_by_name(name).timeframe == native       # کپی سطحی؛ رجیستری دست‌نخورده
 
-      - name: Commit results
-        run: |
-          git config user.name "trading-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add -A results/backtest/combos_15m_all
-          git diff --quiet --cached || git commit -m "chore: update 15m all-strategies backtest results [skip ci]"
-          for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
-            sleep 5
-          done
+
+# ------------------------------------------------------------------ ادغام تکه‌ها
+def _fake_trades(n, offset_h, symbol):
+    rng = np.random.default_rng(offset_h)
+    t0 = pd.Timestamp("2026-01-01", tz="UTC")
+    rows = []
+    for i in range(n):
+        pnl = float(rng.choice([-0.1, 0.2], p=[0.6, 0.4]))
+        rows.append({"strategy": "s1" if i % 2 else "s2", "category": "x", "symbol": symbol, "timeframe": "15m",
+                     "session": SESSIONS[i % 5], "selected": False, "side": "long",
+                     "entry_time": (t0 + pd.Timedelta(hours=offset_h + i)).isoformat(),
+                     "exit_time": (t0 + pd.Timedelta(hours=offset_h + i + 2)).isoformat(),
+                     "entry_price": 100.0, "stop_loss": 99.0, "take_profit": 102.0, "exit_price": 101.0,
+                     "exit_reason": "tp", "pnl_pct": pnl * 10, "pnl_usdt": pnl, "win": pnl > 0,
+                     "duration_minutes": 120.0, "reason": ""})
+    return pd.DataFrame(rows)
+
+
+def _dump(path, trades, sym, **over):
+    params = {"fee_pct": 0.04, "slippage_pct": 0.0, "trade_value": 10.0, "min_reward_pct": 0.15, "windows": {},
+              "all_sessions": True, "timeframe_override": "15m", "strategies": ["s1", "s2"],
+              "symbols_requested": 1, "symbols_with_data": 1, "symbols_missing": [], "combos": {}}
+    params.update(over)
+    with gzip.open(path, "wb") as f:
+        pickle.dump({"trades": trades, "metas": {sym: {"trades": len(trades)}}, "params": params}, f)
+
+
+def test_merge_shards_builds_report_without_selected_combos(tmp_path):
+    _dump(tmp_path / "shard_1.pkl.gz", _fake_trades(300, 0, "BTC/USDT"), "BTCUSDT")
+    _dump(tmp_path / "shard_2.pkl.gz", _fake_trades(300, 500, "ETH/USDT"), "ETHUSDT")
+    out = tmp_path / "out"
+    cb.merge_shards([str(tmp_path / "shard_*.pkl.gz")], str(out))
+    md = (out / "summary.md").read_text(encoding="utf-8")
+    assert "همه‌ی ترکیب‌ها" in md and "تایم‌فریم **15m**" in md
+    assert "چک سوگیری انتخاب" not in md
+    df = pd.read_csv(out / "by_combo.csv")
+    assert df["n"].sum() == 600 and set(df["strategy"]) == {"s1", "s2"}
+    assert set(pd.read_csv(out / "by_symbol.csv")["symbol"]) == {"BTC/USDT", "ETH/USDT"}
+    html = (out / "dashboard.html").read_text(encoding="utf-8")
+    assert "sel_label" in html
+
+
+def test_merge_shards_refuses_mismatched_parameters(tmp_path):
+    _dump(tmp_path / "shard_1.pkl.gz", _fake_trades(50, 0, "BTC/USDT"), "BTCUSDT")
+    _dump(tmp_path / "shard_2.pkl.gz", _fake_trades(50, 500, "ETH/USDT"), "ETHUSDT", fee_pct=0.35)
+    with pytest.raises(SystemExit):
+        cb.merge_shards([str(tmp_path / "shard_*.pkl.gz")], str(tmp_path / "out"))
