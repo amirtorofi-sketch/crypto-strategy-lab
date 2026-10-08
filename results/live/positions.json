@@ -111333,12 +111333,12 @@
     "take_profit": 116.6344750137165,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-08T07:15:56.172847+00:00",
+    "exit_price": 114.95466299835402,
+    "pnl_usdt": -0.0414,
+    "pnl_pct": -0.4141,
+    "duration_minutes": 14.7,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -111361,5 +111361,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به مقاومت افقی"
+  },
+  {
+    "id": "ict_london_killzone_breakout__BTC-USDT__20261008T071553",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-08T07:15:53.759276+00:00",
+    "entry_price": 83060.49,
+    "stop_loss": 82506.6,
+    "take_profit": 83947.30999999998,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
