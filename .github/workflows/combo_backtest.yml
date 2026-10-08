@@ -66,6 +66,9 @@ jobs:
           if [ -n "$SYMBOLS" ]; then ARGS="$ARGS --symbols $SYMBOLS"; fi
           python -m backtest.combo_backtest $ARGS 2>&1 | tee backtest_log.txt
           cp download_report.txt results/backtest/combos/download_report.txt
+          # فایل معاملات حجیم است (برای ۳۶۵ روز حدود ۷۵ مگابایت)؛ داخل ریپو commit نمی‌شود و فقط در Artifact می‌ماند
+          mkdir -p heavy
+          mv results/backtest/combos/trades.csv.gz heavy/trades.csv.gz
 
       - name: Show summary on the run page
         if: always()
@@ -81,6 +84,7 @@ jobs:
           name: combo-backtest-results
           path: |
             results/backtest/combos/
+            heavy/trades.csv.gz
             backtest_log.txt
           if-no-files-found: warn
 
@@ -88,7 +92,7 @@ jobs:
         run: |
           git config user.name "trading-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add results/backtest/combos
+          git add -A results/backtest/combos
           git diff --quiet --cached || git commit -m "chore: update combo backtest results [skip ci]"
           for i in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
