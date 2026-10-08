@@ -10,7 +10,7 @@
     by_strategy_session.csv          استراتژی × سشن
     by_strategy_symbol.csv           استراتژی × نماد
     by_strategy_session_symbol.csv.gz  استراتژی × سشن × نماد (سه‌بعدی؛ فقط گروه‌های n>=10)
-    by_combo.csv                     فقط ۱۳ ترکیب انتخاب‌شده‌ی استراتژی × سشن
+    by_combo.csv                     ترکیب‌های انتخاب‌شده‌ی استراتژی × سشن (در حالت --all-strategies: همه‌ی ترکیب‌ها)
     trades.csv.gz                    همه‌ی معاملات (حجیم؛ workflow آن را فقط به‌عنوان Artifact نگه می‌دارد)
     meta.json                        پارامترها و وضعیت داده‌ی هر نماد
 
@@ -65,12 +65,12 @@ def _flat(rows: list[dict], key_names: list[str]) -> pd.DataFrame:
     return df[first + [c for c in df.columns if c not in first]].round(4)
 
 
-def _equity(days: list[str], base: pd.DataFrame, sel: pd.DataFrame, all_sessions: bool) -> dict:
+def _equity(days: list[str], base: pd.DataFrame, sel: pd.DataFrame, all_sessions: bool, label: str) -> dict:
     def curve(g):
         s = g.groupby(g["exit_dt"].dt.strftime("%Y-%m-%d"))["pnl_usdt"].sum()
         return [round(float(v), 4) for v in s.reindex(days, fill_value=0).cumsum()]
 
-    eq = {"ALL (۱۳ ترکیب انتخاب‌شده)": curve(sel)}
+    eq = {f"ALL ({label})": curve(sel)}
     if all_sessions:
         eq["ALL (همه‌ی سشن‌ها)"] = curve(base)
     for ses, g in base.groupby("session"):
@@ -120,8 +120,14 @@ def write_outputs(trades: pd.DataFrame, metas: dict, params: dict, out_dir: str)
 
     sel = t[t["selected"]].copy()
     all_sessions = bool(params["all_sessions"])
-    base = t if all_sessions else sel
     sel_map = {(s, ses) for s, ses_list in params["combos"].items() for ses in ses_list}
+    has_selected = not sel.empty
+    if not has_selected:                       # حالت --all-strategies: هیچ ترکیبی «انتخاب‌شده» نیست؛ همه را بگیر
+        sel = t.copy()
+        all_sessions = True
+    label = f"{len(sel_map)} ترکیب انتخاب‌شده" if has_selected else "همه‌ی ترکیب‌ها"
+    params = {**params, "sel_label": label, "has_selected": has_selected}
+    base = t if all_sessions else sel
 
     cost_per_trade = params["trade_value"] * 2 * (params["fee_pct"] + params["slippage_pct"]) / 100
     slip_cost = params["trade_value"] * 2 * SLIP_STRESS_PCT / 100
@@ -149,7 +155,7 @@ def write_outputs(trades: pd.DataFrame, metas: dict, params: dict, out_dir: str)
     overall_all["exp_gross"] = overall_all["exp"] + cost_per_trade
 
     days = sorted(base["exit_dt"].dt.strftime("%Y-%m-%d").unique())
-    equity = _equity(days, base, sel, all_sessions)
+    equity = _equity(days, base, sel, all_sessions, label)
 
     # ---- CSV و معاملات
     for name, (keys, rows) in tables.items():
@@ -171,7 +177,7 @@ def write_outputs(trades: pd.DataFrame, metas: dict, params: dict, out_dir: str)
         json.dump(meta, f, ensure_ascii=False, indent=1, default=str)
 
     _write_md(os.path.join(out_dir, "summary.md"), tables, sel_rows, overall, overall_all, meta, params)
-    _write_dashboard(os.path.join(out_dir, "dashboard.html"), tables, overall, overall_all, meta, equity, days)
+    _write_dashboard(os.path.join(out_dir, "dashboard.html"), tables, overall, overall_all, meta, equity, days, label)
     print(f"\n✅ نتایج در {out_dir}/ ذخیره شد (summary.md ، dashboard.html ، CSVها ، trades.csv.gz)\n")
     print(_md_combo_table(sel_rows))
 
@@ -187,16 +193,17 @@ def _write_md(path: str, tables: dict, sel_rows: list[dict], o: dict, oa: dict, 
              + (f" (بدون داده: {', '.join(miss[:10])}{'…' if len(miss) > 10 else ''})" if miss else ""))
     L.append(f"- حجم ثابت {params['trade_value']:g}$ ، کارمزد هر طرف {params['fee_pct']}% ، اسلیپیج هر طرف "
              f"{params['slippage_pct']}% ، min_reward_pct={params['min_reward_pct']}")
-    L.append(f"- ۱۳ ترکیب انتخاب‌شده: **{o['n']}** معامله | وین‌ریت {o['wr']*100:.1f}% "
+    label = params["sel_label"]
+    L.append(f"- {label}: **{o['n']}** معامله | وین‌ریت {o['wr']*100:.1f}% "
              f"(سربه‌سر {_fmt(o['be'] and o['be']*100, 1)}%) | PF {_fmt(o['pf'], 3)} | Expectancy {o['exp']:.4f}$ | "
              f"**Expectancy قبل از کارمزد {o['exp_gross']:.4f}$** | سود خالص {o['net']:.2f}$ | MaxDD {o['mdd']:.2f}$")
-    if all_sessions:
+    if all_sessions and params["has_selected"]:
         L.append(f"- کل معاملات همه‌ی سشن‌ها: **{oa['n']}** | PF {_fmt(oa['pf'], 3)} | Expectancy {oa['exp']:.4f}$ | "
                  f"قبل از کارمزد {oa['exp_gross']:.4f}$ | سود خالص {oa['net']:.2f}$")
     L.append("")
     L.append("> اگر «Expectancy قبل از کارمزد» نزدیک صفر باشد، یعنی سیگنال‌ها خودشان هیچ برتری‌ای ندارند و کل ضرر "
              "همان کارمزد است.\n")
-    L.append("## ۱۳ ترکیب انتخاب‌شده (مرتب: PF، Expectancy، وین‌ریت، سود خالص)\n")
+    L.append(f"## {label} (مرتب: PF، Expectancy، وین‌ریت، سود خالص)\n")
     L.append(_md_combo_table(sel_rows))
     rp = [r for r in sel_rows if r["verdict"] == "reliable_pos"]
     rn = [r for r in sel_rows if r["verdict"] == "reliable_neg"]
@@ -209,10 +216,17 @@ def _write_md(path: str, tables: dict, sel_rows: list[dict], o: dict, oa: dict, 
         sess = tables["session"][1]
         L.append("## هر سشن (جمع همه‌ی استراتژی‌ها)\n")
         L.append(_md_simple_table(sorted(sess, key=lambda r: r["key"][0]), "سشن"))
-        L.append("\n## چک سوگیری انتخاب: همین استراتژی‌ها در همه‌ی سشن‌ها\n")
-        L.append("اگر ترکیب‌های انتخاب‌شده فقط به‌خاطر انتخاب از روی داده‌ی زنده خوب به نظر می‌رسیدند، روی تاریخچه‌ی بلند "
-                 "باید از بقیه‌ی سشن‌ها بهتر نباشند. (هر سشن مستقل شبیه‌سازی شده؛ اعداد کلی با حالت پیش‌فرض ممکن است "
-                 "کمی فرق کند.)\n")
+        if params["has_selected"]:
+            L.append("\n## چک سوگیری انتخاب: همین استراتژی‌ها در همه‌ی سشن‌ها\n")
+            L.append("اگر ترکیب‌های انتخاب‌شده فقط به‌خاطر انتخاب از روی داده‌ی زنده خوب به نظر می‌رسیدند، روی تاریخچه‌ی بلند "
+                     "باید از بقیه‌ی سشن‌ها بهتر نباشند. (هر سشن مستقل شبیه‌سازی شده؛ اعداد کلی با حالت پیش‌فرض ممکن است "
+                     "کمی فرق کند.)\n")
+        else:
+            L.append("\n## هر استراتژی در هر سشن\n")
+            tfo = params.get("timeframe_override")
+            if tfo:
+                L.append(f"همه‌ی استراتژی‌ها روی تایم‌فریم **{tfo}** اجرا شده‌اند (نه تایم‌فریم اصلی خودشان)؛ پارامترهای هر استراتژی "
+                         "بر حسب «کندل» است، پس نتیجه‌ی این جدول برای تایم‌فریم اصلی آن استراتژی صادق نیست.\n")
         rows = sorted(tables["strategy_session"][1], key=lambda r: (r["key"][0], r["key"][1]))
         L.append("| استراتژی | سشن | انتخاب‌شده؟ | n | PF | Expectancy $ | PF نیمه ۱ | PF نیمه ۲ | q | وضعیت |\n"
                  "|---|---|---|--:|--:|--:|--:|--:|--:|---|")
@@ -266,7 +280,8 @@ def _rnd(x):
     return x
 
 
-def _write_dashboard(path: str, tables: dict, o: dict, oa: dict, meta: dict, equity: dict, days: list[str]) -> None:
+def _write_dashboard(path: str, tables: dict, o: dict, oa: dict, meta: dict, equity: dict, days: list[str],
+                     label: str = "") -> None:
     def pack(rows):
         return [[r["key"], 1 if r.get("selected") else 0] + [r.get(c) for c in COLS] for r in rows]
 
@@ -274,7 +289,7 @@ def _write_dashboard(path: str, tables: dict, o: dict, oa: dict, meta: dict, equ
         "cols": COLS,
         "tables": {k: {"keys": v[0], "rows": pack(v[1])} for k, v in tables.items()},
         "overall": {c: o.get(c) for c in COLS}, "overall_all": {c: oa.get(c) for c in COLS},
-        "equity": equity, "days": days,
+        "equity": equity, "days": days, "sel_label": label,
         "meta": {"start": meta["period_start"][:10], "end": meta["period_end"][:10], "span": meta["span_days"],
                  "mid": meta["half_boundary"][:10], "slip": SLIP_STRESS_PCT,
                  "p": {k: v for k, v in meta["params"].items()
@@ -353,7 +368,7 @@ document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>setLevel(b.da
 ['minn','vf','stab','q','fs','fe','onlysel'].forEach(i=>$(i).oninput=render);
 const O=D.overall,M=D.meta;
 $('meta').textContent=`از ${M.start} تا ${M.end} (${M.span.toFixed(0)} روز) | ${M.p.symbols_with_data} از ${M.p.symbols_requested} نماد | حجم ${M.p.trade_value}$ | کارمزد هر طرف ${M.p.fee_pct}% + اسلیپیج ${M.p.slippage_pct}% | مرز نیمه‌ها: ${M.mid} | ${M.p.all_sessions?'همه‌ی سشن‌ها شبیه‌سازی شده':'فقط سشن‌های انتخاب‌شده شبیه‌سازی شده'}`;
-const kp=[['معاملات (۱۳ ترکیب)',O.n,''],['وین‌ریت واقعی',pc(O.wr),''],['سربه‌سر لازم',pc(O.be),''],['Profit Factor',O.pf==null?'∞':f(O.pf,3),(O.pf==null||O.pf>=1)?'pos':'neg'],['Expectancy / معامله','$'+f(O.exp,4),O.exp>0?'pos':'neg'],['Exp قبل از کارمزد','$'+f(O.exp_gross,4),O.exp_gross>0?'pos':'neg'],['سود خالص','$'+f(O.net),O.net>0?'pos':'neg'],['Max Drawdown','$'+f(O.mdd),'neg']];
+const kp=[['معاملات ('+D.sel_label+')',O.n,''],['وین‌ریت واقعی',pc(O.wr),''],['سربه‌سر لازم',pc(O.be),''],['Profit Factor',O.pf==null?'∞':f(O.pf,3),(O.pf==null||O.pf>=1)?'pos':'neg'],['Expectancy / معامله','$'+f(O.exp,4),O.exp>0?'pos':'neg'],['Exp قبل از کارمزد','$'+f(O.exp_gross,4),O.exp_gross>0?'pos':'neg'],['سود خالص','$'+f(O.net),O.net>0?'pos':'neg'],['Max Drawdown','$'+f(O.mdd),'neg']];
 $('kpis').innerHTML=kp.map(k=>`<div class="k"><span>${k[0]}</span><b class="${k[2]}">${k[1]}</b></div>`).join('');
 (function(){const rows=T.strategy_session.rows,S=[...new Set(rows.map(r=>r.key[0]))].sort(),E=[...new Set(rows.map(r=>r.key[1]))].sort();
 let h='<thead><tr><th>استراتژی</th>'+E.map(e=>`<th>${e}</th>`).join('')+'</tr></thead><tbody>';
