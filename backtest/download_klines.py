@@ -169,13 +169,16 @@ def _job(symbol: str, start: datetime, end: datetime, out_dir: str):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=180)
-    ap.add_argument("--symbols", nargs="*", default=None, help="مثلاً BTCUSDT ETHUSDT (خالی = همه‌ی نمادهای دست‌ترید)")
+    ap.add_argument("--symbols", nargs="*", default=None, help="مثلاً BTCUSDT ETHUSDT (خالی = مجموعه‌ی --symbol-set)")
+    ap.add_argument("--symbol-set", choices=["liquid", "all"], default="liquid",
+                    help="liquid = ۳۶ نماد پرنقدینگی (پیش‌فرض) ، all = هر ۱۸۱ نماد دست‌ترید")
+    ap.add_argument("--shard", default=None, help="i/n: فقط تکه‌ی i از n تکه‌ی نمادها (همان تقسیم combo_backtest)")
     ap.add_argument("--out", default="backtest_data")
     ap.add_argument("--threads", type=int, default=8)
     a = ap.parse_args()
     sys.path.insert(0, os.getcwd())
-    from backtest.combos import BOT_SYMBOLS, to_binance
-    symbols = [to_binance(s) for s in (a.symbols or BOT_SYMBOLS)]
+    from backtest.combos import pick_symbols
+    symbols = pick_symbols(a.symbol_set, a.shard, a.symbols)
     os.makedirs(a.out, exist_ok=True)
     end = datetime.now(timezone.utc)
     start = (end - timedelta(days=a.days)).replace(hour=0, minute=0, second=0, microsecond=0)
