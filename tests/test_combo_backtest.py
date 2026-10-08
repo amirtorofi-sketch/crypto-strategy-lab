@@ -175,10 +175,43 @@ def test_write_outputs_creates_all_files(tmp_path):
               "all_sessions": False, "symbols_requested": 2, "symbols_with_data": 2, "symbols_missing": [],
               "combos": {"s1": ["Asia"], "s2": ["Asia"]}}
     write_outputs(pd.DataFrame(rows), {"BTCUSDT": {}}, params, str(tmp_path))
-    for f in ["summary.md", "dashboard.html", "by_combo.csv", "by_strategy.csv", "by_combo_symbol.csv",
-              "by_symbol.csv", "trades.csv.gz", "meta.json"]:
+    for f in ["summary.md", "dashboard.html", "by_combo.csv", "by_strategy.csv", "by_strategy_session.csv",
+              "by_session.csv", "by_symbol.csv", "by_session_symbol.csv", "by_strategy_symbol.csv",
+              "by_strategy_session_symbol.csv.gz", "trades.csv.gz", "meta.json"]:
         assert (tmp_path / f).exists(), f
     md = (tmp_path / "summary.md").read_text(encoding="utf-8")
     assert "s1" in md and "s2" in md
     df = pd.read_csv(tmp_path / "by_combo.csv")
     assert set(df["strategy"]) == {"s1", "s2"} and math.isclose(df["n"].sum(), n)
+
+
+# ------------------------------------------------------------------ آزمون روزانه و لغزش
+def _grp(pnls, start="2026-01-01", per_day=1):
+    t0 = pd.Timestamp(start, tz="UTC")
+    exit_dt = [t0 + pd.Timedelta(days=i // per_day, minutes=i % per_day) for i in range(len(pnls))]
+    return pd.DataFrame({"pnl_usdt": pnls, "win": [p > 0 for p in pnls], "exit_dt": exit_dt,
+                         "half": [1 if i < len(pnls) // 2 else 2 for i in range(len(pnls))]})
+
+
+def test_day_cluster_test_needs_enough_days_and_penalises_clustering():
+    rng = np.random.default_rng(3)
+    base = rng.normal(0.02, 0.1, 400)
+    spread = cs.group_stats(_grp(list(base), per_day=1), 400)      # ۴۰۰ روز، هر روز یک معامله
+    clustered = cs.group_stats(_grp(list(base), per_day=40), 10)   # همان ۴۰۰ معامله در ۱۰ روز
+    assert spread["days"] == 400 and spread["p_day"] is not None
+    assert clustered["days"] == 10 and clustered["p_day"] is None      # کمتر از ۲۰ روز => بدون آزمون
+    assert clustered["exp"] == pytest.approx(spread["exp"])
+
+
+def test_slip_cost_reduces_expectancy_and_pf():
+    g = _grp([0.1, -0.05, 0.2, -0.05] * 30)
+    a = cs.group_stats(g, 120)
+    b = cs.group_stats(g, 120, slip_cost=0.01)
+    assert b["exp_slip"] == pytest.approx(a["exp"] - 0.01)
+    assert b["pf_slip"] < a["pf"]
+
+
+def test_verdict_positive_requires_edge_to_survive_slippage():
+    base = {"n": 500, "q": 0.001, "stable": "pos", "exp": 0.004, "exp_slip": -0.002}
+    assert cs.verdict(base) == "hypothesis"
+    assert cs.verdict({**base, "exp_slip": 0.001}) == "reliable_pos"
