@@ -1,0 +1,96 @@
+name: Combo Backtest (manual)
+
+# فقط دستی اجرا می‌شود: Actions → Combo Backtest → Run workflow. هیچ زمان‌بندی ندارد.
+# نتیجه (summary.md ، dashboard.html ، CSVها) داخل خود ریپو در results/backtest/combos/ commit می‌شود،
+# در صفحه‌ی Summary همین اجرا هم نمایش داده می‌شود و به‌صورت Artifact هم قابل دانلود است.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "تعداد روز تاریخچه"
+        default: "180"
+      all_sessions:
+        description: "همین استراتژی‌ها در همه‌ی سشن‌ها (چک سوگیری انتخاب)؟"
+        type: boolean
+        default: false
+      fee_pct:
+        description: "کارمزد هر طرف (٪)"
+        default: "0.04"
+      slippage_pct:
+        description: "اسلیپیج هر طرف (٪)"
+        default: "0"
+      symbols:
+        description: "نمادها (خالی = همه‌ی نمادهای دست‌ترید؛ مثال: BTCUSDT ETHUSDT)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: combo-backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      DAYS: ${{ inputs.days }}
+      ALL_SESSIONS: ${{ inputs.all_sessions }}
+      FEE_PCT: ${{ inputs.fee_pct }}
+      SLIPPAGE_PCT: ${{ inputs.slippage_pct }}
+      SYMBOLS: ${{ inputs.symbols }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas numpy PyYAML ccxt requests
+
+      - name: Download klines (Binance public archive)
+        run: |
+          if [ -n "$SYMBOLS" ]; then
+            python -m backtest.download_klines --days "$DAYS" --symbols $SYMBOLS 2>&1 | tee download_report.txt
+          else
+            python -m backtest.download_klines --days "$DAYS" 2>&1 | tee download_report.txt
+          fi
+
+      - name: Run combo backtest
+        run: |
+          ARGS="--workers $(nproc) --fee-pct $FEE_PCT --slippage-pct $SLIPPAGE_PCT"
+          if [ "$ALL_SESSIONS" = "true" ]; then ARGS="$ARGS --all-sessions"; fi
+          if [ -n "$SYMBOLS" ]; then ARGS="$ARGS --symbols $SYMBOLS"; fi
+          python -m backtest.combo_backtest $ARGS 2>&1 | tee backtest_log.txt
+          cp download_report.txt results/backtest/combos/download_report.txt
+
+      - name: Show summary on the run page
+        if: always()
+        run: |
+          if [ -f results/backtest/combos/summary.md ]; then
+            cat results/backtest/combos/summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: combo-backtest-results
+          path: |
+            results/backtest/combos/
+            backtest_log.txt
+          if-no-files-found: warn
+
+      - name: Commit results to the repo
+        run: |
+          git config user.name "trading-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add results/backtest/combos
+          git diff --quiet --cached || git commit -m "chore: update combo backtest results [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
