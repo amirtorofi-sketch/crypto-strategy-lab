@@ -13,6 +13,7 @@ import pandas as pd
 
 MIN_N_LOW = 30      # زیر این تعداد: «نمونه ناکافی»
 MIN_N_HIGH = 100    # از این تعداد به بالا: اطمینان «زیاد» (در صورت پایداری و معناداری)
+MIN_DAYS_FOR_T = 20  # حداقل تعداد روزِ دارای معامله برای آزمون خوشه‌بندی‌شده
 
 
 def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
@@ -68,10 +69,14 @@ def _pf(pnl: np.ndarray):
     return None if gw > 0 else 0.0     # None = بی‌نهایت (هیچ باختی نبود)
 
 
-def group_stats(g: pd.DataFrame, span_days: float) -> dict:
+def group_stats(g: pd.DataFrame, span_days: float, slip_cost: float = 0.0) -> dict:
     """
     g باید ستون‌های pnl_usdt، win (bool)، exit_dt (datetime) و half (1|2) داشته باشد.
     ترتیب برای drawdown و streak بر اساس زمان خروج است.
+
+    slip_cost: هزینه‌ی اضافه‌ی فرضی در هر معامله (به دلار) برای تست حساسیت به لغزش (exp_slip / pf_slip).
+    p_day: آزمون t روی «جمع PnL هر روز» (خوشه‌بندی روزانه). معاملات هم‌زمان روی ده‌ها نماد هم‌بسته‌اند و
+           آزمون binomial (p) آن‌ها را مستقل فرض می‌کند و معناداری را بیش از حد نشان می‌دهد؛ q از p_day ساخته می‌شود.
     """
     g = g.sort_values("exit_dt")
     pnl = g["pnl_usdt"].to_numpy(float)
@@ -107,12 +112,28 @@ def group_stats(g: pd.DataFrame, span_days: float) -> dict:
     else:
         r["stable"] = "na"
     r["conf"] = "low" if n < MIN_N_LOW else ("mid" if n < MIN_N_HIGH else "high")
+
+    # آزمون خوشه‌بندی‌شده‌ی روزانه
+    dsum = g.groupby(g["exit_dt"].dt.strftime("%Y-%m-%d"))["pnl_usdt"].sum().to_numpy(float)
+    k_days = len(dsum)
+    t_day = p_day = None
+    if k_days >= MIN_DAYS_FOR_T:
+        sd = float(dsum.std(ddof=1))
+        if sd > 0:
+            t_day = float(dsum.mean() / (sd / math.sqrt(k_days)))
+            p_day = float(math.erfc(abs(t_day) / math.sqrt(2)))
+    r["days"], r["t_day"], r["p_day"] = k_days, t_day, p_day
+
+    # حساسیت به لغزش
+    pn = pnl - slip_cost
+    r["exp_slip"] = float(pn.mean()) if n else 0.0
+    r["pf_slip"] = _pf(pn) if n else 0.0
     return r
 
 
-def bh_adjust(rows: list[dict]) -> None:
-    """اصلاح Benjamini–Hochberg روی p-valueهای یک جدول؛ نتیجه در r['q']."""
-    idx = [(i, r["p"]) for i, r in enumerate(rows) if r.get("p") is not None]
+def bh_adjust(rows: list[dict], field: str = "p") -> None:
+    """اصلاح Benjamini–Hochberg روی p-valueهای یک جدول (ستون field)؛ نتیجه در r['q']."""
+    idx = [(i, r[field]) for i, r in enumerate(rows) if r.get(field) is not None]
     idx.sort(key=lambda x: x[1])
     m = len(idx)
     prev = 1.0
@@ -126,14 +147,16 @@ def bh_adjust(rows: list[dict]) -> None:
 def verdict(r: dict) -> str:
     """
     فقط سه برچسب محتاطانه؛ تصمیم «حذف/نگه‌دار» با خود شماست.
-      reliable_pos / reliable_neg : n>=100 ، q<0.05 ، علامت Expectancy هر دو نیمه‌ی بازه با آن یکی
+      reliable_pos / reliable_neg : n>=100 ، q<0.05 (q از آزمون روزانه‌ی خوشه‌بندی‌شده)،
+                                    علامت Expectancy هر دو نیمه‌ی بازه با آن یکی؛
+                                    برای «مثبت» علاوه‌بر این Expectancy بعد از لغزش فرضی هم باید مثبت بماند
       low_n                       : n<30
       hypothesis                  : بقیه
     """
     if r["n"] < MIN_N_LOW:
         return "low_n"
     if r["n"] >= MIN_N_HIGH and r.get("q") is not None and r["q"] < 0.05:
-        if r["stable"] == "pos" and r["exp"] > 0:
+        if r["stable"] == "pos" and r["exp"] > 0 and r.get("exp_slip", r["exp"]) > 0:
             return "reliable_pos"
         if r["stable"] == "neg" and r["exp"] < 0:
             return "reliable_neg"
@@ -154,16 +177,19 @@ def rank_key(r: dict):
     return (-pf, -r["exp"], -r["wr"], -r["net"])
 
 
-def build_table(trades: pd.DataFrame, keys: list[str], span_days: float) -> list[dict]:
+def build_table(trades: pd.DataFrame, keys: list[str], span_days: float,
+                min_n: int = 1, slip_cost: float = 0.0) -> list[dict]:
     rows = []
     if trades.empty:
         return rows
     for k, g in trades.groupby(keys, sort=False):
+        if len(g) < min_n:
+            continue
         k = k if isinstance(k, tuple) else (k,)
-        r = group_stats(g, span_days)
+        r = group_stats(g, span_days, slip_cost)
         r["key"] = list(k)
         rows.append(r)
-    bh_adjust(rows)
+    bh_adjust(rows, "p_day")
     for r in rows:
         r["verdict"] = verdict(r)
     rows.sort(key=rank_key)
