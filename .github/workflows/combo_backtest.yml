@@ -20,7 +20,7 @@ on:
         description: "اسلیپیج هر طرف (٪)"
         default: "0"
       symbols:
-        description: "نمادها (خالی = همه‌ی نمادهای دست‌ترید؛ مثال: BTCUSDT ETHUSDT)"
+        description: "نمادها (خالی = ۳۶ نماد پرنقدینگی؛ مثال: BTCUSDT ETHUSDT)"
         default: ""
 
 permissions:
