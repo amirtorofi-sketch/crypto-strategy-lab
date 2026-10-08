@@ -7,3 +7,5 @@ venv/
 results/trades/*.csv
 results/backtest_summary.csv
 !results/live/.gitkeep
+# کندل‌های دانلودشده‌ی بک‌تستر ترکیب‌ها (حجیم؛ هر بار دوباره دانلود می‌شود)
+backtest_data/
