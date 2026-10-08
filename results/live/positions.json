@@ -111760,5 +111760,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی MACD"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261008T091600",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-08T09:16:00.793592+00:00",
+    "entry_price": 115.07,
+    "stop_loss": 115.4136061525861,
+    "take_profit": 113.95661539511583,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
