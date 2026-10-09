@@ -115624,5 +115624,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__SOL-USDT__20261009T064549",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-09T06:45:49.112048+00:00",
+    "entry_price": 110.76,
+    "stop_loss": 110.92447757200848,
+    "take_profit": 109.4928364198727,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
