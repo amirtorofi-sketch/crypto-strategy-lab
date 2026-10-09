@@ -117927,12 +117927,33 @@
     "take_profit": 741.3299999999999,
     "size_usdt": 10.0,
     "session": "New York",
+    "status": "win",
+    "exit_time": "2026-10-09T17:01:09.030075+00:00",
+    "exit_price": 741.3299999999999,
+    "pnl_usdt": 0.0092,
+    "pnl_pct": 0.0916,
+    "duration_minutes": 15.2,
+    "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261009T170106",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-09T17:01:06.928169+00:00",
+    "entry_price": 2491.47,
+    "stop_loss": 2495.6201216950503,
+    "take_profit": 2470.5523192079163,
+    "size_usdt": 10.0,
+    "session": "New York",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "خرید از کف رنج"
+    "reason": "ورود در FVG نزولی"
   }
 ]
