@@ -118585,5 +118585,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "classic_stochastic_cross__BTC-USDT__20261009T210101",
+    "strategy": "classic_stochastic_cross",
+    "category": "classic",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-09T21:01:01.783480+00:00",
+    "entry_price": 82514.01,
+    "stop_loss": 81897.27984108668,
+    "take_profit": 83747.47031782664,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس صعودی استوکاستیک از اشباع فروش"
   }
 ]
