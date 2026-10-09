@@ -115218,12 +115218,12 @@
     "take_profit": 742.78599419131,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-09T04:30:55.291237+00:00",
+    "exit_price": 742.78599419131,
+    "pnl_usdt": 0.0582,
+    "pnl_pct": 0.5821,
+    "duration_minutes": 75.2,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
@@ -115239,12 +115239,12 @@
     "take_profit": 4164.156318246188,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-09T04:30:56.424684+00:00",
+    "exit_price": 4181.012245450254,
+    "pnl_usdt": -0.012,
+    "pnl_pct": -0.12,
+    "duration_minutes": 29.9,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
