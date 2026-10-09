@@ -114637,5 +114637,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "برگشت از باند بالای بولینگر"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BNB-USDT__20261009T011549",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-09T01:15:49.232012+00:00",
+    "entry_price": 734.76,
+    "stop_loss": 733.5489969656754,
+    "take_profit": 741.3750455148689,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
