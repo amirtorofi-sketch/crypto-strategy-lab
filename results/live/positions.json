@@ -120517,5 +120517,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH صعودی - برگشت روند"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261010T171543",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-10T17:15:43.713945+00:00",
+    "entry_price": 83065.81,
+    "stop_loss": 83097.38055058803,
+    "take_profit": 82851.9017411794,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
