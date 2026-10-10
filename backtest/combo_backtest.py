@@ -157,6 +157,12 @@ def simulate(strategy, df: pd.DataFrame, symbol: str, allowed_sessions: set[str]
     return trades
 
 
+def split_buildable(names: list[str]) -> tuple[list[str], list[str]]:
+    """استراتژی‌هایی که تایم‌فریم خودشان از داده‌ی ۱۵ دقیقه‌ای قابل ساخت نیست (۵m، 1d) را جدا می‌کند."""
+    ok = [n for n in names if get_by_name(n).timeframe in SUPPORTED_TIMEFRAMES]
+    return ok, [n for n in names if n not in ok]
+
+
 def run_symbol(job: dict):
     """کار یک نماد (در پروسس جدا). خروجی: (نماد, معاملات, متادیتا)."""
     sym = job["symbol"]
@@ -303,6 +309,13 @@ def main():
             combos = {k: v for k, v in combos.items() if k in only}
         allowed = {k: (list(SESSIONS) if a.all_sessions else list(v)) for k, v in combos.items()}
         names = list(combos)
+    skipped: list[str] = []
+    if not a.timeframe:                      # تایم‌فریم خودِ استراتژی: ۵m و 1d از داده‌ی ۱۵ دقیقه‌ای ساخته نمی‌شود
+        names, skipped = split_buildable(names)
+        allowed = {n: allowed[n] for n in names}
+        if skipped:
+            print(f"⚠️ {len(skipped)} استراتژی رد شد چون تایم‌فریمشان از داده‌ی ۱۵ دقیقه‌ای ساخته نمی‌شود: "
+                  f"{', '.join(f'{n} ({get_by_name(n).timeframe})' for n in skipped)}")
     if not names:
         raise SystemExit("هیچ استراتژی‌ای برای اجرا نمانده.")
     windows = {} if a.timeframe else {tf: live_window_size(tf, buffer_bars, max_fetch)
@@ -338,7 +351,7 @@ def main():
             print(f"[{k}/{len(jobs)}] {sym}: {meta.get('trades', 0)} معامله {meta.get('error', '')}", flush=True)
     params = {"fee_pct": fee_pct, "slippage_pct": a.slippage_pct, "trade_value": trade_value,
               "min_reward_pct": min_reward, "windows": windows, "all_sessions": bool(a.all_sessions),
-              "timeframe_override": a.timeframe, "strategies": names,
+              "timeframe_override": a.timeframe, "strategies": names, "skipped_unbuildable": skipped,
               "symbols_requested": len(syms), "symbols_with_data": len(jobs), "symbols_missing": missing,
               "combos": combos}
     trades = pd.DataFrame(all_rows)
