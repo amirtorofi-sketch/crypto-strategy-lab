@@ -129,3 +129,21 @@ def test_merge_shards_refuses_mismatched_parameters(tmp_path):
     _dump(tmp_path / "shard_2.pkl.gz", _fake_trades(50, 500, "ETH/USDT"), "ETHUSDT", fee_pct=0.35)
     with pytest.raises(SystemExit):
         cb.merge_shards([str(tmp_path / "shard_*.pkl.gz")], str(tmp_path / "out"))
+
+
+# ------------------------------------------------------------------ حالت «تایم‌فریم اصلی هر استراتژی»
+def test_split_buildable_skips_5m_and_1d_only():
+    names = [s.name for s in get_all_strategies() if s.name not in EXCLUDED_STRATEGIES]
+    ok, skipped = cb.split_buildable(names)
+    assert set(skipped) == {"ict_judas_swing", "classic_golden_cross_50_200"}
+    assert len(ok) == 18 and {get_by_name(n).timeframe for n in ok} == {"15m", "1h", "4h"}
+
+
+def test_report_lists_native_timeframes(tmp_path):
+    tr = _fake_trades(200, 0, "BTC/USDT")
+    tr["timeframe"] = np.where(tr["strategy"] == "s1", "1h", "4h")
+    _dump(tmp_path / "shard_1.pkl.gz", tr, "BTCUSDT", timeframe_override=None, skipped_unbuildable=["ict_judas_swing"])
+    out = tmp_path / "out"
+    cb.merge_shards([str(tmp_path / "shard_1.pkl.gz")], str(out))
+    md = (out / "summary.md").read_text(encoding="utf-8")
+    assert "تایم‌فریم اصلی خودش" in md and "ict_judas_swing" in md and "**1h**" in md and "**4h**" in md
