@@ -119838,12 +119838,12 @@
     "take_profit": 83053.34286516657,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-10T10:15:40.064622+00:00",
+    "exit_price": 82826.69325618,
+    "pnl_usdt": -0.0119,
+    "pnl_pct": -0.1191,
+    "duration_minutes": 14.6,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -119859,12 +119859,12 @@
     "take_profit": 83026.79829213326,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-10T10:15:40.064642+00:00",
+    "exit_price": 82826.69325618,
+    "pnl_usdt": -0.0119,
+    "pnl_pct": -0.1191,
+    "duration_minutes": 14.6,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
