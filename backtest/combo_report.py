@@ -126,7 +126,8 @@ def write_outputs(trades: pd.DataFrame, metas: dict, params: dict, out_dir: str)
         sel = t.copy()
         all_sessions = True
     label = f"{len(sel_map)} ترکیب انتخاب‌شده" if has_selected else "همه‌ی ترکیب‌ها"
-    params = {**params, "sel_label": label, "has_selected": has_selected}
+    params = {**params, "sel_label": label, "has_selected": has_selected,
+              "strategy_tf": t.groupby("strategy")["timeframe"].first().to_dict()}
     base = t if all_sessions else sel
 
     cost_per_trade = params["trade_value"] * 2 * (params["fee_pct"] + params["slippage_pct"]) / 100
@@ -224,6 +225,17 @@ def _write_md(path: str, tables: dict, sel_rows: list[dict], o: dict, oa: dict, 
         else:
             L.append("\n## هر استراتژی در هر سشن\n")
             tfo = params.get("timeframe_override")
+            if not tfo and params.get("strategy_tf"):
+                by_tf: dict[str, list[str]] = {}
+                for sn, tf in sorted(params["strategy_tf"].items()):
+                    by_tf.setdefault(tf, []).append(sn)
+                L.append("هر استراتژی روی تایم‌فریم اصلی خودش اجرا شده: " +
+                         " | ".join(f"**{tf}**: {len(v)} استراتژی" for tf, v in sorted(by_tf.items())) + "\n")
+                for tf, v in sorted(by_tf.items()):
+                    L.append(f"- {tf}: {', '.join(v)}")
+                if params.get("skipped_unbuildable"):
+                    L.append(f"- ⚠️ رد شده (تایم‌فریمشان از داده‌ی ۱۵ دقیقه‌ای ساخته نمی‌شود): {', '.join(params['skipped_unbuildable'])}")
+                L.append("")
             if tfo:
                 L.append(f"همه‌ی استراتژی‌ها روی تایم‌فریم **{tfo}** اجرا شده‌اند (نه تایم‌فریم اصلی خودشان)؛ پارامترهای هر استراتژی "
                          "بر حسب «کندل» است، پس نتیجه‌ی این جدول برای تایم‌فریم اصلی آن استراتژی صادق نیست.\n")
