@@ -1,0 +1,291 @@
+{
+ "generated_utc": "2026-10-10T10:03:19+00:00",
+ "period_start": "2025-10-10 15:00:00+00:00",
+ "period_end": "2026-10-10 09:45:00+00:00",
+ "span_days": 364.78,
+ "half_boundary": "2026-04-12 18:00:00+00:00",
+ "trades_all": 511299,
+ "trades_selected": 511299,
+ "params": {
+  "fee_pct": 0.04,
+  "slippage_pct": 0.0,
+  "trade_value": 10.0,
+  "min_reward_pct": 0.15,
+  "windows": {
+   "15m": 110,
+   "4h": 110,
+   "1h": 110
+  },
+  "all_sessions": true,
+  "timeframe_override": null,
+  "strategies": [
+   "classic_ma_crossover_20_50",
+   "classic_rsi_reversal_30_70",
+   "classic_bollinger_mean_reversion",
+   "classic_stochastic_cross",
+   "pa_pin_bar_rejection",
+   "pa_double_top_bottom",
+   "pa_support_resistance_bounce",
+   "smc_choch_reversal",
+   "smc_order_block_retest",
+   "smc_fvg_fill_entry",
+   "smc_liquidity_sweep_reversal",
+   "smc_premium_discount_zone",
+   "smc_equal_highs_lows_grab",
+   "ict_optimal_trade_entry_ote",
+   "ict_london_killzone_breakout",
+   "rtm_supply_demand_zone",
+   "range_fade_extremes",
+   "rtm_imbalance_rebalance"
+  ],
+  "skipped_unbuildable": [
+   "classic_golden_cross_50_200",
+   "ict_judas_swing"
+  ],
+  "symbols_requested": 36,
+  "symbols_with_data": 36,
+  "symbols_missing": [],
+  "combos": {},
+  "shards": 6,
+  "sel_label": "همه‌ی ترکیب‌ها",
+  "has_selected": false,
+  "strategy_tf": {
+   "classic_bollinger_mean_reversion": "1h",
+   "classic_ma_crossover_20_50": "4h",
+   "classic_rsi_reversal_30_70": "1h",
+   "classic_stochastic_cross": "1h",
+   "ict_london_killzone_breakout": "15m",
+   "ict_optimal_trade_entry_ote": "15m",
+   "pa_double_top_bottom": "4h",
+   "pa_pin_bar_rejection": "4h",
+   "pa_support_resistance_bounce": "1h",
+   "range_fade_extremes": "15m",
+   "rtm_imbalance_rebalance": "15m",
+   "rtm_supply_demand_zone": "1h",
+   "smc_choch_reversal": "1h",
+   "smc_equal_highs_lows_grab": "15m",
+   "smc_fvg_fill_entry": "15m",
+   "smc_liquidity_sweep_reversal": "15m",
+   "smc_order_block_retest": "1h",
+   "smc_premium_discount_zone": "1h"
+  }
+ },
+ "symbols": {
+  "BTCUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14356
+  },
+  "BCHUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14825
+  },
+  "ADAUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14070
+  },
+  "ARBUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14072
+  },
+  "HBARUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14132
+  },
+  "WLDUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13513
+  },
+  "ETHUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13643
+  },
+  "TRXUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13708
+  },
+  "NEARUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14263
+  },
+  "OPUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14504
+  },
+  "RENDERUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14197
+  },
+  "ICPUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14393
+  },
+  "AVAXUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14503
+  },
+  "BNBUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 15064
+  },
+  "UNIUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13894
+  },
+  "INJUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14196
+  },
+  "SHIBUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13244
+  },
+  "ONDOUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14054
+  },
+  "LINKUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14514
+  },
+  "ATOMUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 15444
+  },
+  "SOLUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14242
+  },
+  "FILUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14247
+  },
+  "SEIUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14500
+  },
+  "PEPEUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 11504
+  },
+  "ETCUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 15642
+  },
+  "DOTUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14603
+  },
+  "SUIUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13852
+  },
+  "XRPUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14384
+  },
+  "TIAUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14163
+  },
+  "TAOUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14225
+  },
+  "LTCUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 15112
+  },
+  "DOGEUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14027
+  },
+  "AAVEUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14018
+  },
+  "APTUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 14534
+  },
+  "ENAUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13968
+  },
+  "FETUSDT": {
+   "candles_15m": 35079,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 09:30:00+00:00",
+   "trades": 13689
+  }
+ }
+}
