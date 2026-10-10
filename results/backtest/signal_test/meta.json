@@ -1,0 +1,267 @@
+{
+ "generated_utc": "2026-10-10T20:07:50+00:00",
+ "period_start": "2025-10-10 15:00:00+00:00",
+ "period_end": "2026-10-10 19:45:00+00:00",
+ "half_boundary": "2026-04-11 20:00:00+00:00",
+ "events": 630697,
+ "params": {
+  "min_reward_pct": 0.15,
+  "windows": {
+   "1h": 110,
+   "15m": 110,
+   "4h": 110
+  },
+  "strategies": [
+   "classic_ma_crossover_20_50",
+   "classic_rsi_reversal_30_70",
+   "classic_macd_signal_cross",
+   "classic_bollinger_mean_reversion",
+   "classic_stochastic_cross",
+   "pa_pin_bar_rejection",
+   "pa_inside_bar_breakout",
+   "pa_double_top_bottom",
+   "pa_support_resistance_bounce",
+   "smc_bos_continuation",
+   "smc_choch_reversal",
+   "smc_order_block_retest",
+   "smc_fvg_fill_entry",
+   "smc_liquidity_sweep_reversal",
+   "smc_premium_discount_zone",
+   "smc_equal_highs_lows_grab",
+   "ict_optimal_trade_entry_ote",
+   "ict_london_killzone_breakout",
+   "rtm_supply_demand_zone",
+   "range_fade_extremes",
+   "rtm_imbalance_rebalance"
+  ],
+  "skipped": [
+   "classic_golden_cross_50_200",
+   "ict_judas_swing"
+  ],
+  "symbols_requested": 36,
+  "symbols_with_data": 36,
+  "symbols_missing": [],
+  "fee_pct_a": 0.04,
+  "fee_pct_b": 0.35,
+  "symbol_set": "liquid",
+  "shard": "1/6"
+ },
+ "symbols": {
+  "BTCUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18011
+  },
+  "BCHUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18327
+  },
+  "ADAUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17505
+  },
+  "ARBUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17431
+  },
+  "HBARUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17413
+  },
+  "WLDUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 16733
+  },
+  "ETHUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17181
+  },
+  "OPUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17626
+  },
+  "NEARUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17716
+  },
+  "TRXUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 15668
+  },
+  "ICPUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18027
+  },
+  "RENDERUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18046
+  },
+  "BNBUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18585
+  },
+  "UNIUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17549
+  },
+  "INJUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17735
+  },
+  "AVAXUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17841
+  },
+  "SHIBUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 15460
+  },
+  "ONDOUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17278
+  },
+  "SOLUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17683
+  },
+  "LINKUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18002
+  },
+  "ATOMUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18768
+  },
+  "FILUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17722
+  },
+  "PEPEUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 13585
+  },
+  "SEIUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17422
+  },
+  "XRPUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17762
+  },
+  "DOTUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17869
+  },
+  "SUIUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17463
+  },
+  "ETCUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18732
+  },
+  "TAOUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17613
+  },
+  "TIAUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17586
+  },
+  "DOGEUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17475
+  },
+  "LTCUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 18806
+  },
+  "AAVEUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17729
+  },
+  "APTUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17935
+  },
+  "ENAUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17389
+  },
+  "FETUSDT": {
+   "candles_15m": 35119,
+   "first": "2025-10-10 00:00:00+00:00",
+   "last": "2026-10-10 19:30:00+00:00",
+   "events": 17024
+  }
+ }
+}
