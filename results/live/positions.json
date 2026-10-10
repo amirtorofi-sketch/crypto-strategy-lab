@@ -118284,12 +118284,12 @@
     "take_profit": 4185.02,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-10T01:45:55.237127+00:00",
+    "exit_price": 4185.02,
+    "pnl_usdt": 0.0185,
+    "pnl_pct": 0.1852,
+    "duration_minutes": 404.6,
     "reason": "فروش از سقف رنج"
   },
   {
