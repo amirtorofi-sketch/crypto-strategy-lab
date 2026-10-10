@@ -1,0 +1,140 @@
+name: Signal Test (manual)
+
+# فقط دستی اجرا می‌شود: Actions → "Signal Test" → Run workflow.
+#
+# چه می‌کند: «آزمون سیگنال» (Event Study) — بعد از سیگنال هر استراتژی (تایم‌فریم اصلی خودش)، قیمت در ۱، ۴، ۱۲، ۲۴ و ۷۲ ساعت
+# بعد در جهت سیگنال رفته یا نه؟ بدون SL و TP، نسبت به میانگین بازار همان نماد و سشن، با آزمون خوشه‌بندی‌شده.
+#   - پیش‌فرض: ۳۶ نماد پرنقدینگی (backtest/combos.py: LIQUID_SYMBOLS) ، ۳۶۵ روز
+#   - ۲۱ استراتژی‌ای که از داده‌ی ۱۵ دقیقه‌ای قابل ساخت‌اند (۵ دقیقه‌ای و ۱ روزه رد می‌شوند)
+#
+# چرا matrix؟ هر job گیت‌هاب حداکثر ۶ ساعت اجرا می‌شود. نمادها در ۶ تکه روی ۶ job موازی اجرا می‌شوند و job آخر ادغام و گزارش را می‌سازد.
+# اگر یکی از تکه‌ها شکست بخورد، گزارش ساخته نمی‌شود (تا نتیجه‌ی ناقص با کامل اشتباه گرفته نشود).
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "تعداد روز تاریخچه"
+        default: "365"
+      symbol_set:
+        description: "liquid = ۳۶ نماد پرنقدینگی (پیش‌فرض) ؛ all = هر ۱۸۱ نماد (چند برابر کندتر)"
+        type: choice
+        options: [liquid, all]
+        default: liquid
+      fee_pct_a:
+        description: "کارمزد هر طرف برای مقایسه‌ی اول (٪)"
+        default: "0.04"
+      fee_pct_b:
+        description: "کارمزد هر طرف برای مقایسه‌ی دوم (٪) — مثلاً کارمزد واقعی Tabdeal"
+        default: "0.35"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signal-test
+  cancel-in-progress: false
+
+env:
+  SHARDS: "6"
+
+defaults:
+  run:
+    shell: bash          # شامل pipefail: خطای python پشت tee گم نمی‌شود
+
+jobs:
+  events:
+    name: events (shard ${{ matrix.shard }}/6)
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas numpy PyYAML ccxt requests
+
+      - name: Download klines (this shard's symbols)
+        env:
+          DAYS: ${{ inputs.days }}
+          SYMBOL_SET: ${{ inputs.symbol_set }}
+        run: |
+          mkdir -p shards
+          python -m backtest.download_klines --days "$DAYS" --symbol-set "$SYMBOL_SET" --shard "${{ matrix.shard }}/$SHARDS" 2>&1 | tee "shards/download_report_${{ matrix.shard }}.txt"
+
+      - name: Collect signal events
+        env:
+          SYMBOL_SET: ${{ inputs.symbol_set }}
+          FEE_A: ${{ inputs.fee_pct_a }}
+          FEE_B: ${{ inputs.fee_pct_b }}
+        run: |
+          python -m backtest.signal_test \
+            --symbol-set "$SYMBOL_SET" --shard "${{ matrix.shard }}/$SHARDS" --workers "$(nproc)" \
+            --fee-pct-a "$FEE_A" --fee-pct-b "$FEE_B" \
+            --events-out "shards/ev_${{ matrix.shard }}.pkl.gz" 2>&1 | tee "shards/log_${{ matrix.shard }}.txt"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: shards/
+          if-no-files-found: error
+          retention-days: 7
+
+  report:
+    name: merge + report
+    needs: events
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas numpy PyYAML ccxt requests
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+          merge-multiple: true
+
+      - name: Merge and build report
+        run: |
+          OUT=results/backtest/signal_test
+          python -m backtest.signal_test --merge "shards/ev_*.pkl.gz" --out "$OUT" 2>&1 | tee merge_log.txt
+          cat shards/download_report_*.txt > "$OUT/download_report.txt"
+
+      - name: Show summary on the run page
+        if: always()
+        run: |
+          if [ -f results/backtest/signal_test/summary.md ]; then cat results/backtest/signal_test/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signal-test-results
+          path: |
+            results/backtest/signal_test/
+            merge_log.txt
+          if-no-files-found: warn
+
+      - name: Commit results
+        run: |
+          git config user.name "trading-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A results/backtest/signal_test
+          git diff --quiet --cached || git commit -m "chore: update signal test results [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
