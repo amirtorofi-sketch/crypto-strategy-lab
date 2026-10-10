@@ -1,10 +1,15 @@
 name: Backtest 15m - all strategies (manual)
+# (نام نمایشی قدیمی ثابت مانده؛ حالا تایم‌فریم قابل انتخاب است: خودِ استراتژی / 15m / 1h / 4h)
 
 # فقط دستی اجرا می‌شود: Actions → "Backtest 15m - all strategies" → Run workflow.
 #
 # چه می‌کند:
 #   - ۳۶ نماد پرنقدینگی (backtest/combos.py: LIQUID_SYMBOLS)
-#   - ۲۰ استراتژی (همه‌ی استراتژی‌های ثبت‌شده منهای EXCLUDED_STRATEGIES) همگی روی تایم‌فریم ۱۵ دقیقه
+#   - ۲۰ استراتژی (همه‌ی استراتژی‌های ثبت‌شده منهای EXCLUDED_STRATEGIES)
+#   - تایم‌فریم: ورودی timeframe
+#       native = هر استراتژی روی تایم‌فریم اصلی خودش (۱۸ استراتژی؛ ict_judas_swing با 5m و classic_golden_cross_50_200
+#                با 1d رد می‌شوند چون از داده‌ی ۱۵ دقیقه‌ای ساخته نمی‌شوند) — حدود ۶ ساعت CPU
+#       15m / 1h / 4h = همه‌ی ۲۰ استراتژی روی همان تایم‌فریم — 15m حدود ۱۵ ساعت CPU
 #   - هر پنج سشن، هر سشن مستقل (برای مقایسه‌ی منصفانه‌ی سشن‌ها)
 #   - بازه‌ی پیش‌فرض ۳۶۵ روز
 #
@@ -14,6 +19,11 @@ name: Backtest 15m - all strategies (manual)
 on:
   workflow_dispatch:
     inputs:
+      timeframe:
+        description: "تایم‌فریم اجرا: native = هر استراتژی روی تایم‌فریم اصلی خودش"
+        type: choice
+        options: [native, 15m, 1h, 4h]
+        default: native
       days:
         description: "تعداد روز تاریخچه"
         default: "365"
@@ -65,13 +75,16 @@ jobs:
           mkdir -p shards
           python -m backtest.download_klines --days "$DAYS" --shard "${{ matrix.shard }}/$SHARDS" 2>&1 | tee "shards/download_report_${{ matrix.shard }}.txt"
 
-      - name: Simulate (15m, all strategies, all sessions)
+      - name: Simulate (all strategies, all sessions)
         env:
           FEE_PCT: ${{ inputs.fee_pct }}
           SLIPPAGE_PCT: ${{ inputs.slippage_pct }}
+          TF: ${{ inputs.timeframe }}
         run: |
+          TF_ARG=()
+          if [ "$TF" != "native" ]; then TF_ARG=(--timeframe "$TF"); fi
           python -m backtest.combo_backtest \
-            --all-strategies --timeframe 15m --shard "${{ matrix.shard }}/$SHARDS" \
+            --all-strategies "${TF_ARG[@]}" --shard "${{ matrix.shard }}/$SHARDS" \
             --workers "$(nproc)" --fee-pct "$FEE_PCT" --slippage-pct "$SLIPPAGE_PCT" \
             --trades-out "shards/shard_${{ matrix.shard }}.pkl.gz" 2>&1 | tee "shards/log_${{ matrix.shard }}.txt"
 
@@ -105,8 +118,12 @@ jobs:
           merge-multiple: true
 
       - name: Merge shards and build report
+        env:
+          TF: ${{ inputs.timeframe }}
         run: |
-          OUT=results/backtest/combos_15m_all
+          # پوشه‌ی خروجی جدا برای هر تایم‌فریم تا نتیجه‌ها روی هم نوشته نشوند
+          if [ "$TF" = "15m" ]; then OUT=results/backtest/combos_15m_all; else OUT="results/backtest/combos_all_${TF}"; fi
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
           python -m backtest.combo_backtest --merge shards/shard_*.pkl.gz --out "$OUT" 2>&1 | tee merge_log.txt
           cat shards/download_report_*.txt > "$OUT/download_report.txt"
           # فایل معاملات حجیم است؛ داخل ریپو commit نمی‌شود و فقط در Artifact می‌ماند
@@ -116,23 +133,25 @@ jobs:
       - name: Show summary on the run page
         if: always()
         run: |
-          if [ -f results/backtest/combos_15m_all/summary.md ]; then cat results/backtest/combos_15m_all/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+          if [ -n "$OUT" ] && [ -f "$OUT/summary.md" ]; then cat "$OUT/summary.md" >> "$GITHUB_STEP_SUMMARY"; fi
 
       - uses: actions/upload-artifact@v4
         with:
-          name: backtest-15m-all-results
+          name: backtest-all-${{ inputs.timeframe }}-results
           path: |
-            results/backtest/combos_15m_all/
+            ${{ env.OUT }}/
             heavy/trades.csv.gz
             merge_log.txt
           if-no-files-found: warn
 
       - name: Commit results
+        env:
+          TF: ${{ inputs.timeframe }}
         run: |
           git config user.name "trading-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add -A results/backtest/combos_15m_all
-          git diff --quiet --cached || git commit -m "chore: update 15m all-strategies backtest results [skip ci]"
+          git add -A "$OUT"
+          git diff --quiet --cached || git commit -m "chore: update all-strategies backtest results ($TF) [skip ci]"
           for i in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
             sleep 5
