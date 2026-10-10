@@ -120552,12 +120552,12 @@
     "take_profit": 83296.01296835944,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-10T18:30:58.405853+00:00",
+    "exit_price": 83059.88844379687,
+    "pnl_usdt": -0.015,
+    "pnl_pct": -0.1499,
+    "duration_minutes": 29.9,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -120594,12 +120594,33 @@
     "take_profit": 110.125,
     "size_usdt": 10.0,
     "session": "New York",
+    "status": "win",
+    "exit_time": "2026-10-10T18:31:00.503380+00:00",
+    "exit_price": 110.125,
+    "pnl_usdt": 0.0116,
+    "pnl_pct": 0.1156,
+    "duration_minutes": 15.2,
+    "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261010T183100",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-10T18:31:00.845987+00:00",
+    "entry_price": 110.0,
+    "stop_loss": 109.8760130533135,
+    "take_profit": 110.65980420029761,
+    "size_usdt": 10.0,
+    "session": "New York",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "خرید از کف رنج"
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
