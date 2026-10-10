@@ -119887,5 +119887,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261010T113059",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-10T11:30:59.147604+00:00",
+    "entry_price": 109.56,
+    "stop_loss": 109.66577105366984,
+    "take_profit": 109.01190788608464,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
