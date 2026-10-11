@@ -124465,5 +124465,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__PAXG-USDT__20261011T233105",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-11T23:31:05.201429+00:00",
+    "entry_price": 4193.73,
+    "stop_loss": 4187.816919112717,
+    "take_profit": 4201.57621330925,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
