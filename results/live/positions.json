@@ -124066,5 +124066,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__ETH-USDT__20261011T200111",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "4h",
+    "side": "short",
+    "entry_time": "2026-10-11T20:01:11.174301+00:00",
+    "entry_price": 2536.64,
+    "stop_loss": 2557.6388103022346,
+    "take_profit": 2488.2637939553047,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار نزولی"
   }
 ]
