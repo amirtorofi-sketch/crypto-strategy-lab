@@ -121308,12 +121308,12 @@
     "take_profit": 4198.6157514340575,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-11T11:01:09.529893+00:00",
+    "exit_price": 4184.4921242829705,
+    "pnl_usdt": -0.0192,
+    "pnl_pct": -0.1924,
+    "duration_minutes": 479.9,
     "reason": "CHoCH صعودی - برگشت روند"
   },
   {
