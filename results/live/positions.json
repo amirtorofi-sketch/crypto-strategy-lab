@@ -123576,12 +123576,12 @@
     "take_profit": 760.2172580560068,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-11T17:15:51.447040+00:00",
+    "exit_price": 755.8931290332793,
+    "pnl_usdt": -0.0181,
+    "pnl_pct": -0.1813,
+    "duration_minutes": 14.6,
     "reason": "ورود در FVG صعودی"
   },
   {
