@@ -60,12 +60,57 @@ def test_gap_makes_returns_nan_instead_of_wrong():
 
 def test_baseline_is_session_mean():
     df = make15(n=96 * 20)
-    a = prepare_symbol(df)
+    a = prepare_symbol(df, baseline="year")
     r = a.ret["4h"]
     t_close = df.index.as_unit("ns").asi8 + 900 * 10**9
     hours = (t_close // (3600 * 10**9)) % 24
     asia = (hours >= 0) & (hours < 7) & ~np.isnan(r)
-    assert a.base["4h"][SESSIONS.index("Asia")] == pytest.approx(r[asia].mean())
+    k_asia = int(np.where(asia)[0][5])
+    assert a.base["4h"][k_asia] == pytest.approx(r[asia].mean())
+
+
+def _regime_series(n):
+    """ژانویه: صعود تند ، فوریه: ریزش تند (رژیم‌های بازار)؛ هر کندل ±۱۰ bps."""
+    idx = pd.date_range("2026-01-01 00:00", periods=n, freq="15min", tz="UTC")
+    step = np.where(idx.month == 1, 0.001, -0.001)
+    close = 100 * np.exp(np.cumsum(step))
+    return pd.DataFrame({"open": close, "high": close * 1.0005, "low": close * 0.9995, "close": close, "volume": 1.0},
+                        index=idx)
+
+
+def test_monthly_baseline_follows_the_market_regime():
+    df = _regime_series(96 * 59)                        # ژانویه + فوریه (۵۹ روز)
+    am = prepare_symbol(df, baseline="month")
+    ay = prepare_symbol(df, baseline="year")
+    k_jan, k_feb = 96 * 10, 96 * 45
+    assert am.base["4h"][k_jan] == pytest.approx(16 * 10.0, abs=15)      # حدود +۱۶۰ bps
+    assert am.base["4h"][k_feb] == pytest.approx(-16 * 10.0, abs=15)     # حدود −۱۶۰ bps
+    assert abs(ay.base["4h"][k_jan]) < 80                                # baseline یک‌ساله هر دو رژیم را میانگین می‌گیرد
+
+
+def test_regime_following_is_not_credited_as_skill_with_monthly_baseline():
+    df = _regime_series(96 * 59)
+    am = prepare_symbol(df, baseline="month")
+    ay = prepare_symbol(df, baseline="year")
+    rng = np.random.default_rng(0)
+    k = np.concatenate([rng.integers(96 * 5, 96 * 25, 200), rng.integers(96 * 35, 96 * 55, 200)])
+    side = np.where(df.index[k].month == 1, 1.0, -1.0)    # «سیگنال» فقط جهت رژیم را دنبال می‌کند
+    exc_m = np.mean(side * (am.ret["4h"][k] - am.base["4h"][k]))
+    exc_y = np.mean(side * (ay.ret["4h"][k] - ay.base["4h"][k]))
+    raw = np.mean(side * am.ret["4h"][k])
+    assert raw > 100 and exc_y > 100 and abs(exc_m) < 10   # baseline سالانه مهارت کاذب می‌سازد ، ماهانه نه
+
+
+def test_small_cells_fall_back_without_nan():
+    df = make15(n=96 * 3)
+    a = prepare_symbol(df, baseline="month")
+    ok = ~np.isnan(a.ret["1h"])
+    assert not np.isnan(a.base["1h"][ok]).any()
+
+
+def test_invalid_baseline_rejected():
+    with pytest.raises(ValueError):
+        prepare_symbol(make15(n=500), baseline="decade")
 
 
 def test_mfe_mae_for_long_ramp():
