@@ -3,7 +3,7 @@ name: Signal Test (manual)
 # فقط دستی اجرا می‌شود: Actions → "Signal Test" → Run workflow.
 #
 # چه می‌کند: «آزمون سیگنال» (Event Study) — بعد از سیگنال هر استراتژی (تایم‌فریم اصلی خودش)، قیمت در ۱، ۴، ۱۲، ۲۴ و ۷۲ ساعت
-# بعد در جهت سیگنال رفته یا نه؟ بدون SL و TP، نسبت به میانگین بازار همان نماد و سشن، با آزمون خوشه‌بندی‌شده.
+# بعد در جهت سیگنال رفته یا نه؟ بدون SL و TP، نسبت به میانگین بازار همان نماد/ماه/سشن (baseline)، با آزمون خوشه‌بندی‌شده.
 #   - پیش‌فرض: ۳۶ نماد پرنقدینگی (backtest/combos.py: LIQUID_SYMBOLS) ، ۳۶۵ روز
 #   - ۲۱ استراتژی‌ای که از داده‌ی ۱۵ دقیقه‌ای قابل ساخت‌اند (۵ دقیقه‌ای و ۱ روزه رد می‌شوند)
 #
@@ -20,6 +20,11 @@ on:
         type: choice
         options: [liquid, all]
         default: liquid
+      baseline:
+        description: "baseline بازار: month = ماهانه (پیش‌فرض) ؛ week = هفتگی ؛ year = کل بازه (رفتار قبلی، رژیم بازار را به حساب مهارت می‌گذارد)"
+        type: choice
+        options: [month, week, year]
+        default: month
       fee_pct_a:
         description: "کارمزد هر طرف برای مقایسه‌ی اول (٪)"
         default: "0.04"
@@ -72,12 +77,13 @@ jobs:
       - name: Collect signal events
         env:
           SYMBOL_SET: ${{ inputs.symbol_set }}
+          BASELINE: ${{ inputs.baseline }}
           FEE_A: ${{ inputs.fee_pct_a }}
           FEE_B: ${{ inputs.fee_pct_b }}
         run: |
           python -m backtest.signal_test \
             --symbol-set "$SYMBOL_SET" --shard "${{ matrix.shard }}/$SHARDS" --workers "$(nproc)" \
-            --fee-pct-a "$FEE_A" --fee-pct-b "$FEE_B" \
+            --baseline "$BASELINE" --fee-pct-a "$FEE_A" --fee-pct-b "$FEE_B" \
             --events-out "shards/ev_${{ matrix.shard }}.pkl.gz" 2>&1 | tee "shards/log_${{ matrix.shard }}.txt"
 
       - uses: actions/upload-artifact@v4
