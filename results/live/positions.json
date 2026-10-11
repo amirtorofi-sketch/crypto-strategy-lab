@@ -122547,12 +122547,12 @@
     "take_profit": 109.585,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-11T10:31:01.556848+00:00",
+    "exit_price": 109.585,
+    "pnl_usdt": 0.0107,
+    "pnl_pct": 0.1074,
+    "duration_minutes": 60.0,
     "reason": "خرید از کف رنج"
   },
   {
