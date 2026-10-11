@@ -42,6 +42,8 @@ VERDICT_FA = {
     "hypothesis": "فرضیه",
     "low_n": "نمونه ناکافی",
 }
+BL_FA = {"month": "ماهانه", "week": "هفتگی", "year": "کل بازه"}
+BL_UNIT_FA = {"month": "ماه", "week": "هفته", "year": "کل بازه"}
 HALF_FA = {"pos": "هر دو نیمه مثبت", "neg": "هر دو نیمه منفی", "mixed": "ناپایدار", "na": "نامشخص"}
 
 COLS = ["n", "hit", "mean_dir", "mean_exc", "med_dir", "se_exc", "t", "p", "q", "days", "n1", "exc1", "n2", "exc2",
@@ -266,7 +268,7 @@ def _write_md(path: str, tabs: dict, pooled: list[dict], F: dict, meta: dict, pa
     L.append(f"- بازه‌ی رویدادها: {meta['period_start'][:10]} تا {meta['period_end'][:10]} | مرز نیمه‌ها: {meta['half_boundary'][:10]}")
     L.append(f"- نمادها: {params['symbols_with_data']} از {params['symbols_requested']} | استراتژی‌ها: {len(params['strategies'])} "
              f"(رد شده چون از داده‌ی ۱۵ دقیقه‌ای ساخته نمی‌شوند: {', '.join(params['skipped']) or '—'}) | رویدادها: {meta['events']:,}")
-    L.append("- افق‌ها: " + "، ".join(H_LABELS) + " بعد از بسته‌شدن کندل سیگنال؛ بازده بر حسب bps (۰.۰۱٪) در جهت سیگنال، منهای میانگین بازار همان نماد و سشن.\n")
+    L.append("- افق‌ها: " + "، ".join(H_LABELS) + f" بعد از بسته‌شدن کندل سیگنال؛ بازده بر حسب bps (۰.۰۱٪) در جهت سیگنال، منهای میانگین بازار همان نماد/سشن/{BL_UNIT_FA[params.get('baseline', 'year')]}.\n")
     L.append("## یافته‌های کلیدی\n")
     L.append("**قابل اتکا**\n")
     L += [f"- {x}" for x in F["reliable"]]
@@ -278,7 +280,9 @@ def _write_md(path: str, tabs: dict, pooled: list[dict], F: dict, meta: dict, pa
     L.append("\n## نکات\n")
     L.append("- هر رویداد یک ورود است؛ سیگنال‌های پشت‌سرهمِ هم‌جهت یک‌بار شمرده شده‌اند. بازه‌ی افق‌های بلند (۲۴ و ۷۲ ساعته) روی هم می‌افتند؛ "
              "برای همین t با خطای استاندارد خوشه‌بندی‌شده‌ی روزانه حساب شده است.")
-    L.append("- baseline (میانگین بازار همان نماد و سشن) روی کل بازه حساب شده و فقط برای حذف روند کلی بازار است.")
+    bl = params.get("baseline", "year")
+    L.append(f"- baseline (میانگین بازار همان نماد و سشن) با دوره‌ی «{BL_FA[bl]}» حساب شده تا رژیم بازار "
+             "(ریزش یا صعود همان دوره) به حساب مهارت سیگنال نیفتد؛ با baseline کل‌بازه، علامت برتری لانگ و شورت بین دو نیمه‌ی بازه برعکس می‌شد.")
     L.append("- کالیبراسیون آزمون روی راه‌رفتن تصادفی: نرخ مثبت کاذب ~۵–۷٪ تا افق ۲۴ ساعت و حدود ۱۰٪ در افق ۷۲ ساعت؛ به نتایج ۷۲ ساعته با احتیاط‌تر نگاه کن.")
     L.append("- «بالاتر از کارمزد» یعنی میانگین بازده در جهت سیگنال بعد از کسر کارمزد رفت‌وبرگشت هنوز مثبت است (بدون SL و TP، با خروج در پایان افق).")
     L.append("- داده‌ی بایننس اسپات است؛ اسپرد و لغزش واقعی Tabdeal جدا باید لحاظ شود.")
@@ -307,7 +311,7 @@ def _write_dashboard(path: str, tabs: dict, pooled: list[dict], F: dict, meta: d
         "meta": {"start": meta["period_start"][:10], "end": meta["period_end"][:10], "mid": meta["half_boundary"][:10],
                  "events": meta["events"], "symbols": params["symbols_with_data"], "strategies": len(params["strategies"]),
                  "skipped": params["skipped"], "cost_a": 2 * params["fee_pct_a"] * 100, "cost_b": 2 * params["fee_pct_b"] * 100,
-                 "fee_a": params["fee_pct_a"], "fee_b": params["fee_pct_b"]},
+                 "fee_a": params["fee_pct_a"], "fee_b": params["fee_pct_b"], "baseline": params.get("baseline", "year")},
         "names": {"strategy": "استراتژی", "strategy_session": "استراتژی × سشن", "strategy_symbol": "استراتژی × نماد",
                   "strategy_side": "استراتژی × جهت"},
     }
@@ -365,7 +369,7 @@ const T={};Object.keys(D.tables).forEach(k=>{T[k]={keys:D.tables[k].keys,rows:D.
 const P=D.pooled.map(a=>{const o={key:a[0],hz:a[0][1]};D.cols.forEach((c,i)=>o[c]=a[i+1]);return o});
 let lv='strategy',sk='rank',sd=-1,hmm='mean_exc',ec=null;
 function stratList(){return[...new Set(T.strategy.rows.map(r=>r.key[0]))].sort()}
-$('meta').textContent=`از ${M.start} تا ${M.end} | ${M.events.toLocaleString()} سیگنال | ${M.symbols} نماد | ${M.strategies} استراتژی (تایم‌فریم اصلی) | رد شده: ${M.skipped.join('، ')||'—'} | کارمزد رفت‌وبرگشت ${M.cost_a} و ${M.cost_b} bps | مرز نیمه‌ها: ${M.mid}`;
+$('meta').textContent=`از ${M.start} تا ${M.end} | ${M.events.toLocaleString()} سیگنال | ${M.symbols} نماد | ${M.strategies} استراتژی (تایم‌فریم اصلی) | رد شده: ${M.skipped.join('، ')||'—'} | کارمزد رفت‌وبرگشت ${M.cost_a} و ${M.cost_b} bps | baseline: ${M.baseline} | مرز نیمه‌ها: ${M.mid}`;
 const kp=P.map(r=>[`برتری کل @ ${r.hz}`,(r.mean_exc>=0?'+':'')+f(r.mean_exc,1)+' bps',r.mean_exc>0?'pos':'neg',`t=${f(r.t,1)} | n=${r.n.toLocaleString()}`]);
 $('kpis').innerHTML=kp.map(k=>`<div class="k"><span>${k[0]}</span><b class="${k[2]}">${k[1]}</b><span>${k[3]}</span></div>`).join('');
 $('f_rel').innerHTML=D.findings.reliable.map(x=>`<li>${x}</li>`).join('');$('f_hyp').innerHTML=D.findings.hypo.map(x=>`<li>${x}</li>`).join('');$('f_note').innerHTML=D.findings.notes.join('<br>');
