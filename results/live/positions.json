@@ -122568,12 +122568,33 @@
     "take_profit": 82889.70060058203,
     "size_usdt": 10.0,
     "session": "London",
+    "status": "loss",
+    "exit_time": "2026-10-11T11:30:51.820855+00:00",
+    "exit_price": 83071.31712793016,
+    "pnl_usdt": -0.0125,
+    "pnl_pct": -0.1249,
+    "duration_minutes": 75.0,
+    "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BNB-USDT__20261011T113054",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-11T11:30:54.445595+00:00",
+    "entry_price": 748.17,
+    "stop_loss": 748.9550150734431,
+    "take_profit": 745.844773898353,
+    "size_usdt": 10.0,
+    "session": "London",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG نزولی"
+    "reason": "شکار های‌های برابر"
   }
 ]
