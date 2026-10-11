@@ -121119,12 +121119,12 @@
     "take_profit": 110.25,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-11T01:45:51.673512+00:00",
+    "exit_price": 110.25,
+    "pnl_usdt": 0.0202,
+    "pnl_pct": 0.202,
+    "duration_minutes": 74.8,
     "reason": "خرید از کف رنج"
   },
   {
