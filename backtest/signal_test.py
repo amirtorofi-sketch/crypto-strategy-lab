@@ -12,9 +12,12 @@
   - قیمت مبدأ = close کندل سیگنال (لحظه‌ی بسته‌شدنش)؛ قیمت آینده از کندل‌های ۱۵ دقیقه‌ای خوانده می‌شود.
   - سیگنال‌های پشت‌سرهمِ هم‌جهت (کندل‌های متوالی) یک رویداد حساب می‌شوند (فقط اولین؛ بدون این‌کار یک ایده
     چند بار شمرده می‌شود).
-  - baseline = میانگین بازده آینده‌ی همه‌ی کندل‌های همان نماد و همان سشن (بدون شرط سیگنال). excess = جهت × (بازده − baseline).
-    baseline روی کل بازه حساب می‌شود (کمی نگاه‌به‌آینده دارد، ولی فقط برای حذف روند کلی است و سیگنال‌ها
-    را به‌نفع هیچ استراتژی‌ای تغییر نمی‌دهد).
+  - baseline = میانگین بازده آینده‌ی همه‌ی کندل‌های همان نماد، همان «ماه» و همان سشن (بدون شرط سیگنال).
+    excess = جهت × (بازده − baseline). baseline ماهانه روند/رژیم همان ماه بازار را حذف می‌کند؛ با baseline یک‌ساله
+    رژیم‌های نیمه‌ی اول و دوم بازه (مثلاً ریزش در نیمه‌ی اول و صعود در دوم) به‌اشتباه به حساب مهارت سیگنال می‌افتاد.
+    اگر یک سلول (ماه×سشن) کمتر از ۱۰۰ کندل داشته باشد، میانگین همان ماه (همه‌ی سشن‌ها) و در نهایت میانگین کل بازه‌ی
+    همان سشن استفاده می‌شود. گزینه‌ی --baseline = month (پیش‌فرض) | week | year (رفتار قدیمی).
+    باز هم کمی نگاه‌به‌آینده دارد (میانگین ماه با داده‌ی همان ماه ساخته می‌شود) ولی فقط برای حذف رژیم بازار است.
   - MFE/MAE: بیشترین حرکت موافق و مخالف قیمت (٪) در ۴ و ۲۴ ساعت بعد، برای انتخاب منطقی SL/TP.
 
 اجرا (از ریشه‌ی ریپو، بعد از python -m backtest.download_klines):
@@ -67,7 +70,7 @@ class SymbolArrays:
     high: np.ndarray
     low: np.ndarray
     ret: dict                     # ret[h] : بازده آینده (bps) از close کندل k تا close کندل k+h ؛ NaN اگر حفره باشد
-    base: dict                    # base[h] : آرایه‌ی ۵تایی میانگین بازده آینده به تفکیک سشن
+    base: dict                    # base[h] : برای هر کندل k ، میانگین بازده آینده‌ی «همتا»ها (همان نماد، دوره‌ی baseline و سشن)
     mfe: dict                     # mfe[w] , mae[w] : حرکت موافق/مخالف (٪) در w کندل بعد از کندل k (بر اساس جهت لانگ)
     mae: dict
 
@@ -81,7 +84,34 @@ def _roll_fwd(a: np.ndarray, w: int, fn: str) -> np.ndarray:
     return out
 
 
-def prepare_symbol(df15: pd.DataFrame) -> SymbolArrays:
+BASELINES = ("month", "week", "year")
+MIN_CELL = 100
+
+
+def _period_ids(t_close_ns: np.ndarray, baseline: str) -> np.ndarray:
+    if baseline == "year":
+        return np.zeros(len(t_close_ns), dtype=np.int64)
+    if baseline == "week":
+        return (t_close_ns // (7 * 86400 * 10**9)).astype(np.int64)
+    if baseline == "month":
+        ts = pd.DatetimeIndex(t_close_ns.astype("datetime64[ns]"))
+        return (ts.year * 12 + ts.month).to_numpy(dtype=np.int64)
+    raise ValueError(f"baseline نامعتبر: {baseline!r} (مجاز: {BASELINES})")
+
+
+def _local_baseline(r: np.ndarray, period: np.ndarray, sess: np.ndarray) -> np.ndarray:
+    """برای هر کندل: میانگین r در سلول (دوره × سشن) ← اگر کم‌نمونه بود: میانگین دوره ← میانگین کل بازه‌ی همان سشن."""
+    df = pd.DataFrame({"p": period, "s": sess, "r": r})
+    cell_m = df.groupby(["p", "s"])["r"].transform("mean").to_numpy()
+    cell_c = df.groupby(["p", "s"])["r"].transform("count").to_numpy()
+    per_m = df.groupby("p")["r"].transform("mean").to_numpy()
+    per_c = df.groupby("p")["r"].transform("count").to_numpy()
+    sess_m = df.groupby("s")["r"].transform("mean").to_numpy()
+    out = np.where(cell_c >= MIN_CELL, cell_m, np.where(per_c >= MIN_CELL, per_m, sess_m))
+    return out
+
+
+def prepare_symbol(df15: pd.DataFrame, baseline: str = "month") -> SymbolArrays:
     idx_ns = df15.index.as_unit("ns").asi8.astype(np.int64)      # pandas ۳ پیش‌فرض µs است؛ همیشه به ns تبدیل می‌کنیم
     close = df15["close"].to_numpy(float)
     high = df15["high"].to_numpy(float)
@@ -89,6 +119,7 @@ def prepare_symbol(df15: pd.DataFrame) -> SymbolArrays:
     n = len(df15)
     hours = ((idx_ns + STEP15 * 10**9) // (3600 * 10**9)) % 24          # ساعت UTC لحظه‌ی بسته‌شدن کندل k
     sess = HOUR_TO_SESSION[hours.astype(int)]
+    period = _period_ids(idx_ns + STEP15 * 10**9, baseline)
     ret, base = {}, {}
     for lab, h in HORIZONS.items():
         r = np.full(n, np.nan)
@@ -96,12 +127,7 @@ def prepare_symbol(df15: pd.DataFrame) -> SymbolArrays:
             ok = (idx_ns[h:] - idx_ns[:-h]) == h * STEP15 * 10**9
             r[:-h] = np.where(ok, (close[h:] / close[:-h] - 1) * 1e4, np.nan)
         ret[lab] = r
-        b = np.full(len(SESSIONS), np.nan)
-        for s in range(len(SESSIONS)):
-            m = (sess == s) & ~np.isnan(r)
-            if m.any():
-                b[s] = r[m].mean()
-        base[lab] = b
+        base[lab] = _local_baseline(r, period, sess)
     mfe, mae = {}, {}
     for lab, w in MFE_WINDOWS.items():
         mh = _roll_fwd(high, w, "max")
@@ -142,7 +168,7 @@ def collect_events(strategy, df_tf: pd.DataFrame, arr: SymbolArrays, symbol: str
                       "t": t_close, "session": sess}
                 for lab in HORIZONS:
                     ev["r_" + lab] = arr.ret[lab][k]
-                    ev["b_" + lab] = arr.base[lab][sess]
+                    ev["b_" + lab] = arr.base[lab][k]
                 for lab in MFE_WINDOWS:
                     up, dn = arr.mfe[lab][k], arr.mae[lab][k]
                     ev["mfe_" + lab] = up if side == 1 else -dn          # موافق (٪)
@@ -161,7 +187,7 @@ def run_symbol(job: dict):
     if len(df15) < 1000:
         meta["error"] = "داده‌ی کافی نیست"
         return sym, [], meta
-    arr = prepare_symbol(df15)
+    arr = prepare_symbol(df15, job.get("baseline", "month"))
     frames: dict[str, pd.DataFrame] = {}
     rows: list[dict] = []
     for sname in job["strategies"]:
@@ -193,7 +219,7 @@ def merge(paths: list[str], out_dir: str) -> None:
         with gzip.open(fp, "rb") as f:
             parts.append(pickle.load(f))
     base = dict(parts[0]["params"])
-    for k in ("min_reward_pct", "fee_pct_a", "fee_pct_b"):
+    for k in ("min_reward_pct", "fee_pct_a", "fee_pct_b", "baseline"):
         vals = {repr(p["params"].get(k)) for p in parts}
         if len(vals) > 1:
             raise SystemExit(f"تکه‌ها با پارامتر متفاوت اجرا شده‌اند ({k}: {sorted(vals)}).")
@@ -224,6 +250,8 @@ def main():
     ap.add_argument("--only", default=None, help="فقط این استراتژی‌ها (جداشده با ویرگول)")
     ap.add_argument("--events-out", default=None, help="فقط رویدادها را ذخیره کن (برای حالت تکه‌تکه)؛ گزارش را --merge می‌سازد")
     ap.add_argument("--merge", nargs="+", default=None, help="فایل‌های --events-out را ادغام و گزارش را بساز")
+    ap.add_argument("--baseline", choices=list(BASELINES), default="month",
+                    help="دوره‌ی baseline بازار: month (پیش‌فرض) | week | year (رفتار قبلی)")
     ap.add_argument("--fee-pct-a", type=float, default=0.04, help="کارمزد هر طرف برای مقایسه‌ی اول (٪)")
     ap.add_argument("--fee-pct-b", type=float, default=0.35, help="کارمزد هر طرف برای مقایسه‌ی دوم (٪)")
     ap.add_argument("--workers", type=int, default=max(1, os.cpu_count() or 2))
@@ -258,13 +286,14 @@ def main():
         if not os.path.exists(p):
             missing.append(s)
             continue
-        jobs.append({"symbol": s, "path": p, "strategies": names, "windows": windows, "min_reward_pct": min_reward})
+        jobs.append({"symbol": s, "path": p, "strategies": names, "windows": windows, "min_reward_pct": min_reward,
+                     "baseline": a.baseline})
     if not jobs:
         raise SystemExit("هیچ فایل داده‌ای نیست؛ اول python -m backtest.download_klines را اجرا کن.")
     if missing:
         print(f"⚠️ داده‌ی {len(missing)} نماد نبود و رد شد: {' '.join(missing[:20])}")
     print(f"{len(jobs)} نماد × {len(names)} استراتژی (تایم‌فریم اصلی) | رد شده (۵m/۱d): {', '.join(skipped) or '—'} | "
-          f"افق‌ها: {', '.join(H_LABELS)} | پنجره‌ی داده: {windows}")
+          f"افق‌ها: {', '.join(H_LABELS)} | baseline: {a.baseline} | پنجره‌ی داده: {windows}")
 
     rows: list[dict] = []
     metas: dict = {}
@@ -283,7 +312,8 @@ def main():
             events[c] = events[c].astype(np.float32)
     params = {"min_reward_pct": min_reward, "windows": windows, "strategies": names, "skipped": skipped,
               "symbols_requested": len(syms), "symbols_with_data": len(jobs), "symbols_missing": missing,
-              "fee_pct_a": a.fee_pct_a, "fee_pct_b": a.fee_pct_b, "symbol_set": a.symbol_set, "shard": a.shard}
+              "fee_pct_a": a.fee_pct_a, "fee_pct_b": a.fee_pct_b, "symbol_set": a.symbol_set, "shard": a.shard,
+              "baseline": a.baseline}
     if a.events_out:
         _dump(a.events_out, events, metas, params)
         print(f"رویدادها در {a.events_out} ذخیره شد ({len(events):,} رویداد).")
