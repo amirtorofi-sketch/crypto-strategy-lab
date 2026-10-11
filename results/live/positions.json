@@ -121161,12 +121161,33 @@
     "take_profit": 746.1427274178964,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-11T01:30:57.907814+00:00",
+    "exit_price": 748.2084727098525,
+    "pnl_usdt": -0.0124,
+    "pnl_pct": -0.1239,
+    "duration_minutes": 15.0,
+    "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__SOL-USDT__20261011T013056",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-11T01:30:56.815457+00:00",
+    "entry_price": 110.17,
+    "stop_loss": 109.96415409618224,
+    "take_profit": 110.70768855726644,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG نزولی"
+    "reason": "شکار لوهای برابر"
   }
 ]
