@@ -124458,12 +124458,12 @@
     "take_profit": 4195.089318252388,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-11T23:45:52.759291+00:00",
+    "exit_price": 4195.089318252388,
+    "pnl_usdt": 0.0086,
+    "pnl_pct": 0.0859,
+    "duration_minutes": 30.0,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
