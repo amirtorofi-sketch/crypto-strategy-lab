@@ -126873,12 +126873,12 @@
     "take_profit": 82533.98000000001,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-12T13:31:00.081101+00:00",
+    "exit_price": 82533.98000000001,
+    "pnl_usdt": 0.1344,
+    "pnl_pct": 1.3436,
+    "duration_minutes": 315.2,
     "reason": "شکست پایین رنج افتتاحیه لندن"
   },
   {
@@ -127846,5 +127846,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "ict_judas_swing__BNB-USDT__20261012T133102",
+    "strategy": "ict_judas_swing",
+    "category": "ict",
+    "symbol": "BNB/USDT",
+    "timeframe": "5m",
+    "side": "long",
+    "entry_time": "2026-10-12T13:31:02.611380+00:00",
+    "entry_price": 746.52,
+    "stop_loss": 746.090363692246,
+    "take_profit": 748.7654538469241,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "Judas Swing صعودی در باز شدن سشن"
   }
 ]
