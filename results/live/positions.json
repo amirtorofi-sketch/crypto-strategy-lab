@@ -134433,12 +134433,12 @@
     "take_profit": 4153.139198080799,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-13T22:01:12.318452+00:00",
+    "exit_price": 4166.687296230304,
+    "pnl_usdt": -0.0146,
+    "pnl_pct": -0.1457,
+    "duration_minutes": 60.0,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -134566,5 +134566,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261013T220108",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-13T22:01:08.547632+00:00",
+    "entry_price": 83533.04,
+    "stop_loss": 83859.72416630603,
+    "take_profit": 83380.375,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
