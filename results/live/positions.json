@@ -134097,12 +134097,12 @@
     "take_profit": 83821.32049450853,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-13T18:45:58.135014+00:00",
+    "exit_price": 83034.5913003661,
+    "pnl_usdt": -0.0243,
+    "pnl_pct": -0.2429,
+    "duration_minutes": 30.0,
     "reason": "شکار لوهای برابر"
   },
   {
