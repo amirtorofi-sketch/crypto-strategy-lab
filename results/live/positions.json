@@ -134286,12 +134286,12 @@
     "take_profit": 2511.115,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-13T20:15:47.708782+00:00",
+    "exit_price": 2511.115,
+    "pnl_usdt": 0.0172,
+    "pnl_pct": 0.1717,
+    "duration_minutes": 29.8,
     "reason": "خرید از کف رنج"
   },
   {
@@ -134356,5 +134356,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BNB-USDT__20261013T201549",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-13T20:15:49.784462+00:00",
+    "entry_price": 742.41,
+    "stop_loss": 743.2322774110412,
+    "take_profit": 737.7258388343811,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
