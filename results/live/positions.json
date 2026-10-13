@@ -134160,12 +134160,12 @@
     "take_profit": 109.04587984247861,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-13T20:31:02.147178+00:00",
+    "exit_price": 107.22009441890256,
+    "pnl_usdt": -0.0461,
+    "pnl_pct": -0.4608,
+    "duration_minutes": 135.1,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -134377,5 +134377,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__ETH-USDT__20261013T203100",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-13T20:31:00.756883+00:00",
+    "entry_price": 2507.81,
+    "stop_loss": 2504.923258330911,
+    "take_profit": 2524.2249444605955,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
