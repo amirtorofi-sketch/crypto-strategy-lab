@@ -139053,12 +139053,12 @@
     "take_profit": 4102.545,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-14T22:45:47.206316+00:00",
+    "exit_price": 4121.197180501114,
+    "pnl_usdt": -0.0256,
+    "pnl_pct": -0.2557,
+    "duration_minutes": 134.8,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -139389,12 +139389,33 @@
     "take_profit": 82185.4113723516,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-10-14T22:45:44.245823+00:00",
+    "exit_price": 81498.21724184323,
+    "pnl_usdt": -0.0222,
+    "pnl_pct": -0.2224,
+    "duration_minutes": 14.9,
+    "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261014T224547",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-14T22:45:47.721641+00:00",
+    "entry_price": 4121.02,
+    "stop_loss": 4123.673941670987,
+    "take_profit": 4104.15,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکار لوهای برابر"
+    "reason": "فروش از سقف رنج"
   }
 ]
