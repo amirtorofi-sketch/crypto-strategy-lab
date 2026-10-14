@@ -1,0 +1,94 @@
+name: Trend Test (manual)
+
+# فقط دستی اجرا می‌شود: Actions → "Trend Test" → Run workflow.
+#
+# آزمون روندپیروی و مومنتوم روی کندل «روزانه» (۱۳ واریانت از پیش مشخص؛ بدون جست‌وجوی پارامتر).
+# مستقل از صرافی است: کارمزد و بهره‌ی قرض را در داشبورد خودت وارد می‌کنی و زنده دوباره حساب می‌شود.
+# اجرا چند دقیقه طول می‌کشد (داده‌ی روزانه سبک است).
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "تعداد سال تاریخچه (برای روندپیروی حداقل ۳ تا ۴ سال لازم است)"
+        default: "5"
+      symbol_set:
+        description: "liquid = ۳۶ نماد پرنقدینگی ؛ all = هر ۱۸۱ نماد"
+        type: choice
+        options: [liquid, all]
+        default: liquid
+      holdout_days:
+        description: "آخرین N روز برای تصمیم نهایی جدا نگه داشته می‌شود"
+        default: "365"
+      default_fee:
+        description: "کارمزد هر طرف (٪) برای گزارش متنی summary.md (داشبورد جداگانه قابل تنظیم است)"
+        default: "0.10"
+      default_borrow:
+        description: "بهره‌ی قرض شورت (٪ روزانه) برای summary.md"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trend-test
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  trend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      YEARS: ${{ inputs.years }}
+      SYMBOL_SET: ${{ inputs.symbol_set }}
+      HOLDOUT: ${{ inputs.holdout_days }}
+      FEE: ${{ inputs.default_fee }}
+      BORROW: ${{ inputs.default_borrow }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas numpy requests
+
+      - name: Download daily klines (Binance public REST)
+        run: |
+          python -m backtest.download_daily --years "$YEARS" --symbol-set "$SYMBOL_SET" 2>&1 | tee download_report_daily.txt
+
+      - name: Run trend / momentum test
+        run: |
+          OUT=results/backtest/trend_test
+          python -m backtest.trend_test --out "$OUT" --holdout-days "$HOLDOUT" --default-fee "$FEE" --default-borrow "$BORROW" 2>&1 | tee trend_log.txt
+          cp download_report_daily.txt "$OUT/download_report.txt"
+
+      - name: Show summary on the run page
+        if: always()
+        run: |
+          if [ -f results/backtest/trend_test/summary.md ]; then cat results/backtest/trend_test/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trend-test-results
+          path: |
+            results/backtest/trend_test/
+            trend_log.txt
+          if-no-files-found: warn
+
+      - name: Commit results
+        run: |
+          git config user.name "trading-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A results/backtest/trend_test
+          git diff --quiet --cached || git commit -m "chore: update trend test results [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
