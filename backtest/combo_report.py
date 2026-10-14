@@ -187,6 +187,10 @@ def _write_md(path: str, tables: dict, sel_rows: list[dict], o: dict, oa: dict, 
     all_sessions = bool(params["all_sessions"])
     L = []
     L.append("# نتیجه‌ی بک‌تست ترکیب‌های استراتژی × سشن\n")
+    if params.get("invert"):
+        L.append("> ⚠️ **حالت معکوس:** سیگنال هر استراتژی همان است ولی پوزیشن برعکس اجرا شده (long -> short و بالعکس) و فاصله‌ی "
+                 "SL و TP عیناً آینه‌ای حول قیمت ورود در سمت مخالف قرار گرفته (R:R ثابت). ستون side جهت اجراشده و raw_side "
+                 "جهت سیگنال خام است. اگر استراتژی‌ها اطلاعات ضدجهت نداشته باشند، Expectancy قبل از کارمزد باز هم ≈ صفر می‌ماند.\n")
     L.append(f"- بازه: {meta['period_start'][:10]} تا {meta['period_end'][:10]} ({meta['span_days']:.0f} روز) | "
              f"نیمه‌ی اول/دوم: مرز {meta['half_boundary'][:10]}")
     miss = params["symbols_missing"]
