@@ -138255,12 +138255,12 @@
     "take_profit": 740.21,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-14T14:45:55.872871+00:00",
+    "exit_price": 732.1342388598675,
+    "pnl_usdt": -0.0331,
+    "pnl_pct": -0.3315,
+    "duration_minutes": 30.0,
     "reason": "خرید از کف رنج"
   }
 ]
