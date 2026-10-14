@@ -24,6 +24,14 @@ on:
         type: choice
         options: [native, 15m, 1h, 4h]
         default: native
+      invert:
+        description: "معکوس: سیگنال همان است ولی پوزیشن برعکس اجرا می‌شود (SL/TP آینه‌ای حول ورود)"
+        type: boolean
+        default: false
+      include_excluded:
+        description: "شامل ۳ استراتژی حذف‌شده‌ی EXCLUDED_STRATEGIES هم بشود (همه‌ی استراتژی‌های ثبت‌شده)"
+        type: boolean
+        default: false
       days:
         description: "تعداد روز تاریخچه"
         default: "365"
@@ -80,9 +88,13 @@ jobs:
           FEE_PCT: ${{ inputs.fee_pct }}
           SLIPPAGE_PCT: ${{ inputs.slippage_pct }}
           TF: ${{ inputs.timeframe }}
+          INVERT: ${{ inputs.invert }}
+          INCLUDE_EXCLUDED: ${{ inputs.include_excluded }}
         run: |
           TF_ARG=()
           if [ "$TF" != "native" ]; then TF_ARG=(--timeframe "$TF"); fi
+          if [ "$INVERT" = "true" ]; then TF_ARG+=(--invert); fi
+          if [ "$INCLUDE_EXCLUDED" = "true" ]; then TF_ARG+=(--exclude ""); fi
           python -m backtest.combo_backtest \
             --all-strategies "${TF_ARG[@]}" --shard "${{ matrix.shard }}/$SHARDS" \
             --workers "$(nproc)" --fee-pct "$FEE_PCT" --slippage-pct "$SLIPPAGE_PCT" \
@@ -120,9 +132,13 @@ jobs:
       - name: Merge shards and build report
         env:
           TF: ${{ inputs.timeframe }}
+          INVERT: ${{ inputs.invert }}
+          INCLUDE_EXCLUDED: ${{ inputs.include_excluded }}
         run: |
-          # پوشه‌ی خروجی جدا برای هر تایم‌فریم تا نتیجه‌ها روی هم نوشته نشوند
+          # پوشه‌ی خروجی جدا برای هر حالت تا نتیجه‌ها روی هم نوشته نشوند
           if [ "$TF" = "15m" ]; then OUT=results/backtest/combos_15m_all; else OUT="results/backtest/combos_all_${TF}"; fi
+          if [ "$INCLUDE_EXCLUDED" = "true" ]; then OUT="${OUT}_full"; fi
+          if [ "$INVERT" = "true" ]; then OUT="${OUT}_inverted"; fi
           echo "OUT=$OUT" >> "$GITHUB_ENV"
           python -m backtest.combo_backtest --merge shards/shard_*.pkl.gz --out "$OUT" 2>&1 | tee merge_log.txt
           cat shards/download_report_*.txt > "$OUT/download_report.txt"
@@ -137,7 +153,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: backtest-all-${{ inputs.timeframe }}-results
+          name: backtest-all-${{ inputs.timeframe }}-${{ inputs.invert && 'inverted-' || '' }}results
           path: |
             ${{ env.OUT }}/
             heavy/trades.csv.gz
@@ -151,7 +167,7 @@ jobs:
           git config user.name "trading-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A "$OUT"
-          git diff --quiet --cached || git commit -m "chore: update all-strategies backtest results ($TF) [skip ci]"
+          git diff --quiet --cached || git commit -m "chore: update all-strategies backtest results ($OUT) [skip ci]"
           for i in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
             sleep 5
