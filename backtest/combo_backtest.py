@@ -96,10 +96,26 @@ def live_window_size(timeframe: str, buffer_bars: int, max_fetch: int) -> int:
 
 
 # ----------------------------------------------------------------------------- شبیه‌ساز
+def mirror_signal(side: str, entry: float, stop_loss: float, take_profit: float) -> tuple[str, float, float]:
+    """
+    معکوس‌سازی سیگنال به همان روش ربات‌های دست‌ترید (resolve_poc_reversed): جهت برعکس می‌شود و فاصله‌ی ریسک
+    (تا SL) و فاصله‌ی سود (تا TP) عیناً آینه‌ای حول قیمت ورود در سمت مخالف بازتعریف می‌شوند (R:R ثابت می‌ماند).
+    خروجی: (جهت جدید، SL جدید، TP جدید)
+    """
+    risk = abs(entry - stop_loss)
+    reward = abs(take_profit - entry)
+    if side == "long":
+        return "short", entry + risk, entry - reward
+    return "long", entry - risk, entry + reward
+
+
 def simulate(strategy, df: pd.DataFrame, symbol: str, allowed_sessions: set[str], selected_sessions: set[str],
              window_size: int, min_reward_pct: float, trade_value: float,
-             fee_pct: float, slippage_pct: float) -> list[dict]:
-    """یک استراتژی روی یک نماد؛ یک پوزیشن باز در هر لحظه. کندل i بسته‌شده است و سیگنال روی close آن."""
+             fee_pct: float, slippage_pct: float, invert: bool = False) -> list[dict]:
+    """
+    یک استراتژی روی یک نماد؛ یک پوزیشن باز در هر لحظه. کندل i بسته‌شده است و سیگنال روی close آن.
+    invert=True: سیگنال و اعتبارسنجی همان است ولی پوزیشن برعکس اجرا می‌شود (mirror_signal).
+    """
     tf = strategy.timeframe
     tf_delta = pd.Timedelta(seconds=TIMEFRAME_SECONDS[tf])
     idx = df.index
@@ -128,7 +144,7 @@ def simulate(strategy, df: pd.DataFrame, symbol: str, allowed_sessions: set[str]
                     "strategy": strategy.name, "category": strategy.category, "symbol": symbol,
                     "timeframe": tf, "session": pos["session"],
                     "selected": pos["session"] in selected_sessions,
-                    "side": pos["side"], "entry_time": pos["entry_time"].isoformat(),
+                    "side": pos["side"], "raw_side": pos["raw_side"], "entry_time": pos["entry_time"].isoformat(),
                     "entry_price": pos["entry"], "stop_loss": pos["sl"], "take_profit": pos["tp"],
                     "exit_time": close_time.isoformat(), "exit_price": exit_price,
                     "exit_reason": "sl" if hit_sl else "tp",
@@ -150,9 +166,11 @@ def simulate(strategy, df: pd.DataFrame, symbol: str, allowed_sessions: set[str]
             if sig is not None:
                 ok, _ = validate_signal(sig, min_reward_pct=min_reward_pct)
                 if ok:
-                    pos = {"i": i, "side": sig.side, "entry": float(sig.entry), "sl": float(sig.stop_loss),
-                           "tp": float(sig.take_profit), "entry_time": close_time, "session": session,
-                           "reason": sig.reason}
+                    side, sl, tp = sig.side, float(sig.stop_loss), float(sig.take_profit)
+                    if invert:
+                        side, sl, tp = mirror_signal(sig.side, float(sig.entry), sl, tp)
+                    pos = {"i": i, "side": side, "raw_side": sig.side, "entry": float(sig.entry), "sl": sl,
+                           "tp": tp, "entry_time": close_time, "session": session, "reason": sig.reason}
         i += 1
     return trades
 
@@ -197,7 +215,7 @@ def run_symbol(job: dict):
         for grp in groups:
             rows += simulate(strat, frames[tf], to_ccxt(sym), set(grp), set(job["selected"].get(sname, [])),
                              window, job["min_reward_pct"], job["trade_value"],
-                             job["fee_pct"], job["slippage_pct"])
+                             job["fee_pct"], job["slippage_pct"], bool(job.get("invert", False)))
     meta["trades"] = len(rows)
     return sym, rows, meta
 
@@ -229,7 +247,7 @@ def merge_shards(paths: list[str], out_dir: str) -> None:
         with gzip.open(fp, "rb") as f:
             parts.append(pickle.load(f))
     base = dict(parts[0]["params"])
-    for k in ("fee_pct", "slippage_pct", "trade_value", "min_reward_pct", "all_sessions", "timeframe_override"):
+    for k in ("fee_pct", "slippage_pct", "trade_value", "min_reward_pct", "all_sessions", "timeframe_override", "invert"):
         vals = {repr(p["params"].get(k)) for p in parts}
         if len(vals) > 1:
             raise SystemExit(f"تکه‌ها با پارامتر متفاوت اجرا شده‌اند ({k}: {sorted(vals)}) و قابل ادغام نیستند.")
@@ -266,6 +284,8 @@ def main():
                     help="استراتژی‌های حذف‌شده در --all-strategies (جداشده با ویرگول؛ پیش‌فرض EXCLUDED_STRATEGIES؛ '' = هیچ‌کدام)")
     ap.add_argument("--timeframe", choices=SUPPORTED_TIMEFRAMES, default=None,
                     help="همه‌ی استراتژی‌ها را روی این تایم‌فریم اجرا کن (به‌جای تایم‌فریم خودشان)")
+    ap.add_argument("--invert", action="store_true",
+                    help="سیگنال هر استراتژی همان است ولی پوزیشن برعکس اجرا می‌شود (SL/TP آینه‌ای حول ورود، مثل ربات‌های دست‌ترید)")
     ap.add_argument("--all-sessions", action="store_true",
                     help="استراتژی‌های انتخاب‌شده را در همه‌ی سشن‌ها اجرا کن؛ ترکیب‌های انتخاب‌شده علامت می‌خورند")
     ap.add_argument("--fee-pct", type=float, default=None, help="کارمزد هر طرف (٪)؛ پیش‌فرض backtest.fee_pct کانفیگ (۰.۰۴)")
@@ -331,14 +351,15 @@ def main():
         jobs.append({"symbol": s, "path": p, "allowed": allowed, "selected": combos, "windows": windows,
                      "tf_override": a.timeframe, "buffer_bars": buffer_bars, "max_fetch": max_fetch,
                      "min_reward_pct": min_reward, "trade_value": trade_value,
-                     "fee_pct": fee_pct, "slippage_pct": a.slippage_pct, "independent": bool(a.all_sessions)})
+                     "fee_pct": fee_pct, "slippage_pct": a.slippage_pct, "independent": bool(a.all_sessions),
+                     "invert": bool(a.invert)})
     if not jobs:
         raise SystemExit("هیچ فایل داده‌ای نیست؛ اول python -m backtest.download_klines را اجرا کن.")
     if missing:
         print(f"⚠️ داده‌ی {len(missing)} نماد موجود نبود و رد شد: {' '.join(missing[:20])}{' ...' if len(missing) > 20 else ''}")
 
     print(f"{len(jobs)} نماد × {len(names)} استراتژی | تایم‌فریم: {a.timeframe or 'خود استراتژی'} | سشن‌ها: "
-          f"{'همه' if a.all_sessions else 'فقط انتخاب‌شده'} | کارمزد هر طرف {fee_pct}% + اسلیپیج {a.slippage_pct}% | "
+          f"{'همه' if a.all_sessions else 'فقط انتخاب‌شده'} | جهت: {'معکوس' if a.invert else 'عادی'} | کارمزد هر طرف {fee_pct}% + اسلیپیج {a.slippage_pct}% | "
           f"پنجره‌ی داده: {windows or 'min_bars+buffer هر استراتژی'} | min_reward_pct={min_reward}")
     all_rows: list[dict] = []
     metas: dict[str, dict] = {}
@@ -351,7 +372,7 @@ def main():
             print(f"[{k}/{len(jobs)}] {sym}: {meta.get('trades', 0)} معامله {meta.get('error', '')}", flush=True)
     params = {"fee_pct": fee_pct, "slippage_pct": a.slippage_pct, "trade_value": trade_value,
               "min_reward_pct": min_reward, "windows": windows, "all_sessions": bool(a.all_sessions),
-              "timeframe_override": a.timeframe, "strategies": names, "skipped_unbuildable": skipped,
+              "timeframe_override": a.timeframe, "invert": bool(a.invert), "strategies": names, "skipped_unbuildable": skipped,
               "symbols_requested": len(syms), "symbols_with_data": len(jobs), "symbols_missing": missing,
               "combos": combos}
     trades = pd.DataFrame(all_rows)
