@@ -139039,5 +139039,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار نزولی"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261014T203100",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-14T20:31:00.538402+00:00",
+    "entry_price": 4113.97,
+    "stop_loss": 4121.197180501114,
+    "take_profit": 4102.545,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
