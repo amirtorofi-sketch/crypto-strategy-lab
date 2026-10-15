@@ -140040,12 +140040,12 @@
     "take_profit": 103.25236168578046,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-15T01:45:51.674494+00:00",
+    "exit_price": 104.54411659770635,
+    "pnl_usdt": -0.0247,
+    "pnl_pct": -0.2468,
+    "duration_minutes": 29.9,
     "reason": "ورود در FVG نزولی"
   },
   {
