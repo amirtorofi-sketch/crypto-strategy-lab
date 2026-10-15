@@ -139725,12 +139725,12 @@
     "take_profit": 4106.65,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-15T00:15:49.071179+00:00",
+    "exit_price": 4126.464577607114,
+    "pnl_usdt": -0.0164,
+    "pnl_pct": -0.1638,
+    "duration_minutes": 14.5,
     "reason": "فروش از سقف رنج"
   }
 ]
