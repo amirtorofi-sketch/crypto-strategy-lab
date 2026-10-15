@@ -141244,5 +141244,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "ict_london_killzone_breakout__PAXG-USDT__20261015T071553",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-15T07:15:53.684579+00:00",
+    "entry_price": 4146.91,
+    "stop_loss": 4136.07,
+    "take_profit": 4161.83,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
