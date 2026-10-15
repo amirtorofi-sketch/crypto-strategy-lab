@@ -141496,5 +141496,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "classic_macd_signal_cross__BTC-USDT__20261015T090112",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-15T09:01:12.420368+00:00",
+    "entry_price": 81380.29,
+    "stop_loss": 80483.98460458269,
+    "take_profit": 83172.9007908346,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس صعودی MACD"
   }
 ]
