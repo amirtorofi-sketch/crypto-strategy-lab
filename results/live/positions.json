@@ -143736,12 +143736,12 @@
     "take_profit": 728.2676818594773,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-15T19:15:53.990178+00:00",
+    "exit_price": 734.6923477210785,
+    "pnl_usdt": -0.0233,
+    "pnl_pct": -0.233,
+    "duration_minutes": 29.9,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
