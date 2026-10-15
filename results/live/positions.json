@@ -140061,12 +140061,12 @@
     "take_profit": 105.47395846338756,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-15T02:15:52.235105+00:00",
+    "exit_price": 103.8484027691075,
+    "pnl_usdt": -0.0322,
+    "pnl_pct": -0.3217,
+    "duration_minutes": 44.8,
     "reason": "شکار لوهای برابر"
   },
   {
@@ -140082,12 +140082,33 @@
     "take_profit": 82183.1846365194,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-15T02:15:50.292066+00:00",
+    "exit_price": 81548.81904361767,
+    "pnl_usdt": -0.0192,
+    "pnl_pct": -0.1917,
+    "duration_minutes": 14.7,
+    "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261015T021553",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-15T02:15:53.544442+00:00",
+    "entry_price": 726.43,
+    "stop_loss": 725.3528532915774,
+    "take_profit": 729.135,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود در FVG صعودی"
+    "reason": "خرید از کف رنج"
   }
 ]
