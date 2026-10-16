@@ -146046,12 +146046,12 @@
     "take_profit": 82886.72,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-16T10:01:14.218065+00:00",
+    "exit_price": 82020.0,
+    "pnl_usdt": -0.0443,
+    "pnl_pct": -0.4434,
+    "duration_minutes": 75.4,
     "reason": "شکست بالای رنج افتتاحیه لندن"
   },
   {
@@ -146235,12 +146235,12 @@
     "take_profit": 82583.88713124946,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-16T10:01:14.218094+00:00",
+    "exit_price": 82034.55085791669,
+    "pnl_usdt": -0.0211,
+    "pnl_pct": -0.2108,
+    "duration_minutes": 15.5,
     "reason": "شکار لوهای برابر"
   }
 ]
