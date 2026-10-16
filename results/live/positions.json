@@ -145332,12 +145332,12 @@
     "take_profit": 724.6936707182105,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-16T04:45:51.571596+00:00",
+    "exit_price": 729.4383595138147,
+    "pnl_usdt": -0.015,
+    "pnl_pct": -0.1497,
+    "duration_minutes": 14.7,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -145353,12 +145353,33 @@
     "take_profit": 725.4109365745684,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-16T04:45:51.571619+00:00",
+    "exit_price": 729.4383595138147,
+    "pnl_usdt": -0.015,
+    "pnl_pct": -0.1497,
+    "duration_minutes": 14.7,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261016T044553",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-16T04:45:53.486857+00:00",
+    "entry_price": 4176.07,
+    "stop_loss": 4170.308914794691,
+    "take_profit": 4191.24571004424,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+    "reason": "ورود در FVG صعودی"
   }
 ]
