@@ -144177,12 +144177,12 @@
     "take_profit": 4156.109,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-16T01:01:16.528280+00:00",
+    "exit_price": 4156.109,
+    "pnl_usdt": 0.0299,
+    "pnl_pct": 0.2995,
+    "duration_minutes": 180.1,
     "reason": "برگشت از باند بالای بولینگر"
   },
   {
@@ -144625,5 +144625,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "classic_macd_signal_cross__PAXG-USDT__20261016T010116",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-16T01:01:16.938966+00:00",
+    "entry_price": 4157.95,
+    "stop_loss": 4174.468878555667,
+    "take_profit": 4124.912242888664,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی MACD"
   }
 ]
