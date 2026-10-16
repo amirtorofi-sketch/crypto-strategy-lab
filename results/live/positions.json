@@ -147201,12 +147201,12 @@
     "take_profit": 729.96,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-16T17:15:53.143517+00:00",
+    "exit_price": 722.7724361170035,
+    "pnl_usdt": -0.0379,
+    "pnl_pct": -0.379,
+    "duration_minutes": 104.8,
     "reason": "خرید از کف رنج"
   },
   {
@@ -147355,5 +147355,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از ناحیه پریمیوم هم‌جهت با روند نزولی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261016T171551",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-16T17:15:51.788927+00:00",
+    "entry_price": 103.64,
+    "stop_loss": 103.31837832845707,
+    "take_profit": 105.46432507314393,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
