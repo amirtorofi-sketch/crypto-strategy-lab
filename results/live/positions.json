@@ -146242,5 +146242,26 @@
     "pnl_pct": -0.2108,
     "duration_minutes": 15.5,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "ict_optimal_trade_entry_ote__BNB-USDT__20261016T101555",
+    "strategy": "ict_optimal_trade_entry_ote",
+    "category": "ict",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-16T10:15:55.200448+00:00",
+    "entry_price": 730.07,
+    "stop_loss": 732.6205540345057,
+    "take_profit": 725.5,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در ناحیه OTE نزولی"
   }
 ]
