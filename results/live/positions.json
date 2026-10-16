@@ -145948,5 +145948,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "pa_pin_bar_rejection__PAXG-USDT__20261016T080105",
+    "strategy": "pa_pin_bar_rejection",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-10-16T08:01:05.957687+00:00",
+    "entry_price": 4184.68,
+    "stop_loss": 4167.929354984291,
+    "take_profit": 4231.8929003141775,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "پین‌بار صعودی"
   }
 ]
