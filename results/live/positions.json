@@ -148573,5 +148573,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261017T021552",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-17T02:15:52.885140+00:00",
+    "entry_price": 2424.71,
+    "stop_loss": 2428.6615089013626,
+    "take_profit": 2407.4373664795658,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
