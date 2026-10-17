@@ -148804,5 +148804,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی MACD"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BNB-USDT__20261017T051546",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-17T05:15:46.165056+00:00",
+    "entry_price": 722.92,
+    "stop_loss": 723.4183616331801,
+    "take_profit": 719.9445755022986,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
