@@ -149539,5 +149539,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای inside bar"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261017T151549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-17T15:15:49.045880+00:00",
+    "entry_price": 104.21,
+    "stop_loss": 104.04334243073781,
+    "take_profit": 104.84881307718497,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
