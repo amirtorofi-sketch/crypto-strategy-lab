@@ -149280,12 +149280,12 @@
     "take_profit": 716.7867553703384,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-17T15:01:09.042837+00:00",
+    "exit_price": 722.75,
+    "pnl_usdt": -0.0245,
+    "pnl_pct": -0.2449,
+    "duration_minutes": 255.3,
     "reason": "شکست پایین inside bar"
   },
   {
@@ -149518,5 +149518,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "pa_inside_bar_breakout__BNB-USDT__20261017T150109",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-17T15:01:09.712354+00:00",
+    "entry_price": 722.01,
+    "stop_loss": 718.92,
+    "take_profit": 726.5180954912942,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
