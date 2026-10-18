@@ -150883,5 +150883,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS نزولی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261018T003056",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-18T00:30:56.044399+00:00",
+    "entry_price": 81442.87,
+    "stop_loss": 81545.04249167656,
+    "take_profit": 81039.78262485148,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
