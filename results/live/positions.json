@@ -153508,5 +153508,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261018T203051",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-18T20:30:51.452825+00:00",
+    "entry_price": 2350.33,
+    "stop_loss": 2359.466211809226,
+    "take_profit": 2325.528234923114,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
