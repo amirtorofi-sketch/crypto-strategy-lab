@@ -152031,12 +152031,12 @@
     "take_profit": 2418.26,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-18T11:15:49.011148+00:00",
+    "exit_price": 2418.26,
+    "pnl_usdt": 0.0195,
+    "pnl_pct": 0.1955,
+    "duration_minutes": 89.9,
     "reason": "فروش از سقف رنج"
   },
   {
