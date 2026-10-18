@@ -150351,12 +150351,12 @@
     "take_profit": 80333.50950417583,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-18T01:01:03.897199+00:00",
+    "exit_price": 81542.28524791208,
+    "pnl_usdt": -0.0577,
+    "pnl_pct": -0.5766,
+    "duration_minutes": 135.4,
     "reason": "کراس نزولی MACD"
   },
   {
@@ -150897,12 +150897,12 @@
     "take_profit": 81039.78262485148,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-18T01:01:04.745286+00:00",
+    "exit_price": 81545.04249167656,
+    "pnl_usdt": -0.0205,
+    "pnl_pct": -0.2055,
+    "duration_minutes": 30.1,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
