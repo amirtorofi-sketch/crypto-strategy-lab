@@ -153949,5 +153949,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__PAXG-USDT__20261018T221555",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-18T22:15:55.192217+00:00",
+    "entry_price": 4169.61,
+    "stop_loss": 4148.276245399242,
+    "take_profit": 4178.516319011371,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
