@@ -156196,5 +156196,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "ict_london_killzone_breakout__PAXG-USDT__20261019T073055",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-19T07:30:55.703535+00:00",
+    "entry_price": 4181.62,
+    "stop_loss": 4168.01,
+    "take_profit": 4207.04,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
