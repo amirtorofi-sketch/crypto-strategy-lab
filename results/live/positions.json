@@ -158814,12 +158814,12 @@
     "take_profit": 2387.13290319318,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-19T23:45:47.465104+00:00",
+    "exit_price": 2411.8451397871213,
+    "pnl_usdt": -0.0237,
+    "pnl_pct": -0.2372,
+    "duration_minutes": 60.1,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
