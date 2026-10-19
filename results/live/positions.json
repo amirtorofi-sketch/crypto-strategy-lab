@@ -158569,5 +158569,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261019T203107",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-19T20:31:07.622104+00:00",
+    "entry_price": 728.72,
+    "stop_loss": 731.4223593900502,
+    "take_profit": 727.375,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
