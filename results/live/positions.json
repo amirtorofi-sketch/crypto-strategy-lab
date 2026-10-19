@@ -158247,12 +158247,12 @@
     "take_profit": 105.51371736807516,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-19T18:31:05.582554+00:00",
+    "exit_price": 103.77841884212833,
+    "pnl_usdt": -0.0427,
+    "pnl_pct": -0.4272,
+    "duration_minutes": 45.3,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
@@ -158275,5 +158275,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261019T183107",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-19T18:31:07.104421+00:00",
+    "entry_price": 726.2,
+    "stop_loss": 723.205955146739,
+    "take_profit": 727.36,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
