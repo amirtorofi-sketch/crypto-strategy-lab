@@ -156847,5 +156847,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261019T113102",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-19T11:31:02.902863+00:00",
+    "entry_price": 4167.89,
+    "stop_loss": 4165.951941775223,
+    "take_profit": 4179.540485206478,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
