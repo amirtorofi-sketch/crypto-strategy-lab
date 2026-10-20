@@ -163560,12 +163560,12 @@
     "take_profit": 742.8239987707196,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-20T19:31:04.624733+00:00",
+    "exit_price": 736.7659201475136,
+    "pnl_usdt": -0.0185,
+    "pnl_pct": -0.185,
+    "duration_minutes": 15.1,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -163581,12 +163581,33 @@
     "take_profit": 742.0171990165757,
     "size_usdt": 10.0,
     "session": "New York",
+    "status": "loss",
+    "exit_time": "2026-10-20T19:31:04.624756+00:00",
+    "exit_price": 736.7659201475136,
+    "pnl_usdt": -0.0185,
+    "pnl_pct": -0.185,
+    "duration_minutes": 15.1,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261020T193102",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-20T19:31:02.680982+00:00",
+    "entry_price": 2428.65,
+    "stop_loss": 2422.9501982182655,
+    "take_profit": 2461.1970267260135,
+    "size_usdt": 10.0,
+    "session": "New York",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
