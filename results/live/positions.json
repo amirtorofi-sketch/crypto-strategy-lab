@@ -160578,12 +160578,12 @@
     "take_profit": 105.28988098004761,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-20T07:30:58.791255+00:00",
+    "exit_price": 104.47951785299286,
+    "pnl_usdt": -0.0176,
+    "pnl_pct": -0.1761,
+    "duration_minutes": 15.2,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
@@ -160620,12 +160620,33 @@
     "take_profit": 729.3199999999999,
     "size_usdt": 10.0,
     "session": "London",
+    "status": "win",
+    "exit_time": "2026-10-20T07:30:59.900548+00:00",
+    "exit_price": 729.3199999999999,
+    "pnl_usdt": 0.0129,
+    "pnl_pct": 0.1293,
+    "duration_minutes": 15.2,
+    "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261020T073056",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-20T07:30:56.963799+00:00",
+    "entry_price": 81631.46,
+    "stop_loss": 81588.40391340377,
+    "take_profit": 82087.25129894329,
+    "size_usdt": 10.0,
+    "session": "London",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "فروش از سقف رنج"
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
