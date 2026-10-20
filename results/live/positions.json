@@ -163959,12 +163959,12 @@
     "take_profit": 745.0314733903051,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-20T23:30:52.541238+00:00",
+    "exit_price": 740.8642231931633,
+    "pnl_usdt": -0.0152,
+    "pnl_pct": -0.1523,
+    "duration_minutes": 15.0,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -163980,12 +163980,33 @@
     "take_profit": 745.145178712244,
     "size_usdt": 10.0,
     "session": "Off-hours",
+    "status": "loss",
+    "exit_time": "2026-10-20T23:30:52.541260+00:00",
+    "exit_price": 740.8642231931633,
+    "pnl_usdt": -0.0152,
+    "pnl_pct": -0.1523,
+    "duration_minutes": 15.0,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261020T233050",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-20T23:30:50.078424+00:00",
+    "entry_price": 82918.03,
+    "stop_loss": 83023.89999312832,
+    "take_profit": 82439.68010307522,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
