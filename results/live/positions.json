@@ -161376,12 +161376,12 @@
     "take_profit": 2369.6430461423924,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-20T12:45:54.754110+00:00",
+    "exit_price": 2399.8391302571736,
+    "pnl_usdt": -0.0434,
+    "pnl_pct": -0.4337,
+    "duration_minutes": 14.8,
     "reason": "شکار های‌های برابر"
   },
   {
@@ -161425,5 +161425,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "Judas Swing نزولی در باز شدن سشن"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20261020T124556",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-20T12:45:56.011970+00:00",
+    "entry_price": 104.66,
+    "stop_loss": 105.27644855485669,
+    "take_profit": 104.44,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
