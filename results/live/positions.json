@@ -161047,5 +161047,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__PAXG-USDT__20261020T101552",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-20T10:15:52.665021+00:00",
+    "entry_price": 4119.7,
+    "stop_loss": 4115.438784753916,
+    "take_profit": 4135.318228691259,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
