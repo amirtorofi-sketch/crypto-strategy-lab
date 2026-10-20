@@ -160263,12 +160263,12 @@
     "take_profit": 81367.228804527,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-20T09:45:50.993937+00:00",
+    "exit_price": 81367.228804527,
+    "pnl_usdt": 0.043,
+    "pnl_pct": 0.4296,
+    "duration_minutes": 194.9,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -160942,5 +160942,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261020T094551",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-20T09:45:51.553152+00:00",
+    "entry_price": 81412.22,
+    "stop_loss": 81331.22175341747,
+    "take_profit": 81887.84369873787,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
