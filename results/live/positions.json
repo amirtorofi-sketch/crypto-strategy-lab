@@ -168117,12 +168117,12 @@
     "take_profit": 109.04631219044116,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-21T21:15:50.895672+00:00",
+    "exit_price": 107.98555317143384,
+    "pnl_usdt": -0.0214,
+    "pnl_pct": -0.2136,
+    "duration_minutes": 44.8,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
