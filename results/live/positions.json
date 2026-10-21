@@ -165079,5 +165079,26 @@
     "pnl_pct": -0.1924,
     "duration_minutes": 14.6,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261021T053100",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-21T05:31:00.148554+00:00",
+    "entry_price": 4135.42,
+    "stop_loss": 4138.673115695724,
+    "take_profit": 4125.82,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
