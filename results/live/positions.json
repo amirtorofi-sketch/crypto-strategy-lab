@@ -168166,5 +168166,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__ETH-USDT__20261021T214548",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-21T21:45:48.712192+00:00",
+    "entry_price": 2499.13,
+    "stop_loss": 2503.3582327161107,
+    "take_profit": 2475.3065092583397,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
