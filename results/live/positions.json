@@ -168691,5 +168691,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261022T011556",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-22T01:15:56.352801+00:00",
+    "entry_price": 2475.96,
+    "stop_loss": 2465.06190765308,
+    "take_profit": 2496.9313852037944,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
