@@ -169846,5 +169846,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین رنج افتتاحیه لندن"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261022T084552",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-22T08:45:52.714578+00:00",
+    "entry_price": 4101.71,
+    "stop_loss": 4105.430816973757,
+    "take_profit": 4084.36985855203,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
