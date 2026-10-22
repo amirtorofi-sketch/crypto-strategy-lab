@@ -172149,12 +172149,12 @@
     "take_profit": 2410.365633661888,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-22T23:46:01.838465+00:00",
+    "exit_price": 2381.8705239605733,
+    "pnl_usdt": -0.0456,
+    "pnl_pct": -0.4564,
+    "duration_minutes": 90.0,
     "reason": "ورود در FVG صعودی"
   },
   {
