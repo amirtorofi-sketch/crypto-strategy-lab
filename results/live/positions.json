@@ -170889,12 +170889,33 @@
     "take_profit": 2381.3663046446763,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
+    "status": "loss",
+    "exit_time": "2026-10-22T14:45:55.866751+00:00",
+    "exit_price": 2415.251579690355,
+    "pnl_usdt": -0.0452,
+    "pnl_pct": -0.4524,
+    "duration_minutes": 30.1,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__PAXG-USDT__20261022T144558",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-22T14:45:58.716379+00:00",
+    "entry_price": 4071.63,
+    "stop_loss": 4060.8108051709128,
+    "take_profit": 4099.067922436309,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
