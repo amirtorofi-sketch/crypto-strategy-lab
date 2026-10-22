@@ -169209,12 +169209,12 @@
     "take_profit": 745.4241389340766,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-22T05:15:50.614425+00:00",
+    "exit_price": 739.1877240710616,
+    "pnl_usdt": -0.029,
+    "pnl_pct": -0.2896,
+    "duration_minutes": 14.8,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
@@ -169230,12 +169230,33 @@
     "take_profit": 745.4241389340766,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-22T05:15:50.614450+00:00",
+    "exit_price": 739.1877240710616,
+    "pnl_usdt": -0.029,
+    "pnl_pct": -0.2896,
+    "duration_minutes": 14.8,
+    "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__ETH-USDT__20261022T051548",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-22T05:15:48.809814+00:00",
+    "entry_price": 2441.86,
+    "stop_loss": 2449.849188017682,
+    "take_profit": 2419.8221797347724,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "شکار لوهای برابر"
+    "reason": "شکار های‌های برابر"
   }
 ]
