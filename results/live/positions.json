@@ -170868,12 +170868,33 @@
     "take_profit": 4098.540463059236,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
+    "status": "loss",
+    "exit_time": "2026-10-22T14:15:54.384788+00:00",
+    "exit_price": 4066.2193024627177,
+    "pnl_usdt": -0.0218,
+    "pnl_pct": -0.2178,
+    "duration_minutes": 14.4,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261022T141551",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-22T14:15:51.993890+00:00",
+    "entry_price": 2406.29,
+    "stop_loss": 2415.251579690355,
+    "take_profit": 2381.3663046446763,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
