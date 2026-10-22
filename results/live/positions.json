@@ -169251,12 +169251,12 @@
     "take_profit": 2419.8221797347724,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-22T08:15:49.529775+00:00",
+    "exit_price": 2419.8221797347724,
+    "pnl_usdt": 0.0823,
+    "pnl_pct": 0.8225,
+    "duration_minutes": 180.0,
     "reason": "شکار های‌های برابر"
   },
   {
