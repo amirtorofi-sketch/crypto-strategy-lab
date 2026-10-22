@@ -169062,12 +169062,12 @@
     "take_profit": 747.2674664881619,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-22T04:45:51.511363+00:00",
+    "exit_price": 739.6635022341226,
+    "pnl_usdt": -0.0424,
+    "pnl_pct": -0.4244,
+    "duration_minutes": 60.0,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
