@@ -172135,5 +172135,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خروج RSI از اشباع فروش"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261022T221559",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-22T22:15:59.653014+00:00",
+    "entry_price": 2390.87,
+    "stop_loss": 2381.8705239605733,
+    "take_profit": 2410.365633661888,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
