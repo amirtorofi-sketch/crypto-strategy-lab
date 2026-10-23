@@ -176622,12 +176622,12 @@
     "take_profit": 103.4753801540914,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-23T20:15:59.790407+00:00",
+    "exit_price": 103.4753801540914,
+    "pnl_usdt": 0.1033,
+    "pnl_pct": 1.033,
+    "duration_minutes": 194.8,
     "reason": "ورود در FVG نزولی"
   },
   {
