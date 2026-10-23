@@ -172422,12 +172422,12 @@
     "take_profit": 4050.8755063971207,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-23T00:31:00.327030+00:00",
+    "exit_price": 4032.9262995735253,
+    "pnl_usdt": -0.0219,
+    "pnl_pct": -0.2185,
+    "duration_minutes": 15.1,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
