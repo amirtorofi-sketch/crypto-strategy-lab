@@ -176118,12 +176118,12 @@
     "take_profit": 756.1266135466284,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-23T18:15:47.121123+00:00",
+    "exit_price": 744.5582257635581,
+    "pnl_usdt": -0.0799,
+    "pnl_pct": -0.799,
+    "duration_minutes": 209.7,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
