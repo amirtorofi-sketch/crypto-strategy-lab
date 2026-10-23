@@ -174312,12 +174312,12 @@
     "take_profit": 4052.6838332897505,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-23T06:45:45.018131+00:00",
+    "exit_price": 4028.49474000523,
+    "pnl_usdt": -0.0226,
+    "pnl_pct": -0.2261,
+    "duration_minutes": 29.8,
     "reason": "ورود در FVG صعودی"
   },
   {
