@@ -180444,12 +180444,12 @@
     "take_profit": 79583.04602689634,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-24T18:15:52.241625+00:00",
+    "exit_price": 80355.77359820691,
+    "pnl_usdt": -0.0179,
+    "pnl_pct": -0.1792,
+    "duration_minutes": 14.8,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
