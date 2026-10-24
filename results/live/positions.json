@@ -178897,5 +178897,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261024T063100",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-24T06:31:00.323031+00:00",
+    "entry_price": 738.89,
+    "stop_loss": 742.1799077650619,
+    "take_profit": 737.315,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
