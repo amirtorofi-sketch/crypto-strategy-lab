@@ -184434,12 +184434,12 @@
     "take_profit": 79478.87042263984,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-25T23:01:11.322633+00:00",
+    "exit_price": 80674.57978868007,
+    "pnl_usdt": -0.0576,
+    "pnl_pct": -0.5765,
+    "duration_minutes": 60.1,
     "reason": "کراس نزولی MACD"
   },
   {
