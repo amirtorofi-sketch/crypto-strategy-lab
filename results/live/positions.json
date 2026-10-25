@@ -181809,12 +181809,12 @@
     "take_profit": 101.89683425030928,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-25T03:15:46.807959+00:00",
+    "exit_price": 102.52397486245361,
+    "pnl_usdt": -0.0152,
+    "pnl_pct": -0.1522,
+    "duration_minutes": 14.6,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
