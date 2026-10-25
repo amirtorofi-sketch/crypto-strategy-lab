@@ -183027,12 +183027,12 @@
     "take_profit": 101.44683098128027,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-25T14:15:50.439658+00:00",
+    "exit_price": 100.66878028224637,
+    "pnl_usdt": -0.018,
+    "pnl_pct": -0.1804,
+    "duration_minutes": 180.0,
     "reason": "ورود در FVG صعودی"
   },
   {
