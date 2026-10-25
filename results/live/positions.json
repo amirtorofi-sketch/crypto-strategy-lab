@@ -182523,12 +182523,12 @@
     "take_profit": 99.97,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-25T15:45:51.151879+00:00",
+    "exit_price": 101.88,
+    "pnl_usdt": -0.0861,
+    "pnl_pct": -0.8615,
+    "duration_minutes": 434.8,
     "reason": "شکست پایین رنج افتتاحیه لندن"
   },
   {
