@@ -187626,12 +187626,12 @@
     "take_profit": 734.0039432793051,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-26T11:45:52.886983+00:00",
+    "exit_price": 741.4064037813797,
+    "pnl_usdt": -0.0257,
+    "pnl_pct": -0.2565,
+    "duration_minutes": 44.6,
     "reason": "شکار های‌های برابر"
   }
 ]
