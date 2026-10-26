@@ -189880,5 +189880,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "classic_macd_signal_cross__BNB-USDT__20261026T230103",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-26T23:01:03.715908+00:00",
+    "entry_price": 742.27,
+    "stop_loss": 748.1624307190317,
+    "take_profit": 730.4851385619364,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی MACD"
   }
 ]
