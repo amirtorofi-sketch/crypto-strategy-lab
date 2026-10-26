@@ -186667,5 +186667,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای inside bar"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__PAXG-USDT__20261026T051551",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-26T05:15:51.788453+00:00",
+    "entry_price": 4024.59,
+    "stop_loss": 4031.085299962563,
+    "take_profit": 4007.56050056155,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
