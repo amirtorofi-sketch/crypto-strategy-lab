@@ -186492,12 +186492,12 @@
     "take_profit": 102.50074235371612,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-26T04:45:51.392036+00:00",
+    "exit_price": 99.95728384308559,
+    "pnl_usdt": -0.0332,
+    "pnl_pct": -0.3322,
+    "duration_minutes": 14.8,
     "reason": "واکنش به ناحیه تقاضای تازه"
   },
   {
@@ -186513,12 +186513,33 @@
     "take_profit": 4008.285683206074,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-10-26T04:45:54.025459+00:00",
+    "exit_price": 4023.794647519089,
+    "pnl_usdt": -0.0143,
+    "pnl_pct": -0.1428,
+    "duration_minutes": 14.8,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20261026T044551",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-26T04:45:51.763274+00:00",
+    "entry_price": 100.21,
+    "stop_loss": 99.95728384308559,
+    "take_profit": 102.50074235371612,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
