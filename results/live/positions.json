@@ -190720,5 +190720,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BTC-USDT__20261027T033107",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-27T03:31:07.606570+00:00",
+    "entry_price": 79799.68,
+    "stop_loss": 79614.01189517128,
+    "take_profit": 80309.50157243073,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
