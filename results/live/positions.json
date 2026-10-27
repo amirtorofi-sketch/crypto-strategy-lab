@@ -190629,12 +190629,12 @@
     "take_profit": 80058.47,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-27T05:01:10.182572+00:00",
+    "exit_price": 79641.62225188492,
+    "pnl_usdt": -0.0301,
+    "pnl_pct": -0.301,
+    "duration_minutes": 120.0,
     "reason": "خرید از کف رنج"
   },
   {
@@ -190930,5 +190930,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20261027T050110",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-27T05:01:10.537868+00:00",
+    "entry_price": 79759.26,
+    "stop_loss": 79832.98992027254,
+    "take_profit": 79384.34399772887,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
