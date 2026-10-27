@@ -194577,12 +194577,12 @@
     "take_profit": 2362.165956518939,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-27T20:45:47.857462+00:00",
+    "exit_price": 2342.3604852177273,
+    "pnl_usdt": -0.02,
+    "pnl_pct": -0.1998,
+    "duration_minutes": 14.8,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -194598,12 +194598,33 @@
     "take_profit": 2360.5067652151506,
     "size_usdt": 10.0,
     "session": "New York",
+    "status": "loss",
+    "exit_time": "2026-10-27T20:45:47.857488+00:00",
+    "exit_price": 2342.3604852177273,
+    "pnl_usdt": -0.02,
+    "pnl_pct": -0.1998,
+    "duration_minutes": 14.8,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261027T204549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-27T20:45:49.434186+00:00",
+    "entry_price": 100.97,
+    "stop_loss": 101.16711111367282,
+    "take_profit": 100.24407405272656,
+    "size_usdt": 10.0,
+    "session": "New York",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+    "reason": "ورود در FVG نزولی"
   }
 ]
