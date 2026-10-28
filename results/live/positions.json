@@ -197335,5 +197335,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261028T151555",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-28T15:15:55.204591+00:00",
+    "entry_price": 4047.96,
+    "stop_loss": 4051.4700267040275,
+    "take_profit": 4037.4597774664394,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
