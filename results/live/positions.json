@@ -195928,5 +195928,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "pa_inside_bar_breakout__BTC-USDT__20261028T060105",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-28T06:01:05.078132+00:00",
+    "entry_price": 80900.57,
+    "stop_loss": 81145.11,
+    "take_profit": 80262.97182330985,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین inside bar"
   }
 ]
