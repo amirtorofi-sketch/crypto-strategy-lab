@@ -196173,12 +196173,12 @@
     "take_profit": 82110.26999999997,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-28T12:45:48.821445+00:00",
+    "exit_price": 80867.6,
+    "pnl_usdt": -0.1076,
+    "pnl_pct": -1.0764,
+    "duration_minutes": 239.9,
     "reason": "شکست بالای رنج افتتاحیه لندن"
   },
   {
