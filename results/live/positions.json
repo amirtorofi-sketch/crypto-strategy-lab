@@ -194556,12 +194556,12 @@
     "take_profit": 4109.494763310085,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-28T05:01:13.873056+00:00",
+    "exit_price": 4046.4126183449575,
+    "pnl_usdt": -0.0597,
+    "pnl_pct": -0.597,
+    "duration_minutes": 540.1,
     "reason": "تایید BOS صعودی"
   },
   {
@@ -195865,5 +195865,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__ETH-USDT__20261028T050111",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-28T05:01:11.252256+00:00",
+    "entry_price": 2355.61,
+    "stop_loss": 2367.63,
+    "take_profit": 2327.8330100531566,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین inside bar"
   }
 ]
