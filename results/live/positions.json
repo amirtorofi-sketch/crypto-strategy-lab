@@ -195046,5 +195046,26 @@
     "pnl_pct": -0.1001,
     "duration_minutes": 15.5,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "pa_double_top_bottom__BNB-USDT__20261028T000110",
+    "strategy": "pa_double_top_bottom",
+    "category": "price_action",
+    "symbol": "BNB/USDT",
+    "timeframe": "4h",
+    "side": "long",
+    "entry_time": "2026-10-28T00:01:10.895850+00:00",
+    "entry_price": 744.94,
+    "stop_loss": 728.5357433094144,
+    "take_profit": 764.5112834529278,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "دابل باتم"
   }
 ]
