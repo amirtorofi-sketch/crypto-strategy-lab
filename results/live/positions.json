@@ -194787,12 +194787,12 @@
     "take_profit": 81672.2349708928,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-28T02:01:08.518848+00:00",
+    "exit_price": 80638.0,
+    "pnl_usdt": -0.042,
+    "pnl_pct": -0.4203,
+    "duration_minutes": 239.8,
     "reason": "شکست بالای inside bar"
   },
   {
