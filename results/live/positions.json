@@ -196236,12 +196236,12 @@
     "take_profit": 747.8050000000001,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-28T10:01:07.605151+00:00",
+    "exit_price": 753.2891367505474,
+    "pnl_usdt": -0.0253,
+    "pnl_pct": -0.2528,
+    "duration_minutes": 75.1,
     "reason": "فروش از سقف رنج"
   },
   {
