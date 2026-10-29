@@ -202921,5 +202921,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__BNB-USDT__20261029T163101",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-29T16:31:01.317014+00:00",
+    "entry_price": 749.19,
+    "stop_loss": 747.7410071976783,
+    "take_profit": 756.246618682145,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
