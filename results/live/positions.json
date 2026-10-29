@@ -198805,5 +198805,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بولیش Order Block"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__SOL-USDT__20261029T003105",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-29T00:31:05.204343+00:00",
+    "entry_price": 102.27,
+    "stop_loss": 102.16621722416714,
+    "take_profit": 103.37674163749287,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
