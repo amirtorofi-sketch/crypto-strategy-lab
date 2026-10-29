@@ -199911,12 +199911,12 @@
     "take_profit": 742.8582538877464,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-29T04:45:49.630301+00:00",
+    "exit_price": 752.0714095334705,
+    "pnl_usdt": -0.0374,
+    "pnl_pct": -0.3736,
+    "duration_minutes": 104.5,
     "reason": "ورود در FVG نزولی"
   },
   {
