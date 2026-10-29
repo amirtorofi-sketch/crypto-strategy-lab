@@ -205056,12 +205056,12 @@
     "take_profit": 3990.55522039465,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-29T23:45:53.455450+00:00",
+    "exit_price": 4031.02565197369,
+    "pnl_usdt": -0.0129,
+    "pnl_pct": -0.1293,
+    "duration_minutes": 14.9,
     "reason": "واکنش به ناحیه عرضه تازه"
   },
   {
@@ -205084,5 +205084,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__PAXG-USDT__20261029T234553",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-10-29T23:45:53.852982+00:00",
+    "entry_price": 4029.04,
+    "stop_loss": 4031.02565197369,
+    "take_profit": 3990.55522039465,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
