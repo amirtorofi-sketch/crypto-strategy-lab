@@ -208101,12 +208101,12 @@
     "take_profit": 3894.4904350904026,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-30T18:15:54.252780+00:00",
+    "exit_price": 3894.4904350904026,
+    "pnl_usdt": 0.0511,
+    "pnl_pct": 0.5114,
+    "duration_minutes": 104.8,
     "reason": "ورود در FVG نزولی"
   },
   {
