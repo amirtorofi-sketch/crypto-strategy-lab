@@ -207723,12 +207723,12 @@
     "take_profit": 2258.073695313015,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-30T15:31:04.146883+00:00",
+    "exit_price": 2258.073695313015,
+    "pnl_usdt": 0.1361,
+    "pnl_pct": 1.3609,
+    "duration_minutes": 89.7,
     "reason": "شکار لوهای برابر"
   },
   {
@@ -207877,5 +207877,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261030T153102",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-30T15:31:02.848876+00:00",
+    "entry_price": 77632.0,
+    "stop_loss": 78177.84537838395,
+    "take_profit": 76614.31932424083,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
