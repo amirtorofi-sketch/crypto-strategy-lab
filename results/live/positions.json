@@ -208717,5 +208717,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__BNB-USDT__20261030T210105",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-30T21:01:05.453825+00:00",
+    "entry_price": 699.18,
+    "stop_loss": 698.1128486169696,
+    "take_profit": 705.5310092202026,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
