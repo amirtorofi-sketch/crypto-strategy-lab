@@ -207051,12 +207051,12 @@
     "take_profit": 4046.324300027356,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-30T09:15:49.575689+00:00",
+    "exit_price": 3981.6378499863217,
+    "pnl_usdt": -0.0619,
+    "pnl_pct": -0.6186,
+    "duration_minutes": 14.7,
     "reason": "خروج RSI از اشباع فروش"
   },
   {
@@ -207121,5 +207121,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست بالای رنج افتتاحیه لندن"
+  },
+  {
+    "id": "classic_rsi_reversal_30_70__PAXG-USDT__20261030T091550",
+    "strategy": "classic_rsi_reversal_30_70",
+    "category": "classic",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-10-30T09:15:50.055401+00:00",
+    "entry_price": 4003.2,
+    "stop_loss": 3981.6378499863217,
+    "take_profit": 4046.324300027356,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خروج RSI از اشباع فروش"
   }
 ]
