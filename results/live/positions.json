@@ -208066,5 +208066,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "دابل تاپ"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261030T161559",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-10-30T16:15:59.577132+00:00",
+    "entry_price": 2233.76,
+    "stop_loss": 2240.6536362693105,
+    "take_profit": 2200.979697755744,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
