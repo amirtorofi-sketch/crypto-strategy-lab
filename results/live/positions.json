@@ -209067,12 +209067,12 @@
     "take_profit": 703.415,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-10-31T04:15:53.547148+00:00",
+    "exit_price": 703.415,
+    "pnl_usdt": 0.0843,
+    "pnl_pct": 0.8433,
+    "duration_minutes": 224.9,
     "reason": "فروش از سقف رنج"
   },
   {
