@@ -211398,12 +211398,12 @@
     "take_profit": 705.5514821749927,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-31T23:15:46.893601+00:00",
+    "exit_price": 703.0222776737512,
+    "pnl_usdt": -0.0124,
+    "pnl_pct": -0.1238,
+    "duration_minutes": 14.5,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
