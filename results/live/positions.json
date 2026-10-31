@@ -210649,5 +210649,26 @@
     "pnl_pct": -0.1535,
     "duration_minutes": 15.2,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20261031T143059",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-31T14:30:59.669655+00:00",
+    "entry_price": 95.68,
+    "stop_loss": 95.10745191922736,
+    "take_profit": 95.83500000000001,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
