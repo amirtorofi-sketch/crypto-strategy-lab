@@ -209956,5 +209956,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BNB-USDT__20261031T073100",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-10-31T07:31:00.216610+00:00",
+    "entry_price": 701.45,
+    "stop_loss": 700.6343241027189,
+    "take_profit": 705.8851384592165,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
