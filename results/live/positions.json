@@ -210222,12 +210222,12 @@
     "take_profit": 94.94157997643394,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-10-31T10:15:43.777623+00:00",
+    "exit_price": 95.63076300353491,
+    "pnl_usdt": -0.0175,
+    "pnl_pct": -0.175,
+    "duration_minutes": 44.8,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
