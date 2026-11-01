@@ -213589,5 +213589,26 @@
     "pnl_pct": -0.2111,
     "duration_minutes": 30.1,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__SOL-USDT__20261101T220106",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-01T22:01:06.086299+00:00",
+    "entry_price": 94.4,
+    "stop_loss": 93.81,
+    "take_profit": 95.40450417335019,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
