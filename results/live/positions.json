@@ -211783,5 +211783,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BNB-USDT__20261101T024551",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-01T02:45:51.817407+00:00",
+    "entry_price": 702.98,
+    "stop_loss": 703.6111930747443,
+    "take_profit": 700.3867243771306,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
