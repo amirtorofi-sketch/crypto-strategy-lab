@@ -212770,5 +212770,26 @@
     "pnl_pct": -0.2064,
     "duration_minutes": 15.1,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20261101T104542",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-01T10:45:42.801472+00:00",
+    "entry_price": 95.4,
+    "stop_loss": 95.15983637195787,
+    "take_profit": 95.63499999999999,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
