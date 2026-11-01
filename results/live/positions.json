@@ -212959,5 +212959,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261101T131549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-01T13:15:49.042709+00:00",
+    "entry_price": 2265.0,
+    "stop_loss": 2268.2619203996924,
+    "take_profit": 2255.150663335896,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
