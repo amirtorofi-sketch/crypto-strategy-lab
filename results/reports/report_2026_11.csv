@@ -1,0 +1,10 @@
+strategy,category,timeframe,symbol,trades,wins,losses,win_rate_pct,profit_factor,total_pnl_usdt,total_pnl_pct_sum
+range_fade_extremes,range_rtm,15m,SOL/USDT,13,10,3,76.9,2.56,0.12,1.15
+pa_inside_bar_breakout,price_action,1h,SOL/USDT,1,0,1,0.0,0.0,-0.05,-0.51
+smc_equal_highs_lows_grab,smc,15m,BTC/USDT,8,2,6,25.0,0.59,-0.06,-0.55
+rtm_supply_demand_zone,range_rtm,1h,BNB/USDT,3,0,3,0.0,0.0,-0.12,-1.17
+pa_pin_bar_rejection,price_action,4h,BNB/USDT,1,0,1,0.0,0.0,-0.12,-1.18
+rtm_imbalance_rebalance,range_rtm,15m,ETH/USDT,10,1,9,10.0,0.17,-0.12,-1.25
+smc_fvg_fill_entry,smc,15m,BNB/USDT,20,4,16,20.0,0.42,-0.17,-1.73
+smc_liquidity_sweep_reversal,smc,15m,ETH/USDT,12,1,11,8.3,0.14,-0.25,-2.52
+ict_london_killzone_breakout,ict,15m,BNB/USDT,4,0,4,0.0,0.0,-0.3,-2.98
