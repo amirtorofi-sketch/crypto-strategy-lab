@@ -218524,5 +218524,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "برگشت از باند پایین بولینگر"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261102T213100",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-02T21:31:00.947287+00:00",
+    "entry_price": 3950.5,
+    "stop_loss": 3939.3567148133643,
+    "take_profit": 3958.04,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
