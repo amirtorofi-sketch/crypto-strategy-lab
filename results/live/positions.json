@@ -214093,5 +214093,26 @@
     "pnl_pct": 0.4636,
     "duration_minutes": 15.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261102T013051",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-02T01:30:51.033883+00:00",
+    "entry_price": 78499.99,
+    "stop_loss": 78666.369248532,
+    "take_profit": 77969.45127201987,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
