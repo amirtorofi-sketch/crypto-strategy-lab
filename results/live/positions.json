@@ -222871,5 +222871,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به مقاومت افقی"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261103T211558",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-03T21:15:58.856146+00:00",
+    "entry_price": 700.03,
+    "stop_loss": 703.0293264762479,
+    "take_profit": 698.7850000000001,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
