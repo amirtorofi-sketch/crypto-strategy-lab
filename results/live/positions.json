@@ -219868,5 +219868,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20261103T053054",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-03T05:30:54.449623+00:00",
+    "entry_price": 91.92,
+    "stop_loss": 91.46012982461279,
+    "take_profit": 92.17,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
