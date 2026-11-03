@@ -219588,12 +219588,12 @@
     "take_profit": 3949.8050000000003,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-03T05:45:51.576094+00:00",
+    "exit_price": 3927.7008909138485,
+    "pnl_usdt": -0.0236,
+    "pnl_pct": -0.2356,
+    "duration_minutes": 120.1,
     "reason": "خرید از کف رنج"
   },
   {
