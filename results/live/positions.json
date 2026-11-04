@@ -226000,5 +226000,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "Judas Swing نزولی در باز شدن سشن"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261104T134555",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-04T13:45:55.154310+00:00",
+    "entry_price": 4040.82,
+    "stop_loss": 4034.251543958006,
+    "take_profit": 4062.390467016619,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
