@@ -223515,12 +223515,12 @@
     "take_profit": 3945.5950000000003,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-04T02:15:51.338805+00:00",
+    "exit_price": 3945.5950000000003,
+    "pnl_usdt": 0.0265,
+    "pnl_pct": 0.2649,
+    "duration_minutes": 44.7,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -223641,12 +223641,12 @@
     "take_profit": 3973.6704547064187,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-04T02:15:51.338832+00:00",
+    "exit_price": 3946.9855454352296,
+    "pnl_usdt": -0.024,
+    "pnl_pct": -0.2397,
+    "duration_minutes": 14.5,
     "reason": "ورود در FVG صعودی"
   }
 ]
