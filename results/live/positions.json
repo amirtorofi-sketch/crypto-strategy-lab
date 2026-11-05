@@ -227379,12 +227379,12 @@
     "take_profit": 4070.9516390147132,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-05T00:31:02.114199+00:00",
+    "exit_price": 4070.9516390147132,
+    "pnl_usdt": 0.0267,
+    "pnl_pct": 0.2666,
+    "duration_minutes": 75.2,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
@@ -227673,12 +227673,12 @@
     "take_profit": 4047.4687484946407,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-05T00:31:02.114225+00:00",
+    "exit_price": 4068.363416767024,
+    "pnl_usdt": -0.025,
+    "pnl_pct": -0.2497,
+    "duration_minutes": 29.9,
     "reason": "شکار های‌های برابر"
   }
 ]
