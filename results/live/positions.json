@@ -228282,12 +228282,12 @@
     "take_profit": 81121.32753992101,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-05T04:15:46.909019+00:00",
+    "exit_price": 80461.43286901186,
+    "pnl_usdt": -0.021,
+    "pnl_pct": -0.2095,
+    "duration_minutes": 74.6,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
@@ -228394,5 +228394,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "دابل باتم"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261105T041548",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-05T04:15:48.902884+00:00",
+    "entry_price": 96.03,
+    "stop_loss": 96.36940088489352,
+    "take_profit": 94.6889867265972,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
