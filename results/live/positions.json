@@ -231775,5 +231775,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20261105T210111",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-05T21:01:11.294127+00:00",
+    "entry_price": 90.04,
+    "stop_loss": 91.83515794531797,
+    "take_profit": 86.36263082023052,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
