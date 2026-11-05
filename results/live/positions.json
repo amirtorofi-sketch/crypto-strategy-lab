@@ -228520,5 +228520,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی MACD"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__BTC-USDT__20261105T051549",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-05T05:15:49.039742+00:00",
+    "entry_price": 80488.0,
+    "stop_loss": 80407.83622604948,
+    "take_profit": 80899.07182633677,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
