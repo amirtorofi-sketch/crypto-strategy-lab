@@ -227680,5 +227680,26 @@
     "pnl_pct": -0.2497,
     "duration_minutes": 29.9,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "range_fade_extremes__SOL-USDT__20261105T004554",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-05T00:45:54.462535+00:00",
+    "entry_price": 95.96,
+    "stop_loss": 96.4903837366212,
+    "take_profit": 95.3,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
