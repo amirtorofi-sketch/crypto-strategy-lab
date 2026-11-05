@@ -228534,12 +228534,33 @@
     "take_profit": 80899.07182633677,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "loss",
+    "exit_time": "2026-11-05T05:30:57.460831+00:00",
+    "exit_price": 80407.83622604948,
+    "pnl_usdt": -0.018,
+    "pnl_pct": -0.1796,
+    "duration_minutes": 15.1,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261105T053057",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-05T05:30:57.930390+00:00",
+    "entry_price": 80465.07,
+    "stop_loss": 80135.08812309329,
+    "take_profit": 80595.185,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+    "reason": "خرید از کف رنج"
   }
 ]
