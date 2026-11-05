@@ -229941,12 +229941,33 @@
     "take_profit": 4120.201148087197,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
+    "status": "loss",
+    "exit_time": "2026-11-05T13:30:59.537966+00:00",
+    "exit_price": 4106.673908153025,
+    "pnl_usdt": -0.0203,
+    "pnl_pct": -0.2035,
+    "duration_minutes": 14.9,
+    "reason": "Judas Swing صعودی در باز شدن سشن"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261105T133057",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-05T13:30:57.812862+00:00",
+    "entry_price": 4106.61,
+    "stop_loss": 4103.359503222361,
+    "take_profit": 4118.635,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "Judas Swing صعودی در باز شدن سشن"
+    "reason": "خرید از کف رنج"
   }
 ]
