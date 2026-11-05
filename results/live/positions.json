@@ -227925,12 +227925,12 @@
     "take_profit": 725.9929951371073,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-05T03:15:48.075605+00:00",
+    "exit_price": 715.5731336575261,
+    "pnl_usdt": -0.0597,
+    "pnl_pct": -0.5967,
+    "duration_minutes": 90.1,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   },
   {
