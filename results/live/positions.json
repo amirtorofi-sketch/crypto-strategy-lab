@@ -231075,12 +231075,12 @@
     "take_profit": 4182.846641909587,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-06T02:01:28.627628+00:00",
+    "exit_price": 4055.1803358090415,
+    "pnl_usdt": -0.1595,
+    "pnl_pct": -1.5947,
+    "duration_minutes": 540.2,
     "reason": "واکنش به بولیش Order Block"
   },
   {
