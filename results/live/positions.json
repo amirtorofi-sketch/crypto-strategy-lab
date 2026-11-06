@@ -232482,12 +232482,12 @@
     "take_profit": 690.12,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-06T05:45:49.840117+00:00",
+    "exit_price": 690.12,
+    "pnl_usdt": 0.0445,
+    "pnl_pct": 0.4447,
+    "duration_minutes": 104.7,
     "reason": "فروش از سقف رنج"
   },
   {
