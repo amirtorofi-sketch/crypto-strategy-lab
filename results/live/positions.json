@@ -235177,5 +235177,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "pa_inside_bar_breakout__ETH-USDT__20261106T200106",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-06T20:01:06.258988+00:00",
+    "entry_price": 2235.79,
+    "stop_loss": 2222.58,
+    "take_profit": 2274.471453046051,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
