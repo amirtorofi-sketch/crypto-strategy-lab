@@ -233847,12 +233847,12 @@
     "take_profit": 698.5175987376803,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-06T14:15:47.804562+00:00",
+    "exit_price": 694.9065921009856,
+    "pnl_usdt": -0.0251,
+    "pnl_pct": -0.2514,
+    "duration_minutes": 59.8,
     "reason": "Judas Swing صعودی در باز شدن سشن"
   },
   {
@@ -233980,5 +233980,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "ict_judas_swing__BTC-USDT__20261106T141545",
+    "strategy": "ict_judas_swing",
+    "category": "ict",
+    "symbol": "BTC/USDT",
+    "timeframe": "5m",
+    "side": "long",
+    "entry_time": "2026-11-06T14:15:45.082350+00:00",
+    "entry_price": 75609.65,
+    "stop_loss": 75506.70728913015,
+    "take_profit": 75982.68388587308,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "Judas Swing صعودی در باز شدن سشن"
   }
 ]
