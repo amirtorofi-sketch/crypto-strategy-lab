@@ -232398,12 +232398,12 @@
     "take_profit": 689.1049700995995,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-06T06:15:48.583934+00:00",
+    "exit_price": 689.1049700995995,
+    "pnl_usdt": 0.0864,
+    "pnl_pct": 0.8637,
+    "duration_minutes": 194.7,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
@@ -232678,5 +232678,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__PAXG-USDT__20261106T061549",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-06T06:15:49.708046+00:00",
+    "entry_price": 4041.54,
+    "stop_loss": 4046.0793654042236,
+    "take_profit": 4017.9619549648028,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
