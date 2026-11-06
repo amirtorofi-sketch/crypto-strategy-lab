@@ -233056,5 +233056,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در ناحیه OTE صعودی"
+  },
+  {
+    "id": "ict_london_killzone_breakout__PAXG-USDT__20261106T081547",
+    "strategy": "ict_london_killzone_breakout",
+    "category": "ict",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-06T08:15:47.988018+00:00",
+    "entry_price": 4052.2,
+    "stop_loss": 4038.07,
+    "take_profit": 4080.039999999999,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای رنج افتتاحیه لندن"
   }
 ]
