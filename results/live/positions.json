@@ -235317,12 +235317,12 @@
     "take_profit": 75344.96338746112,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-06T22:01:01.971899+00:00",
+    "exit_price": 75910.73359350467,
+    "pnl_usdt": -0.0181,
+    "pnl_pct": -0.1806,
+    "duration_minutes": 15.1,
     "reason": "ورود در FVG نزولی"
   }
 ]
