@@ -234001,5 +234001,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "Judas Swing صعودی در باز شدن سشن"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261106T143058",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-06T14:30:58.158599+00:00",
+    "entry_price": 695.39,
+    "stop_loss": 699.7086263333404,
+    "take_profit": 692.645,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
