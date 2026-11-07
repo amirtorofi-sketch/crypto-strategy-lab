@@ -237081,12 +237081,12 @@
     "take_profit": 90.18531120598321,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T18:45:53.107887+00:00",
+    "exit_price": 89.656562655282,
+    "pnl_usdt": -0.0173,
+    "pnl_pct": -0.173,
+    "duration_minutes": 44.7,
     "reason": "ورود در FVG صعودی"
   },
   {
