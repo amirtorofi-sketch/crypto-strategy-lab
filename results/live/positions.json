@@ -236962,5 +236962,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "classic_bollinger_mean_reversion__BTC-USDT__20261107T170106",
+    "strategy": "classic_bollinger_mean_reversion",
+    "category": "classic",
+    "symbol": "BTC/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-07T17:01:06.965359+00:00",
+    "entry_price": 75743.42,
+    "stop_loss": 75360.07379833574,
+    "take_profit": 75958.7935,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "برگشت از باند پایین بولینگر"
   }
 ]
