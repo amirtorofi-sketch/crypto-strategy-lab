@@ -237123,12 +237123,12 @@
     "take_profit": 695.135,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T19:31:05.145182+00:00",
+    "exit_price": 697.1653130506891,
+    "pnl_usdt": -0.0203,
+    "pnl_pct": -0.2028,
+    "duration_minutes": 60.0,
     "reason": "فروش از سقف رنج"
   },
   {
