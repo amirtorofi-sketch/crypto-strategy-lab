@@ -237249,12 +237249,12 @@
     "take_profit": 88.58635545212984,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T23:31:02.787785+00:00",
+    "exit_price": 89.43643734574442,
+    "pnl_usdt": -0.0413,
+    "pnl_pct": -0.4126,
+    "duration_minutes": 105.2,
     "reason": "ورود در FVG نزولی"
   },
   {
