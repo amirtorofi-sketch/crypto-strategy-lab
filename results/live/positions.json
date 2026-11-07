@@ -236052,12 +236052,12 @@
     "take_profit": 91.65489927292951,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T06:15:50.833739+00:00",
+    "exit_price": 89.92,
+    "pnl_usdt": -0.0479,
+    "pnl_pct": -0.4788,
+    "duration_minutes": 14.8,
     "reason": "شکست بالای inside bar"
   },
   {
@@ -236080,5 +236080,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در ناحیه OTE نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__SOL-USDT__20261107T061551",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-07T06:15:51.211811+00:00",
+    "entry_price": 90.28,
+    "stop_loss": 89.92,
+    "take_profit": 91.65489927292951,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
