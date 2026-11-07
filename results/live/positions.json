@@ -236031,12 +236031,12 @@
     "take_profit": 76729.93395583439,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T13:01:08.833903+00:00",
+    "exit_price": 75847.3,
+    "pnl_usdt": -0.0326,
+    "pnl_pct": -0.3256,
+    "duration_minutes": 420.1,
     "reason": "شکست بالای inside bar"
   },
   {
@@ -236500,5 +236500,26 @@
     "pnl_pct": 0.1128,
     "duration_minutes": 60.0,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "pa_inside_bar_breakout__SOL-USDT__20261107T130110",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-07T13:01:10.907847+00:00",
+    "entry_price": 89.75,
+    "stop_loss": 90.1,
+    "take_profit": 88.68463962261451,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین inside bar"
   }
 ]
