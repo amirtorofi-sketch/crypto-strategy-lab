@@ -237228,12 +237228,12 @@
     "take_profit": 2221.77228540053,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-07T22:01:07.822958+00:00",
+    "exit_price": 2232.7873257519364,
+    "pnl_usdt": -0.0205,
+    "pnl_pct": -0.205,
+    "duration_minutes": 15.3,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -237256,5 +237256,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG نزولی"
+  },
+  {
+    "id": "classic_bollinger_mean_reversion__SOL-USDT__20261107T220108",
+    "strategy": "classic_bollinger_mean_reversion",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-07T22:01:08.884703+00:00",
+    "entry_price": 89.25,
+    "stop_loss": 88.73806283993544,
+    "take_profit": 89.89200000000001,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "برگشت از باند پایین بولینگر"
   }
 ]
