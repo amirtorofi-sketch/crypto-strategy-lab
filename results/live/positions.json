@@ -239538,12 +239538,33 @@
     "take_profit": 89.45500000000001,
     "size_usdt": 10.0,
     "session": "New York",
+    "status": "win",
+    "exit_time": "2026-11-08T19:30:53.159675+00:00",
+    "exit_price": 89.45500000000001,
+    "pnl_usdt": 0.0116,
+    "pnl_pct": 0.116,
+    "duration_minutes": 15.0,
+    "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261108T193053",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-08T19:30:53.873133+00:00",
+    "entry_price": 89.54,
+    "stop_loss": 89.36131964404944,
+    "take_profit": 90.19566963292132,
+    "size_usdt": 10.0,
+    "session": "New York",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "خرید از کف رنج"
+    "reason": "ورود در FVG صعودی"
   }
 ]
