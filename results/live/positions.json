@@ -238516,5 +238516,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در ناحیه OTE صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261108T110112",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-08T11:01:12.390854+00:00",
+    "entry_price": 89.22,
+    "stop_loss": 89.15138863993987,
+    "take_profit": 89.62509466716782,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
