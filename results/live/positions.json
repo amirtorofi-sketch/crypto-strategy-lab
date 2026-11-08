@@ -238950,12 +238950,12 @@
     "take_profit": 75791.71130501051,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-08T15:45:44.870408+00:00",
+    "exit_price": 76084.34464339874,
+    "pnl_usdt": -0.0227,
+    "pnl_pct": -0.2266,
+    "duration_minutes": 89.9,
     "reason": "ورود در FVG نزولی"
   },
   {
