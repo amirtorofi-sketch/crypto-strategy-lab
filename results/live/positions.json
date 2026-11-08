@@ -238446,12 +238446,12 @@
     "take_profit": 89.14,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-08T10:31:04.220301+00:00",
+    "exit_price": 89.14,
+    "pnl_usdt": 0.0088,
+    "pnl_pct": 0.088,
+    "duration_minutes": 60.0,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -238495,5 +238495,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "ict_optimal_trade_entry_ote__BNB-USDT__20261108T103105",
+    "strategy": "ict_optimal_trade_entry_ote",
+    "category": "ict",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-08T10:31:05.495801+00:00",
+    "entry_price": 697.2,
+    "stop_loss": 694.8329873137313,
+    "take_profit": 702.0,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در ناحیه OTE صعودی"
   }
 ]
