@@ -237550,5 +237550,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20261108T010111",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-08T01:01:11.456549+00:00",
+    "entry_price": 75798.85,
+    "stop_loss": 75834.54734211086,
+    "take_profit": 75644.28881574277,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
