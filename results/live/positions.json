@@ -238579,5 +238579,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "دابل باتم"
+  },
+  {
+    "id": "smc_fvg_fill_entry__BTC-USDT__20261108T121545",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-08T12:15:45.119227+00:00",
+    "entry_price": 75963.18,
+    "stop_loss": 75934.27818677657,
+    "take_profit": 76094.2784435285,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
