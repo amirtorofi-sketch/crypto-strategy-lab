@@ -237802,5 +237802,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261108T041554",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-08T04:15:54.030522+00:00",
+    "entry_price": 696.87,
+    "stop_loss": 697.203235678343,
+    "take_profit": 695.385,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
