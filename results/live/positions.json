@@ -237445,5 +237445,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار صعودی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261108T001545",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-08T00:15:45.691937+00:00",
+    "entry_price": 89.7,
+    "stop_loss": 89.40875198175418,
+    "take_profit": 90.21040015204852,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
