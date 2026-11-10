@@ -246055,5 +246055,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261110T050108",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-10T05:01:08.762185+00:00",
+    "entry_price": 4106.06,
+    "stop_loss": 4094.9508028077335,
+    "take_profit": 4114.805,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
