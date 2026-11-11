@@ -253552,5 +253552,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "تایید BOS نزولی"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261111T161546",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-11T16:15:46.269721+00:00",
+    "entry_price": 74192.95,
+    "stop_loss": 74614.24871867137,
+    "take_profit": 73932.065,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
