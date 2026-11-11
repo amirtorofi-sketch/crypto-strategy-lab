@@ -250864,5 +250864,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "smc_premium_discount_zone__BNB-USDT__20261111T030109",
+    "strategy": "smc_premium_discount_zone",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-11T03:01:09.273157+00:00",
+    "entry_price": 681.71,
+    "stop_loss": 693.9709732971278,
+    "take_profit": 670.06,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از ناحیه پریمیوم هم‌جهت با روند نزولی"
   }
 ]
