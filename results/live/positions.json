@@ -255295,5 +255295,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261112T024555",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-12T02:45:55.736529+00:00",
+    "entry_price": 3971.37,
+    "stop_loss": 3962.7493650160613,
+    "take_profit": 3980.98,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
