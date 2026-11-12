@@ -256149,12 +256149,12 @@
     "take_profit": 3913.78,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-12T13:31:05.755903+00:00",
+    "exit_price": 3913.78,
+    "pnl_usdt": 0.0686,
+    "pnl_pct": 0.6857,
+    "duration_minutes": 300.0,
     "reason": "شکست پایین رنج افتتاحیه لندن"
   },
   {
