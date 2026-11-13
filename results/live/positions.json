@@ -258144,12 +258144,12 @@
     "take_profit": 3871.785,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-13T01:31:09.043630+00:00",
+    "exit_price": 3892.797255113185,
+    "pnl_usdt": -0.0457,
+    "pnl_pct": -0.4569,
+    "duration_minutes": 195.2,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -258732,12 +258732,33 @@
     "take_profit": 2013.955,
     "size_usdt": 10.0,
     "session": "Asia",
+    "status": "win",
+    "exit_time": "2026-11-13T01:31:06.147805+00:00",
+    "exit_price": 2013.955,
+    "pnl_usdt": 0.0128,
+    "pnl_pct": 0.1277,
+    "duration_minutes": 15.2,
+    "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261113T013109",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-13T01:31:09.360127+00:00",
+    "entry_price": 3909.98,
+    "stop_loss": 3918.3514788410357,
+    "take_profit": 3894.16,
+    "size_usdt": 10.0,
+    "session": "Asia",
     "status": "open",
     "exit_time": null,
     "exit_price": null,
     "pnl_usdt": null,
     "pnl_pct": null,
     "duration_minutes": null,
-    "reason": "خرید از کف رنج"
+    "reason": "فروش از سقف رنج"
   }
 ]
