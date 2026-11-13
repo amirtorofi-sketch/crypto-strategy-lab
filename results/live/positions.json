@@ -259684,5 +259684,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از ناحیه دیسکانت هم‌جهت با روند صعودی"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261113T061549",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-13T06:15:49.814159+00:00",
+    "entry_price": 1917.37,
+    "stop_loss": 1900.5396505480996,
+    "take_profit": 1961.475241778504,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
