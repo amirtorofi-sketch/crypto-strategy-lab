@@ -258858,12 +258858,12 @@
     "take_profit": 654.655,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-13T02:30:53.211008+00:00",
+    "exit_price": 649.5029583548015,
+    "pnl_usdt": -0.037,
+    "pnl_pct": -0.3697,
+    "duration_minutes": 15.0,
     "reason": "خرید از کف رنج"
   },
   {
@@ -258886,5 +258886,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261113T023053",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-13T02:30:53.628016+00:00",
+    "entry_price": 649.62,
+    "stop_loss": 648.0459859444261,
+    "take_profit": 653.95,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
