@@ -258438,12 +258438,12 @@
     "take_profit": 81.56,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-13T00:31:06.134148+00:00",
+    "exit_price": 81.56,
+    "pnl_usdt": 0.0116,
+    "pnl_pct": 0.1158,
+    "duration_minutes": 29.9,
     "reason": "فروش از سقف رنج"
   },
   {
