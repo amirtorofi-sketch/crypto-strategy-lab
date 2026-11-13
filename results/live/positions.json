@@ -257304,12 +257304,12 @@
     "take_profit": 3794.8380830124224,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-13T02:01:10.470825+00:00",
+    "exit_price": 3908.675958493789,
+    "pnl_usdt": -0.106,
+    "pnl_pct": -1.0603,
+    "duration_minutes": 659.9,
     "reason": "تایید BOS نزولی"
   },
   {
