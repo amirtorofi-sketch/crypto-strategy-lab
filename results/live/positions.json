@@ -262029,12 +262029,12 @@
     "take_profit": 3849.9007833120154,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-13T16:45:59.448744+00:00",
+    "exit_price": 3877.8571060025583,
+    "pnl_usdt": -0.0252,
+    "pnl_pct": -0.2517,
+    "duration_minutes": 30.0,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -262050,12 +262050,12 @@
     "take_profit": 3878.325,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-13T16:45:59.448802+00:00",
+    "exit_price": 3878.325,
+    "pnl_usdt": 0.0104,
+    "pnl_pct": 0.1038,
+    "duration_minutes": 29.9,
     "reason": "خرید از کف رنج"
   }
 ]
