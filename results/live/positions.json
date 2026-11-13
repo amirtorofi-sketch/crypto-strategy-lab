@@ -260349,12 +260349,12 @@
     "take_profit": 3899.825,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-13T11:45:46.502045+00:00",
+    "exit_price": 3878.2084111226577,
+    "pnl_usdt": -0.0356,
+    "pnl_pct": -0.3562,
+    "duration_minutes": 210.0,
     "reason": "خرید از کف رنج"
   },
   {
@@ -260797,5 +260797,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261113T114546",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-13T11:45:46.984997+00:00",
+    "entry_price": 3878.69,
+    "stop_loss": 3874.086374303061,
+    "take_profit": 3894.385,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
