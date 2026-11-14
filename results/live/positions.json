@@ -263814,12 +263814,12 @@
     "take_profit": 66150.53285162634,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-14T06:31:00.104945+00:00",
+    "exit_price": 67400.17325780484,
+    "pnl_usdt": -0.0549,
+    "pnl_pct": -0.5493,
+    "duration_minutes": 105.1,
     "reason": "ورود در FVG نزولی"
   },
   {
