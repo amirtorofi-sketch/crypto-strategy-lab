@@ -266299,5 +266299,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH نزولی - برگشت روند"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261114T193115",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-14T19:31:15.183050+00:00",
+    "entry_price": 72.16,
+    "stop_loss": 71.5463137779493,
+    "take_profit": 74.01529333076053,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
