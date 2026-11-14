@@ -265179,12 +265179,12 @@
     "take_profit": 66776.45465927635,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-14T14:45:41.182638+00:00",
+    "exit_price": 65921.2164272579,
+    "pnl_usdt": -0.0604,
+    "pnl_pct": -0.6039,
+    "duration_minutes": 14.7,
     "reason": "Judas Swing صعودی در باز شدن سشن"
   }
 ]
