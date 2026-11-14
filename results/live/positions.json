@@ -264934,5 +264934,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود در FVG صعودی"
+  },
+  {
+    "id": "range_fade_extremes__ETH-USDT__20261114T120105",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-14T12:01:05.082959+00:00",
+    "entry_price": 1910.49,
+    "stop_loss": 1923.4596013174187,
+    "take_profit": 1903.625,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
