@@ -268357,5 +268357,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی MACD"
+  },
+  {
+    "id": "range_fade_extremes__PAXG-USDT__20261115T054547",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-15T05:45:47.887179+00:00",
+    "entry_price": 3820.26,
+    "stop_loss": 3843.60004587626,
+    "take_profit": 3807.5649999999996,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
