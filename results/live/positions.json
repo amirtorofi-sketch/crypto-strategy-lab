@@ -270009,12 +270009,12 @@
     "take_profit": 3819.3799378835824,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-15T18:15:53.753116+00:00",
+    "exit_price": 3833.413337474428,
+    "pnl_usdt": -0.0124,
+    "pnl_pct": -0.1239,
+    "duration_minutes": 14.7,
     "reason": "شکار های‌های برابر"
   }
 ]
