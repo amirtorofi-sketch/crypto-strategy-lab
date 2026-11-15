@@ -268413,12 +268413,12 @@
     "take_profit": 602.7064356497178,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-15T06:15:52.785732+00:00",
+    "exit_price": 591.0600277220339,
+    "pnl_usdt": -0.0414,
+    "pnl_pct": -0.4139,
+    "duration_minutes": 14.8,
     "reason": "ورود در FVG صعودی"
   }
 ]
