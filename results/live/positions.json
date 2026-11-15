@@ -269253,12 +269253,12 @@
     "take_profit": 3815.889056903119,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-15T12:31:02.788176+00:00",
+    "exit_price": 3831.6477131716256,
+    "pnl_usdt": -0.0133,
+    "pnl_pct": -0.1329,
+    "duration_minutes": 89.8,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -269407,5 +269407,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "range_fade_extremes__BNB-USDT__20261115T123101",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-15T12:31:01.604799+00:00",
+    "entry_price": 598.11,
+    "stop_loss": 601.04746158901,
+    "take_profit": 592.085,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
