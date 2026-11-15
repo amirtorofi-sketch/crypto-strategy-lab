@@ -268728,12 +268728,12 @@
     "take_profit": 72.64,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-15T11:45:52.836986+00:00",
+    "exit_price": 72.64,
+    "pnl_usdt": 0.2839,
+    "pnl_pct": 2.8387,
+    "duration_minutes": 194.9,
     "reason": "شکست بالای رنج افتتاحیه لندن"
   },
   {
