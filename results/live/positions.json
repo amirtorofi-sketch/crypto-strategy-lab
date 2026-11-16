@@ -273628,5 +273628,26 @@
     "pnl_pct": 0.4249,
     "duration_minutes": 74.6,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BNB-USDT__20261116T200109",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-16T20:01:09.551168+00:00",
+    "entry_price": 592.28,
+    "stop_loss": 592.8421657706732,
+    "take_profit": 585.6475134399009,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
