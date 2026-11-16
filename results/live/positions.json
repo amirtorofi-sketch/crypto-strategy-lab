@@ -273621,12 +273621,12 @@
     "take_profit": 3853.85,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-16T19:31:05.244721+00:00",
+    "exit_price": 3853.85,
+    "pnl_usdt": 0.0425,
+    "pnl_pct": 0.4249,
+    "duration_minutes": 74.6,
     "reason": "خرید از کف رنج"
   }
 ]
