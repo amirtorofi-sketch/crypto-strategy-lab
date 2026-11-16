@@ -270828,12 +270828,12 @@
     "take_profit": 594.1099999999999,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-16T02:15:46.741373+00:00",
+    "exit_price": 594.1099999999999,
+    "pnl_usdt": 0.0479,
+    "pnl_pct": 0.4786,
+    "duration_minutes": 29.9,
     "reason": "خرید از کف رنج"
   },
   {
@@ -270856,5 +270856,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "برگشت از باند بالای بولینگر"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261116T021545",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-16T02:15:45.562634+00:00",
+    "entry_price": 71.98,
+    "stop_loss": 71.20483370923634,
+    "take_profit": 73.40749436145488,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
