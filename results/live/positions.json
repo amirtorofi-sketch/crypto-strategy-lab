@@ -271122,12 +271122,12 @@
     "take_profit": 65766.15693406777,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-16T04:45:44.752861+00:00",
+    "exit_price": 64945.51236791187,
+    "pnl_usdt": -0.0259,
+    "pnl_pct": -0.2591,
+    "duration_minutes": 14.9,
     "reason": "ورود در FVG صعودی"
   }
 ]
