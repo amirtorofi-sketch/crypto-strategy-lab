@@ -275973,12 +275973,12 @@
     "take_profit": 3849.92,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-17T14:15:57.024029+00:00",
+    "exit_price": 3849.92,
+    "pnl_usdt": 0.0227,
+    "pnl_pct": 0.2269,
+    "duration_minutes": 29.9,
     "reason": "خرید از کف رنج"
   },
   {
@@ -276022,5 +276022,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__PAXG-USDT__20261117T141557",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "PAXG/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-17T14:15:57.632931+00:00",
+    "entry_price": 3851.36,
+    "stop_loss": 3841.7799906841037,
+    "take_profit": 3872.2101397384467,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
