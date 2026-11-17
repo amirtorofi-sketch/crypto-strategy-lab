@@ -274083,12 +274083,12 @@
     "take_profit": 591.925,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-17T02:01:10.399282+00:00",
+    "exit_price": 591.925,
+    "pnl_usdt": 0.0165,
+    "pnl_pct": 0.1652,
+    "duration_minutes": 15.4,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -274153,5 +274153,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "فروش از سقف رنج"
+  },
+  {
+    "id": "pa_inside_bar_breakout__SOL-USDT__20261117T020109",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-17T02:01:09.044728+00:00",
+    "entry_price": 71.83,
+    "stop_loss": 71.32,
+    "take_profit": 73.54978159159207,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست بالای inside bar"
   }
 ]
