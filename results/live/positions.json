@@ -275721,12 +275721,12 @@
     "take_profit": 74.0410474992748,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-17T13:15:47.477041+00:00",
+    "exit_price": 74.0410474992748,
+    "pnl_usdt": 0.1166,
+    "pnl_pct": 1.1658,
+    "duration_minutes": 59.8,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   },
   {
