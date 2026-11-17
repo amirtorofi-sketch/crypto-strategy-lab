@@ -274048,5 +274048,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__ETH-USDT__20261117T003101",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-17T00:31:01.336449+00:00",
+    "entry_price": 1816.54,
+    "stop_loss": 1810.151207082845,
+    "take_profit": 1839.3218937573256,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
