@@ -277471,5 +277471,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__ETH-USDT__20261117T191547",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-17T19:15:47.563838+00:00",
+    "entry_price": 1794.24,
+    "stop_loss": 1801.4574510138373,
+    "take_profit": 1762.2803265744183,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
