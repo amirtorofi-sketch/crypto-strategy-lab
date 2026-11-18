@@ -280866,12 +280866,12 @@
     "take_profit": 3762.2799999999997,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-18T16:45:59.167389+00:00",
+    "exit_price": 3734.4470488257716,
+    "pnl_usdt": -0.0609,
+    "pnl_pct": -0.6085,
+    "duration_minutes": 90.0,
     "reason": "خرید از کف رنج"
   },
   {
