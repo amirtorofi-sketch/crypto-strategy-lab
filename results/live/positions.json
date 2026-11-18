@@ -279102,12 +279102,12 @@
     "take_profit": 3832.249,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-18T09:01:11.481912+00:00",
+    "exit_price": 3757.467662931825,
+    "pnl_usdt": -0.0793,
+    "pnl_pct": -0.7927,
+    "duration_minutes": 179.7,
     "reason": "برگشت از باند پایین بولینگر"
   },
   {
