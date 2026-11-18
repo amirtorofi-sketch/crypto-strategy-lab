@@ -282406,5 +282406,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار لوهای برابر"
+  },
+  {
+    "id": "range_fade_extremes__ETH-USDT__20261118T234554",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-18T23:45:54.370573+00:00",
+    "entry_price": 1780.67,
+    "stop_loss": 1791.7831502600986,
+    "take_profit": 1760.125,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
