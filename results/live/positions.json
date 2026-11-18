@@ -278752,5 +278752,26 @@
     "pnl_pct": -0.1869,
     "duration_minutes": 15.9,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__BTC-USDT__20261118T043103",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-18T04:31:03.915875+00:00",
+    "entry_price": 64574.89,
+    "stop_loss": 64737.194584207304,
+    "take_profit": 63915.42123689054,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار های‌های برابر"
   }
 ]
