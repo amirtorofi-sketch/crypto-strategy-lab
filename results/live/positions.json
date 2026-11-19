@@ -284247,12 +284247,12 @@
     "take_profit": 583.5664698386431,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-19T07:45:48.616359+00:00",
+    "exit_price": 589.4329020107572,
+    "pnl_usdt": -0.0228,
+    "pnl_pct": -0.2283,
+    "duration_minutes": 14.7,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
