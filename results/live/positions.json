@@ -292297,5 +292297,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261120T194545",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-20T19:45:45.144920+00:00",
+    "entry_price": 58836.65,
+    "stop_loss": 57908.99604186668,
+    "take_profit": 60321.40937199985,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
