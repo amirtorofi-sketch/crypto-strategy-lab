@@ -289945,5 +289945,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین رنج افتتاحیه لندن"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261120T094548",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-20T09:45:48.878344+00:00",
+    "entry_price": 61651.94,
+    "stop_loss": 61256.54482698564,
+    "take_profit": 61892.895000000004,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خرید از کف رنج"
   }
 ]
