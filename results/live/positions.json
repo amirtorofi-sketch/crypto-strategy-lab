@@ -290344,5 +290344,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "smc_fvg_fill_entry__ETH-USDT__20261120T113100",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-20T11:31:00.152441+00:00",
+    "entry_price": 1754.46,
+    "stop_loss": 1750.7128352649668,
+    "take_profit": 1775.7697061252768,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG صعودی"
   }
 ]
