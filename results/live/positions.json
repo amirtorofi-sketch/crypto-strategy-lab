@@ -291912,12 +291912,12 @@
     "take_profit": 72.8886237930797,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-20T17:15:50.140809+00:00",
+    "exit_price": 67.82068810346016,
+    "pnl_usdt": -0.251,
+    "pnl_pct": -2.5103,
+    "duration_minutes": 14.7,
     "reason": "خروج RSI از اشباع فروش"
   },
   {
@@ -291961,5 +291961,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "classic_rsi_reversal_30_70__SOL-USDT__20261120T171550",
+    "strategy": "classic_rsi_reversal_30_70",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-20T17:15:50.632978+00:00",
+    "entry_price": 69.51,
+    "stop_loss": 67.82068810346016,
+    "take_profit": 72.8886237930797,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "خروج RSI از اشباع فروش"
   }
 ]
