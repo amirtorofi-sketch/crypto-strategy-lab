@@ -292101,12 +292101,12 @@
     "take_profit": 71.8675,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-20T18:15:52.948232+00:00",
+    "exit_price": 68.74543742426789,
+    "pnl_usdt": -0.0852,
+    "pnl_pct": -0.8516,
+    "duration_minutes": 14.6,
     "reason": "برگشت از باند پایین بولینگر"
   },
   {
@@ -292129,5 +292129,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به بریش Order Block"
+  },
+  {
+    "id": "classic_bollinger_mean_reversion__SOL-USDT__20261120T181553",
+    "strategy": "classic_bollinger_mean_reversion",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-20T18:15:53.525947+00:00",
+    "entry_price": 69.28,
+    "stop_loss": 68.74543742426789,
+    "take_profit": 71.8675,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "برگشت از باند پایین بولینگر"
   }
 ]
