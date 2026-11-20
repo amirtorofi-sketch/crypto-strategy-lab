@@ -289959,12 +289959,12 @@
     "take_profit": 61892.895000000004,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-20T10:31:06.451479+00:00",
+    "exit_price": 61892.895000000004,
+    "pnl_usdt": 0.0311,
+    "pnl_pct": 0.3108,
+    "duration_minutes": 45.3,
     "reason": "خرید از کف رنج"
   },
   {
