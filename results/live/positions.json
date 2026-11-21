@@ -296364,12 +296364,12 @@
     "take_profit": 1736.9367001652763,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T23:01:07.933742+00:00",
+    "exit_price": 1680.42,
+    "pnl_usdt": -0.049,
+    "pnl_pct": -0.4901,
+    "duration_minutes": 180.0,
     "reason": "شکست بالای inside bar"
   },
   {
