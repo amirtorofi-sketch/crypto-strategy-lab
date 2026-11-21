@@ -295524,12 +295524,12 @@
     "take_profit": 1661.8280335435297,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T13:45:52.064707+00:00",
+    "exit_price": 1683.2989573165175,
+    "pnl_usdt": -0.0384,
+    "pnl_pct": -0.3844,
+    "duration_minutes": 14.9,
     "reason": "Judas Swing نزولی در باز شدن سشن"
   },
   {
@@ -295545,12 +295545,12 @@
     "take_profit": 69.12673281824972,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T13:45:53.293996+00:00",
+    "exit_price": 70.02466137454002,
+    "pnl_usdt": -0.0387,
+    "pnl_pct": -0.3875,
+    "duration_minutes": 14.9,
     "reason": "Judas Swing نزولی در باز شدن سشن"
   }
 ]
