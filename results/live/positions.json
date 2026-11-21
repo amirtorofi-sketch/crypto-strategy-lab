@@ -296413,5 +296413,26 @@
     "pnl_pct": -0.2154,
     "duration_minutes": 30.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "pa_support_resistance_bounce__BNB-USDT__20261121T220112",
+    "strategy": "pa_support_resistance_bounce",
+    "category": "price_action",
+    "symbol": "BNB/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-21T22:01:12.514108+00:00",
+    "entry_price": 549.96,
+    "stop_loss": 558.8980355554767,
+    "take_profit": 532.0839288890467,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به مقاومت افقی"
   }
 ]
