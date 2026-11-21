@@ -293718,12 +293718,12 @@
     "take_profit": 1525.8849461147665,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T05:15:53.321948+00:00",
+    "exit_price": 1567.197006466228,
+    "pnl_usdt": -0.047,
+    "pnl_pct": -0.4699,
+    "duration_minutes": 14.9,
     "reason": "ورود در FVG نزولی"
   },
   {
@@ -293739,12 +293739,12 @@
     "take_profit": 1529.8799568918132,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T05:15:53.321976+00:00",
+    "exit_price": 1567.197006466228,
+    "pnl_usdt": -0.047,
+    "pnl_pct": -0.4699,
+    "duration_minutes": 14.8,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
