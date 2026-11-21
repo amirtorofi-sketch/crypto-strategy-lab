@@ -296511,12 +296511,12 @@
     "take_profit": 545.6157392490488,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T23:31:03.253620+00:00",
+    "exit_price": 549.2761391126427,
+    "pnl_usdt": -0.0167,
+    "pnl_pct": -0.1668,
+    "duration_minutes": 15.2,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
