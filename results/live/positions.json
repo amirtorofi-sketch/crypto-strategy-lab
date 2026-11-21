@@ -293116,5 +293116,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "range_fade_extremes__BTC-USDT__20261121T011545",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-21T01:15:45.328204+00:00",
+    "entry_price": 59178.72,
+    "stop_loss": 59562.814633539914,
+    "take_profit": 58594.49,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
