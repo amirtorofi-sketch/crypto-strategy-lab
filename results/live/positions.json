@@ -296406,12 +296406,12 @@
     "take_profit": 71.24085227636469,
     "size_usdt": 10.0,
     "session": "Off-hours",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-21T21:45:53.276675+00:00",
+    "exit_price": 70.52437215854529,
+    "pnl_usdt": -0.0215,
+    "pnl_pct": -0.2154,
+    "duration_minutes": 30.0,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
