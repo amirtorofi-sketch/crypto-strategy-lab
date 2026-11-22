@@ -298779,12 +298779,12 @@
     "take_profit": 3524.457433498096,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-22T11:31:06.002070+00:00",
+    "exit_price": 3557.450171100127,
+    "pnl_usdt": -0.0092,
+    "pnl_pct": -0.0924,
+    "duration_minutes": 15.2,
     "reason": "واکنش به ناحیه عرضه تازه"
   },
   {
@@ -298828,5 +298828,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__PAXG-USDT__20261122T113106",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-22T11:31:06.383633+00:00",
+    "entry_price": 3557.01,
+    "stop_loss": 3557.450171100127,
+    "take_profit": 3524.457433498096,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
