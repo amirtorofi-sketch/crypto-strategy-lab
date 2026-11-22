@@ -296602,5 +296602,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "خرید از کف رنج"
+  },
+  {
+    "id": "range_fade_extremes__ETH-USDT__20261122T011556",
+    "strategy": "range_fade_extremes",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-22T01:15:56.622213+00:00",
+    "entry_price": 1686.2,
+    "stop_loss": 1693.269725018931,
+    "take_profit": 1683.255,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "فروش از سقف رنج"
   }
 ]
