@@ -300060,12 +300060,12 @@
     "take_profit": 563.5702581078067,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-22T20:31:06.335753+00:00",
+    "exit_price": 555.3926494594795,
+    "pnl_usdt": -0.0451,
+    "pnl_pct": -0.4509,
+    "duration_minutes": 135.2,
     "reason": "شکار لوهای برابر"
   },
   {
