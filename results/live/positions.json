@@ -299913,12 +299913,12 @@
     "take_profit": 3527.279954107519,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-22T17:01:08.436520+00:00",
+    "exit_price": 3557.224003059499,
+    "pnl_usdt": -0.0102,
+    "pnl_pct": -0.102,
+    "duration_minutes": 15.2,
     "reason": "واکنش به ناحیه عرضه تازه"
   },
   {
