@@ -300172,5 +300172,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار نزولی"
+  },
+  {
+    "id": "smc_fvg_fill_entry__SOL-USDT__20261122T204553",
+    "strategy": "smc_fvg_fill_entry",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-22T20:45:53.711932+00:00",
+    "entry_price": 70.08,
+    "stop_loss": 70.30234983236227,
+    "take_profit": 69.47708473031449,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود در FVG نزولی"
   }
 ]
