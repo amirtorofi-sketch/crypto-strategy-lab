@@ -299682,12 +299682,12 @@
     "take_profit": 1700.8735649413943,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-22T15:31:00.617884+00:00",
+    "exit_price": 1717.7737148046883,
+    "pnl_usdt": -0.0363,
+    "pnl_pct": -0.3634,
+    "duration_minutes": 29.9,
     "reason": "Judas Swing نزولی در باز شدن سشن"
   },
   {
