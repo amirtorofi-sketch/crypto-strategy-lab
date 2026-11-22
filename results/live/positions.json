@@ -300102,12 +300102,12 @@
     "take_profit": 3553.1865699460327,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-22T18:45:56.986818+00:00",
+    "exit_price": 3553.1865699460327,
+    "pnl_usdt": 0.0111,
+    "pnl_pct": 0.1105,
+    "duration_minutes": 14.8,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
