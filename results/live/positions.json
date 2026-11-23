@@ -302685,12 +302685,12 @@
     "take_profit": 1677.3770274097994,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-23T10:15:52.742421+00:00",
+    "exit_price": 1730.4388648393467,
+    "pnl_usdt": -0.0488,
+    "pnl_pct": -0.4878,
+    "duration_minutes": 14.7,
     "reason": "واکنش به ناحیه عرضه تازه"
   },
   {
@@ -302797,5 +302797,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__ETH-USDT__20261123T101553",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-23T10:15:53.190543+00:00",
+    "entry_price": 1723.41,
+    "stop_loss": 1730.4388648393467,
+    "take_profit": 1677.3770274097994,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
