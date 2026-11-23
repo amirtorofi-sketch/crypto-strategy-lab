@@ -306094,5 +306094,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی MACD"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__SOL-USDT__20261123T191557",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-23T19:15:57.934258+00:00",
+    "entry_price": 73.31,
+    "stop_loss": 73.02974575816096,
+    "take_profit": 75.41381362758578,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی زیر لو + برگشت"
   }
 ]
