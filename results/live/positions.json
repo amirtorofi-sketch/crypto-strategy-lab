@@ -307200,12 +307200,12 @@
     "take_profit": 70.50867659022691,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "win",
+    "exit_time": "2026-11-24T03:15:48.842775+00:00",
+    "exit_price": 70.50867659022691,
+    "pnl_usdt": 0.1773,
+    "pnl_pct": 1.7732,
+    "duration_minutes": 74.6,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
