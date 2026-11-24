@@ -307669,5 +307669,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "پین‌بار نزولی"
+  },
+  {
+    "id": "rtm_supply_demand_zone__ETH-USDT__20261124T050106",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "long",
+    "entry_time": "2026-11-24T05:01:06.548426+00:00",
+    "entry_price": 1699.97,
+    "stop_loss": 1692.064830032702,
+    "take_profit": 1766.4975495094689,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه تقاضای تازه"
   }
 ]
