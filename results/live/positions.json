@@ -310336,5 +310336,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "pa_inside_bar_breakout__PAXG-USDT__20261124T190116",
+    "strategy": "pa_inside_bar_breakout",
+    "category": "price_action",
+    "symbol": "PAXG/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-24T19:01:16.249284+00:00",
+    "entry_price": 3550.57,
+    "stop_loss": 3568.86,
+    "take_profit": 3511.6443156976993,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکست پایین inside bar"
   }
 ]
