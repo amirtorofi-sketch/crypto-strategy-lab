@@ -310546,5 +310546,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "واکنش به ناحیه تقاضای تازه"
+  },
+  {
+    "id": "rtm_supply_demand_zone__SOL-USDT__20261124T220100",
+    "strategy": "rtm_supply_demand_zone",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-24T22:01:00.189457+00:00",
+    "entry_price": 69.44,
+    "stop_loss": 70.67022000865029,
+    "take_profit": 66.88669987024558,
+    "size_usdt": 10.0,
+    "session": "Off-hours",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به ناحیه عرضه تازه"
   }
 ]
