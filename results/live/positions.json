@@ -314382,12 +314382,12 @@
     "take_profit": 1586.1681989218148,
     "size_usdt": 10.0,
     "session": "New York",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-25T16:45:49.287737+00:00",
+    "exit_price": 1655.2731801078185,
+    "pnl_usdt": -0.0485,
+    "pnl_pct": -0.4848,
+    "duration_minutes": 14.8,
     "reason": "واکنش به بریش Order Block"
   },
   {
@@ -314452,5 +314452,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکار های‌های برابر"
+  },
+  {
+    "id": "smc_order_block_retest__ETH-USDT__20261125T164549",
+    "strategy": "smc_order_block_retest",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-25T16:45:49.743388+00:00",
+    "entry_price": 1648.6,
+    "stop_loss": 1655.2731801078185,
+    "take_profit": 1586.1681989218148,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "واکنش به بریش Order Block"
   }
 ]
