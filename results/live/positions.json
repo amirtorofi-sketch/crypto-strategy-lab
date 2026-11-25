@@ -311883,12 +311883,12 @@
     "take_profit": 65.39047074162981,
     "size_usdt": 10.0,
     "session": "London",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-25T08:15:50.541676+00:00",
+    "exit_price": 69.0197646291851,
+    "pnl_usdt": -0.1864,
+    "pnl_pct": -1.8641,
+    "duration_minutes": 14.6,
     "reason": "کراس نزولی MACD"
   },
   {
@@ -311911,5 +311911,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس صعودی استوکاستیک از اشباع فروش"
+  },
+  {
+    "id": "classic_macd_signal_cross__SOL-USDT__20261125T081550",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-25T08:15:50.983907+00:00",
+    "entry_price": 67.81,
+    "stop_loss": 69.0197646291851,
+    "take_profit": 65.39047074162981,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی MACD"
   }
 ]
