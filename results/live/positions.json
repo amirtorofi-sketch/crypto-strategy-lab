@@ -317035,5 +317035,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "CHoCH صعودی - برگشت روند"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__ETH-USDT__20261126T023056",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-26T02:30:56.893906+00:00",
+    "entry_price": 1703.4,
+    "stop_loss": 1710.962652208895,
+    "take_profit": 1677.1102168665766,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
