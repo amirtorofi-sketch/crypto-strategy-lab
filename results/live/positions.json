@@ -318421,5 +318421,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
+  },
+  {
+    "id": "classic_macd_signal_cross__SOL-USDT__20261126T120101",
+    "strategy": "classic_macd_signal_cross",
+    "category": "classic",
+    "symbol": "SOL/USDT",
+    "timeframe": "1h",
+    "side": "short",
+    "entry_time": "2026-11-26T12:01:01.230068+00:00",
+    "entry_price": 70.88,
+    "stop_loss": 71.89753358449317,
+    "take_profit": 68.84493283101365,
+    "size_usdt": 10.0,
+    "session": "London-NY Overlap",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "کراس نزولی MACD"
   }
 ]
