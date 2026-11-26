@@ -317350,5 +317350,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BNB-USDT__20261126T041554",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BNB/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-26T04:15:54.457128+00:00",
+    "entry_price": 560.25,
+    "stop_loss": 561.0864096882101,
+    "take_profit": 553.8538546768475,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
