@@ -322509,12 +322509,12 @@
     "take_profit": 3681.8053543353694,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-27T12:15:55.711445+00:00",
+    "exit_price": 3660.1289574797556,
+    "pnl_usdt": -0.0169,
+    "pnl_pct": -0.1687,
+    "duration_minutes": 14.4,
     "reason": "ورود در FVG صعودی"
   },
   {
@@ -322551,12 +322551,12 @@
     "take_profit": 3679.4602834682955,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-27T12:15:55.711474+00:00",
+    "exit_price": 3660.1289574797556,
+    "pnl_usdt": -0.0169,
+    "pnl_pct": -0.1687,
+    "duration_minutes": 14.4,
     "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
