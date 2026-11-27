@@ -321592,5 +321592,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
+  },
+  {
+    "id": "smc_liquidity_sweep_reversal__BTC-USDT__20261127T064545",
+    "strategy": "smc_liquidity_sweep_reversal",
+    "category": "smc",
+    "symbol": "BTC/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-27T06:45:45.939391+00:00",
+    "entry_price": 61692.15,
+    "stop_loss": 61865.77241321909,
+    "take_profit": 61008.11380171362,
+    "size_usdt": 10.0,
+    "session": "Asia",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   }
 ]
