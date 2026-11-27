@@ -321060,12 +321060,12 @@
     "take_profit": 60945.285,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-27T02:31:02.848391+00:00",
+    "exit_price": 61598.56560985762,
+    "pnl_usdt": -0.0621,
+    "pnl_pct": -0.6209,
+    "duration_minutes": 15.2,
     "reason": "فروش از سقف رنج"
   },
   {
@@ -321081,12 +321081,12 @@
     "take_profit": 71.66,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-27T02:31:04.866578+00:00",
+    "exit_price": 72.62567666819751,
+    "pnl_usdt": -0.0767,
+    "pnl_pct": -0.7672,
+    "duration_minutes": 15.1,
     "reason": "فروش از سقف رنج"
   }
 ]
