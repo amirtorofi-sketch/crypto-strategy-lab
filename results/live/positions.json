@@ -324343,5 +324343,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__ETH-USDT__20261127T171544",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "ETH/USDT",
+    "timeframe": "15m",
+    "side": "short",
+    "entry_time": "2026-11-27T17:15:44.407744+00:00",
+    "entry_price": 1671.33,
+    "stop_loss": 1680.257954485441,
+    "take_profit": 1640.5436367637271,
+    "size_usdt": 10.0,
+    "session": "New York",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه بالایی ایمبالانس نزولی"
   }
 ]
