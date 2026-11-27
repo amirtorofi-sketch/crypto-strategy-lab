@@ -321606,12 +321606,12 @@
     "take_profit": 61008.11380171362,
     "size_usdt": 10.0,
     "session": "Asia",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-27T07:31:00.495569+00:00",
+    "exit_price": 61865.77241321909,
+    "pnl_usdt": -0.0361,
+    "pnl_pct": -0.3614,
+    "duration_minutes": 45.2,
     "reason": "جمع‌آوری نقدینگی بالای های + برگشت"
   },
   {
@@ -321739,5 +321739,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "کراس نزولی استوکاستیک از اشباع خرید"
+  },
+  {
+    "id": "rtm_imbalance_rebalance__SOL-USDT__20261127T073102",
+    "strategy": "rtm_imbalance_rebalance",
+    "category": "range_rtm",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-27T07:31:02.608721+00:00",
+    "entry_price": 72.97,
+    "stop_loss": 72.85767097350094,
+    "take_profit": 73.62552684332707,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "ورود از نیمه پایینی ایمبالانس صعودی"
   }
 ]
