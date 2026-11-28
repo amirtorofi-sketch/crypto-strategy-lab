@@ -325974,12 +325974,12 @@
     "take_profit": 70.28904794395244,
     "size_usdt": 10.0,
     "session": "London-NY Overlap",
-    "status": "open",
-    "exit_time": null,
-    "exit_price": null,
-    "pnl_usdt": null,
-    "pnl_pct": null,
-    "duration_minutes": null,
+    "status": "loss",
+    "exit_time": "2026-11-28T12:45:45.042957+00:00",
+    "exit_price": 70.97091424672571,
+    "pnl_usdt": -0.0208,
+    "pnl_pct": -0.2083,
+    "duration_minutes": 14.8,
     "reason": "ورود در FVG نزولی"
   }
 ]
