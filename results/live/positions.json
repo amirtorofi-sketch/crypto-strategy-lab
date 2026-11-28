@@ -325876,5 +325876,26 @@
     "pnl_pct": null,
     "duration_minutes": null,
     "reason": "شکست پایین inside bar"
+  },
+  {
+    "id": "smc_equal_highs_lows_grab__SOL-USDT__20261128T111550",
+    "strategy": "smc_equal_highs_lows_grab",
+    "category": "smc",
+    "symbol": "SOL/USDT",
+    "timeframe": "15m",
+    "side": "long",
+    "entry_time": "2026-11-28T11:15:50.719386+00:00",
+    "entry_price": 70.77,
+    "stop_loss": 70.56208277379173,
+    "take_profit": 71.48875839312412,
+    "size_usdt": 10.0,
+    "session": "London",
+    "status": "open",
+    "exit_time": null,
+    "exit_price": null,
+    "pnl_usdt": null,
+    "pnl_pct": null,
+    "duration_minutes": null,
+    "reason": "شکار لوهای برابر"
   }
 ]
